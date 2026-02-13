@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rovshen Ashirov - Software Engineer Portfolio</title>
     <meta name="description" content="Rovshen Ashirov - Experienced Backend Developer specializing in Django, Laravel, and microservices architecture">
-    <meta name="keywords" content="Software Engineer, Backend Developer, Django, Laravel, Python, PHP, Full-stack Developer">
+    <meta name="keywords" content="Software Engineer, Backend Developer, Django, Laravel, Python, PHP, Full-stack Developer, OAuth2, Microservices, Uzbekistan">
     <meta name="author" content="Rovshen Ashirov">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Rovshen Ashirov - Software Engineer Portfolio">
-    <meta property="og:description" content="4+ years experienced Backend Developer">
+    <meta property="og:description" content="4+ years experienced Backend Developer - Built 10+ national platforms serving 10,000+ users">
+    <meta property="og:url" content="https://rovshenashirov.github.io">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rovshen Ashirov - Software Engineer">
+    <meta name="twitter:description" content="Backend Developer specializing in Django & Laravel">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,853 +30,8 @@
     <!-- AOS Animation -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     
-    <style>
-        :root {
-            --bg-primary: #0f172a;
-            --bg-secondary: #1e293b;
-            --bg-tertiary: #334155;
-            --text-primary: #f8fafc;
-            --text-secondary: #cbd5e1;
-            --text-muted: #94a3b8;
-            --accent-primary: #6366f1;
-            --accent-secondary: #8b5cf6;
-            --accent-tertiary: #ec4899;
-            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        [data-theme="light"] {
-            --bg-primary: #ffffff;
-            --bg-secondary: #f8fafc;
-            --bg-tertiary: #e2e8f0;
-            --text-primary: #0f172a;
-            --text-secondary: #334155;
-            --text-muted: #64748b;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-            transition: var(--transition);
-        }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--bg-secondary);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--accent-primary);
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--accent-secondary);
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: var(--bg-secondary);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            padding: 1rem 0;
-            box-shadow: var(--shadow-md);
-            transition: var(--transition);
-        }
-
-        nav.scrolled {
-            padding: 0.5rem 0;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            cursor: pointer;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent-gradient);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--text-primary);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .theme-toggle {
-            background: var(--bg-tertiary);
-            border: none;
-            color: var(--text-primary);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-
-        .theme-toggle:hover {
-            background: var(--accent-primary);
-            transform: rotate(20deg);
-        }
-
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            background: var(--bg-tertiary);
-            border: none;
-            color: var(--text-primary);
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1.2rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 8rem 2rem 4rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            position: relative;
-        }
-
-        .hero-text h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            line-height: 1.2;
-        }
-
-        .gradient-text {
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-text p {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-        }
-
-        .typing-text {
-            font-family: 'JetBrains Mono', monospace;
-            color: var(--accent-primary);
-            font-weight: 600;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 0.875rem 2rem;
-            border-radius: 12px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-            font-size: 1rem;
-        }
-
-        .btn-primary {
-            background: var(--accent-gradient);
-            color: white;
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .btn-secondary {
-            background: var(--bg-secondary);
-            color: var(--text-primary);
-            border: 2px solid var(--bg-tertiary);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--accent-primary);
-            background: var(--bg-tertiary);
-        }
-
-        /* Hero Image */
-        .hero-image {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .code-window {
-            background: var(--bg-secondary);
-            border-radius: 16px;
-            padding: 1rem;
-            box-shadow: var(--shadow-xl);
-            border: 1px solid var(--bg-tertiary);
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .code-header {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .code-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-
-        .code-dot:nth-child(1) { background: #ef4444; }
-        .code-dot:nth-child(2) { background: #f59e0b; }
-        .code-dot:nth-child(3) { background: #10b981; }
-
-        .code-content {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.875rem;
-            line-height: 1.8;
-        }
-
-        .code-line {
-            display: block;
-            padding: 0.25rem 0;
-        }
-
-        .code-keyword { color: #8b5cf6; }
-        .code-function { color: #6366f1; }
-        .code-string { color: #10b981; }
-        .code-comment { color: var(--text-muted); font-style: italic; }
-
-        /* Stats Section */
-        .stats {
-            background: var(--bg-secondary);
-            padding: 4rem 2rem;
-        }
-
-        .stats-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .stat-card {
-            background: var(--bg-tertiary);
-            padding: 2rem;
-            border-radius: 16px;
-            text-align: center;
-            transition: var(--transition);
-            border: 2px solid transparent;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-primary);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: 800;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        /* Section Title */
-        .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
-
-        .section-title h2 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-        }
-
-        .section-title p {
-            font-size: 1.25rem;
-            color: var(--text-secondary);
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category {
-            background: var(--bg-secondary);
-            padding: 2rem;
-            border-radius: 16px;
-            border: 2px solid var(--bg-tertiary);
-            transition: var(--transition);
-        }
-
-        .skill-category:hover {
-            border-color: var(--accent-primary);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .skill-category h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .skill-category i {
-            color: var(--accent-primary);
-            font-size: 1.75rem;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .skill-tag {
-            background: var(--bg-tertiary);
-            color: var(--text-primary);
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            font-size: 0.875rem;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .skill-tag:hover {
-            background: var(--accent-primary);
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--bg-secondary);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 2px solid var(--bg-tertiary);
-            transition: var(--transition);
-            cursor: pointer;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent-primary);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .project-header {
-            background: var(--accent-gradient);
-            padding: 2rem;
-            color: white;
-        }
-
-        .project-header h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-stats {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-            font-size: 0.875rem;
-        }
-
-        .project-stat {
-            display: flex;
-            align-items: center;
-            gap: 0.25rem;
-        }
-
-        .project-body {
-            padding: 2rem;
-        }
-
-        .project-body p {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-        }
-
-        .project-tech {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .tech-badge {
-            background: var(--bg-tertiary);
-            color: var(--accent-primary);
-            padding: 0.375rem 0.75rem;
-            border-radius: 6px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .project-link {
-            color: var(--accent-primary);
-            text-decoration: none;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: var(--transition);
-        }
-
-        .project-link:hover {
-            color: var(--accent-secondary);
-            transform: translateX(5px);
-        }
-
-        /* Experience Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 3rem;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: var(--accent-gradient);
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 3rem;
-            padding-left: 2rem;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -3.5rem;
-            top: 0;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: var(--accent-primary);
-            border: 4px solid var(--bg-primary);
-            box-shadow: 0 0 0 4px var(--bg-tertiary);
-        }
-
-        .timeline-content {
-            background: var(--bg-secondary);
-            padding: 2rem;
-            border-radius: 16px;
-            border: 2px solid var(--bg-tertiary);
-            transition: var(--transition);
-        }
-
-        .timeline-content:hover {
-            border-color: var(--accent-primary);
-            transform: translateX(10px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .timeline-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .timeline-title h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .timeline-company {
-            color: var(--accent-primary);
-            font-weight: 600;
-        }
-
-        .timeline-date {
-            color: var(--text-muted);
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-
-        .timeline-description {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-        }
-
-        .timeline-highlights {
-            list-style: none;
-            margin-left: 1rem;
-        }
-
-        .timeline-highlights li {
-            position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-secondary);
-        }
-
-        .timeline-highlights li::before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: var(--accent-primary);
-            font-weight: bold;
-        }
-
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .contact-card {
-            background: var(--bg-secondary);
-            padding: 2rem;
-            border-radius: 16px;
-            text-align: center;
-            border: 2px solid var(--bg-tertiary);
-            transition: var(--transition);
-        }
-
-        .contact-card:hover {
-            border-color: var(--accent-primary);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--accent-gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .contact-card h3 {
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-card a {
-            color: var(--accent-primary);
-            text-decoration: none;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .contact-card a:hover {
-            color: var(--accent-secondary);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--bg-secondary);
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 2px solid var(--bg-tertiary);
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .social-link {
-            width: 50px;
-            height: 50px;
-            background: var(--bg-tertiary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-primary);
-            text-decoration: none;
-            font-size: 1.25rem;
-            transition: var(--transition);
-        }
-
-        .social-link:hover {
-            background: var(--accent-primary);
-            color: white;
-            transform: translateY(-5px);
-        }
-
-        .footer-text {
-            color: var(--text-secondary);
-        }
-
-        /* Animations */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .floating {
-            animation: float 3s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
-
-        .pulse {
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        /* Responsive */
-        @media (max-width: 968px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-buttons {
-                justify-content: center;
-            }
-
-            .hero-image {
-                order: -1;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background: var(--bg-secondary);
-                flex-direction: column;
-                padding: 2rem;
-                transform: translateX(-100%);
-                transition: var(--transition);
-                box-shadow: var(--shadow-lg);
-            }
-
-            .nav-links.active {
-                transform: translateX(0);
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .section-title h2 {
-                font-size: 2rem;
-            }
-
-            .timeline {
-                padding-left: 2rem;
-            }
-
-            .timeline-item {
-                padding-left: 1rem;
-            }
-        }
-
-        @media (max-width: 640px) {
-            .hero-text h1 {
-                font-size: 2rem;
-            }
-
-            .hero-text p {
-                font-size: 1rem;
-            }
-
-            .stat-number {
-                font-size: 2rem;
-            }
-
-            .projects-grid,
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Loading Animation */
-        .loading-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--bg-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            transition: opacity 0.5s ease;
-        }
-
-        .loading-screen.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .loader {
-            width: 50px;
-            height: 50px;
-            border: 5px solid var(--bg-tertiary);
-            border-top-color: var(--accent-primary);
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            to { transform: rotate(360deg); }
-        }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Loading Screen -->
@@ -915,7 +76,7 @@
                 </p>
                 <p>
                     4+ yillik tajribaga ega <strong>Software Engineer</strong> va <strong>Backend Developer</strong>. 
-                    Django, Laravel va microservices arxitekturasi bo'yicha mutaxassis.
+                    O'zbekistonning eng yirik milliy ilmiy platformalarini yaratishda keng tajribaga egaman.
                 </p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">
@@ -946,11 +107,11 @@
                         <span class="code-line">    <span class="code-keyword">def</span> <span class="code-function">skills</span>(self):</span>
                         <span class="code-line">        <span class="code-keyword">return</span> [</span>
                         <span class="code-line">            <span class="code-string">"Django"</span>, <span class="code-string">"Laravel"</span>,</span>
-                        <span class="code-line">            <span class="code-string">"Python"</span>, <span class="code-string">"PHP"</span>,</span>
+                        <span class="code-line">            <span class="code-string">"OAuth2"</span>, <span class="code-string">"Microservices"</span>,</span>
                         <span class="code-line">            <span class="code-string">"PostgreSQL"</span>, <span class="code-string">"Redis"</span></span>
                         <span class="code-line">        ]</span>
                         <span class="code-line"></span>
-                        <span class="code-line"><span class="code-comment"># Ready for new challenges! 🚀</span></span>
+                        <span class="code-line"><span class="code-comment"># Building national platforms! 🚀</span></span>
                     </div>
                 </div>
             </div>
@@ -973,8 +134,8 @@
                 <div class="stat-label">Foydalanuvchilar</div>
             </div>
             <div class="stat-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="stat-number" data-count="21">0</div>
-                <div class="stat-label">GitHub Repos</div>
+                <div class="stat-number" data-count="35000">0</div>
+                <div class="stat-label">Ilmiy Maqolalar</div>
             </div>
         </div>
     </section>
@@ -993,14 +154,20 @@
             </p>
             <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;">
                 Karyeramda <strong>UZINFOCOM</strong> va <strong>Perspective Team</strong> kabi kompaniyalarda ishlagan holda, 
-                <strong>ScienceID</strong>, <strong>Anjumanlar</strong>, <strong>Plagiat.uz</strong>, <strong>EnergoNazorat</strong> 
-                kabi milliy darajadagi loyihalarni muvaffaqiyatli amalga oshirganman. Bu loyihalar 10,000+ foydalanuvchiga xizmat ko'rsatmoqda.
+                <strong>ScienceID</strong>, <strong>ScienceGate</strong>, <strong>Anjumanlar</strong>, <strong>Plagiat.uz</strong>, 
+                <strong>SLIB.uz</strong>, <strong>ROI.uz</strong>, <strong>EnergoNazorat</strong> kabi milliy darajadagi loyihalarni 
+                muvaffaqiyatli amalga oshirganman. Bu loyihalar 10,000+ foydalanuvchiga xizmat ko'rsatmoqda.
+            </p>
+            <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;">
+                Asosiy yutuqlarim: <strong>OAuth2</strong> protokolini Django DRF'da implementatsiya qilish, <strong>OneID</strong> 
+                tizimi bilan integratsiya, <strong>35,000+</strong> ilmiy maqolalar bilan ishlaydigan platformalarni qo'llab-quvvatlash, 
+                va <strong>microservices</strong> arxitektura asosida murakkab tizimlarni ishlab chiqish.
             </p>
             <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text-secondary);">
-                Texnologiyalar: <strong>Django, Laravel, Yii2, PostgreSQL, Redis, Celery</strong> va boshqa zamonaviy texnologiyalar bilan ishlashda 
-                keng tajribaga egaman. Microservices arxitekturasi, RESTful API dizayni va katta hajmdagi ma'lumotlarni qayta ishlash bo'yicha 
-                mutaxassisман. Kelajakda <strong>Senior Backend Developer</strong> va <strong>Tech Lead</strong> bo'lish, shuningdek 
-                <strong>AI/ML</strong> sohasida o'z bilimlarimni rivojlantirish maqsadiga egaman.
+                Texnologiyalar: <strong>Django, Laravel, Yii2, PostgreSQL, Redis, Celery, OAuth2, Microservices</strong> va boshqa 
+                zamonaviy texnologiyalar bilan ishlashda keng tajribaga egaman. Kelajakda <strong>Senior Backend Developer</strong> 
+                va <strong>Tech Lead</strong> bo'lish, shuningdek <strong>AI/ML</strong> sohasida o'z bilimlarimni rivojlantirish 
+                maqsadiga egaman.
             </p>
         </div>
     </section>
@@ -1062,6 +229,8 @@
             <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
                 <h3><i class="fas fa-robot"></i> Additional Skills</h3>
                 <div class="skills-list">
+                    <span class="skill-tag">OAuth2</span>
+                    <span class="skill-tag">OneID Integration</span>
                     <span class="skill-tag">Telegram Bots</span>
                     <span class="skill-tag">Aiogram</span>
                     <span class="skill-tag">RESTful APIs</span>
@@ -1107,18 +276,46 @@
                     </div>
                 </div>
                 <div class="project-body">
-                    <p>Ilmiy-innovatsion faoliyat bilan shug'ullanuvchi jismoniy shaxslarni identifikatsiya tizimi. Milliy ilmiy platformani yaratish va qo'llab-quvvatlash.</p>
+                    <p>Ilmiy-innovatsion faoliyat bilan shug'ullanuvchi shaxslar uchun milliy identifikatsiya platformasi. OAuth2 va OneID integratsiyasi bilan.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Django</span>
                         <span class="tech-badge">DRF</span>
+                        <span class="tech-badge">OAuth2</span>
+                        <span class="tech-badge">OneID</span>
                         <span class="tech-badge">PostgreSQL</span>
-                        <span class="tech-badge">Redis</span>
                     </div>
                     <div class="project-links">
                         <a href="https://scienceid.uz" target="_blank" class="project-link">
                             <i class="fas fa-external-link-alt"></i>
                             Ko'rish
                         </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ScienceGate -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="project-header">
+                    <h3>ScienceGate</h3>
+                    <p style="margin-top: 0.5rem; opacity: 0.9;">Ilmiy Baholash Platformasi</p>
+                    <div class="project-stats">
+                        <div class="project-stat">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Olimlar platformasi</span>
+                        </div>
+                        <div class="project-stat">
+                            <i class="fas fa-lock"></i>
+                            <span>Restricted</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <p>Olimlar uchun portfolio, H-index, ilmiy va pedagogik faoliyat reytingi. ScienceID bilan integratsiyalangan.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Django</span>
+                        <span class="tech-badge">DRF</span>
+                        <span class="tech-badge">Analytics</span>
+                        <span class="tech-badge">H-index</span>
                     </div>
                 </div>
             </div>
@@ -1131,7 +328,7 @@
                     <div class="project-stats">
                         <div class="project-stat">
                             <i class="fas fa-users"></i>
-                            <span>1,573+ foydalanuvchi</span>
+                            <span>1,580+ foydalanuvchi</span>
                         </div>
                         <div class="project-stat">
                             <i class="fas fa-calendar"></i>
@@ -1140,7 +337,7 @@
                     </div>
                 </div>
                 <div class="project-body">
-                    <p>Xalqaro va respublika miqyosida o'tkaziladigan ilmiy va ilmiy-texnik tadbirlar platformasi. Konferensiya va anjumanlarni tashkil qilish.</p>
+                    <p>Respublikadagi barcha ilmiy anjumanlarni bir platformada yig'ish. 329 tashkilot va 809 xodim.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Laravel</span>
                         <span class="tech-badge">Livewire</span>
@@ -1156,32 +353,95 @@
                 </div>
             </div>
 
-            <!-- Plagiat.uz -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+            <!-- eTaqriz -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="250">
                 <div class="project-header">
-                    <h3>Plagiat.uz</h3>
-                    <p style="margin-top: 0.5rem; opacity: 0.9;">Plagiat Tekshirish Tizimi</p>
+                    <h3>eTaqriz</h3>
+                    <p style="margin-top: 0.5rem; opacity: 0.9;">Taqrizchilar Platformasi</p>
                     <div class="project-stats">
                         <div class="project-stat">
-                            <i class="fas fa-database"></i>
-                            <span>2+ mlrd tekshirilgan</span>
+                            <i class="fas fa-file-alt"></i>
+                            <span>2,280+ taqriz</span>
                         </div>
                         <div class="project-stat">
-                            <i class="fas fa-file"></i>
-                            <span>6,263+ hujjat</span>
+                            <i class="fas fa-user-tie"></i>
+                            <span>79 taqrizchi</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-body">
-                    <p>Plagiatga tekshirish va sun'iy intellekt yordamida yozilgan matnlarni aniqlash tizimi. Ekspert va admin tizimini yaratish.</p>
+                    <p>Ilmiy ishlarni malakali mutaxassislar tomonidan taqrizlash tizimi. Tezkor va sifatli xizmat.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Laravel</span>
+                        <span class="tech-badge">Filament</span>
                         <span class="tech-badge">PostgreSQL</span>
-                        <span class="tech-badge">Redis</span>
-                        <span class="tech-badge">AI Detection</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://plagiat.uz" target="_blank" class="project-link">
+                        <a href="https://etaqriz.uz" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Ko'rish
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIB.uz -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-header">
+                    <h3>SLIB.uz</h3>
+                    <p style="margin-top: 0.5rem; opacity: 0.9;">O'zbekiston Ilmiy Kutubxonasi</p>
+                    <div class="project-stats">
+                        <div class="project-stat">
+                            <i class="fas fa-book"></i>
+                            <span>345 jurnal</span>
+                        </div>
+                        <div class="project-stat">
+                            <i class="fas fa-file"></i>
+                            <span>35,339 maqola</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <p>Milliy ilmiy jurnallar va maqolalar platformasi. 20,368+ muallif. SRM tizimi bilan.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Yii2</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">SRM</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://slib.uz" target="_blank" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Ko'rish
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ROI.uz -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="350">
+                <div class="project-header">
+                    <h3>ROI.uz</h3>
+                    <p style="margin-top: 0.5rem; opacity: 0.9;">Raqamli Obyekt Identifikatori</p>
+                    <div class="project-stats">
+                        <div class="project-stat">
+                            <i class="fas fa-hashtag"></i>
+                            <span>35,339+ ROI</span>
+                        </div>
+                        <div class="project-stat">
+                            <i class="fas fa-bolt"></i>
+                            <span>~236/soat</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-body">
+                    <p>DOI va ZENODO'ning O'zbekiston analogi. Ilmiy materiallar uchun raqamli identifikator.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Django</span>
+                        <span class="tech-badge">DRF</span>
+                        <span class="tech-badge">Microservices</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://roi.uz" target="_blank" class="project-link">
                             <i class="fas fa-external-link-alt"></i>
                             Ko'rish
                         </a>
@@ -1197,7 +457,7 @@
                     <div class="project-stats">
                         <div class="project-stat">
                             <i class="fas fa-bolt"></i>
-                            <span>Hukumat</span>
+                            <span>Energiya nazorati</span>
                         </div>
                         <div class="project-stat">
                             <i class="fas fa-chart-line"></i>
@@ -1206,26 +466,25 @@
                     </div>
                 </div>
                 <div class="project-body">
-                    <p>Microservice arxitektura asosida energiya nazorati tizimi. Ma'lumotlarni yig'ish, qayta ishlash va hisobotlar chiqarish.</p>
+                    <p>Microservice arxitektura asosida energiya nazorati. Katta hajmdagi ma'lumotlarni tahlil.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Django</span>
                         <span class="tech-badge">DRF</span>
                         <span class="tech-badge">Celery</span>
-                        <span class="tech-badge">PostgreSQL</span>
                         <span class="tech-badge">Redis</span>
                     </div>
                 </div>
             </div>
 
             <!-- UzTransGaz SCADA -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="project-card" data-aos="fade-up" data-aos-delay="450">
                 <div class="project-header">
                     <h3>UzTransGaz SCADA</h3>
-                    <p style="margin-top: 0.5rem; opacity: 0.9;">Davlat Loyihasi</p>
+                    <p style="margin-top: 0.5rem; opacity: 0.9;">SCADA Monitoring</p>
                     <div class="project-stats">
                         <div class="project-stat">
                             <i class="fas fa-network-wired"></i>
-                            <span>Monitoring</span>
+                            <span>Real-time</span>
                         </div>
                         <div class="project-stat">
                             <i class="fas fa-chart-line"></i>
@@ -1234,42 +493,41 @@
                     </div>
                 </div>
                 <div class="project-body">
-                    <p>Microservice asosida gaz tarmoqlarini monitoring qilish tizimi. Real-time ma'lumotlar va vizualizatsiya.</p>
+                    <p>Gaz tarmoqlarini monitoring. MinIO va Vault bilan ishlash. Core module development.</p>
                     <div class="project-tech">
                         <span class="tech-badge">Django</span>
                         <span class="tech-badge">DRF</span>
-                        <span class="tech-badge">Celery</span>
                         <span class="tech-badge">MinIO</span>
                         <span class="tech-badge">Vault</span>
                     </div>
                 </div>
             </div>
 
-            <!-- SLIB.uz -->
-            <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+            <!-- Plagiat.uz -->
+            <div class="project-card" data-aos="fade-up" data-aos-delay="500">
                 <div class="project-header">
-                    <h3>SLIB.uz</h3>
-                    <p style="margin-top: 0.5rem; opacity: 0.9;">O'zbekiston Ilmiy Kutubxonasi</p>
+                    <h3>Plagiat.uz</h3>
+                    <p style="margin-top: 0.5rem; opacity: 0.9;">Plagiat Tekshirish</p>
                     <div class="project-stats">
                         <div class="project-stat">
-                            <i class="fas fa-book"></i>
-                            <span>Milliy</span>
+                            <i class="fas fa-database"></i>
+                            <span>5,375+ manbalar</span>
                         </div>
                         <div class="project-stat">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Active</span>
+                            <i class="fas fa-file"></i>
+                            <span>6,263+ hujjat</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-body">
-                    <p>O'zbekiston ilmiy kutubxonasi platformasi. Legacy tizimlarni refaktor qilish va yangi funksiyalarni qo'shish.</p>
+                    <p>Plagiatni aniqlash va AI-generated text detection. 2+ milliard tekshirilgan ma'lumot.</p>
                     <div class="project-tech">
-                        <span class="tech-badge">Yii2</span>
+                        <span class="tech-badge">Laravel</span>
+                        <span class="tech-badge">AI Detection</span>
                         <span class="tech-badge">PostgreSQL</span>
-                        <span class="tech-badge">DOI Integration</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://slib.uz" target="_blank" class="project-link">
+                        <a href="https://plagiat.uz" target="_blank" class="project-link">
                             <i class="fas fa-external-link-alt"></i>
                             Ko'rish
                         </a>
@@ -1300,9 +558,10 @@
                         Davlat loyihalari ustida ishlash. Microservice arxitektura asosida backend servislarni ishlab chiqish.
                     </p>
                     <ul class="timeline-highlights">
-                        <li>UzTransGaz SCADA tizimini ishlab chiqish (Django, DRF)</li>
-                        <li>EnergoNazorat platformasini yaratish va qo'llab-quvvatlash</li>
-                        <li>Celery va Vault bilan ishlash tajribasi</li>
+                        <li>UzTransGaz SCADA tizimini ishlab chiqish (Django, DRF, MinIO, Vault)</li>
+                        <li>EnergoNazorat platformasini yaratish - energiya nazorati tizimi</li>
+                        <li>Celery va cron task'lar bilan fon jarayonlarni avtomatlash</li>
+                        <li>Core module development va architecture design</li>
                         <li>Vaqtincha Team Leader vazifasini bajarish</li>
                     </ul>
                 </div>
@@ -1319,14 +578,17 @@
                         <div class="timeline-date">Dekabr 2022 - Avgust 2024</div>
                     </div>
                     <p class="timeline-description">
-                        10+ ta yirik ilmiy platformalarni yaratish va qo'llab-quvvatlash. Django va Laravel asosida murakkab tizimlarni ishlab chiqish.
+                        10+ ta yirik milliy ilmiy platformalarni yaratish va qo'llab-quvvatlash. O'zbekistonning ilmiy ekotizimini raqamlashtirish.
                     </p>
                     <ul class="timeline-highlights">
-                        <li>ScienceID - 4,184+ foydalanuvchi bilan milliy ilmiy identifikatsiya tizimi</li>
-                        <li>Anjumanlar - 1,573+ foydalanuvchi, 3,690+ ta anjuman platformasi</li>
-                        <li>Plagiat.uz - 2+ mlrd tekshirilgan ma'lumotlar bilan plagiat tizimi</li>
-                        <li>SLIB.uz, ROI, eTaqriz va boshqa milliy platformalar</li>
-                        <li>RESTful API dizayni va integratsiyalar</li>
+                        <li><strong>ScienceID</strong> - 4,184+ foydalanuvchi. OAuth2 va OneID integratsiyasi</li>
+                        <li><strong>ScienceGate</strong> - Olimlar uchun H-index va reyting platformasi</li>
+                        <li><strong>Anjumanlar</strong> - 1,580+ foydalanuvchi, 3,690+ anjuman, 329 tashkilot</li>
+                        <li><strong>eTaqriz</strong> - 2,280+ taqriz, 79 taqrizchi</li>
+                        <li><strong>SLIB.uz</strong> - 345 jurnal, 35,339 maqola, 20,368 muallif</li>
+                        <li><strong>ROI.uz</strong> - 35,339+ identifikator, DOI analogi</li>
+                        <li><strong>Plagiat.uz</strong> - 2+ mlrd ma'lumot, AI detection</li>
+                        <li>RESTful API dizayni va multiple platform integratsiyalar</li>
                     </ul>
                 </div>
             </div>
@@ -1337,7 +599,7 @@
                     <div class="timeline-header">
                         <div class="timeline-title">
                             <h3>Web Developer</h3>
-                            <div class="timeline-company">UBTUIT (Dissertatsiya uchun)</div>
+                            <div class="timeline-company">UBTUIT (Dissertatsiya)</div>
                         </div>
                         <div class="timeline-date">Mart 2023 - Iyun 2023</div>
                     </div>
@@ -1346,7 +608,7 @@
                     </p>
                     <ul class="timeline-highlights">
                         <li>IQ darajani aniqlash tizimini ishlab chiqish</li>
-                        <li>Test va natijalarni boshqarish</li>
+                        <li>Test va natijalarni avtomatik hisoblash algoritmlari</li>
                     </ul>
                 </div>
             </div>
@@ -1362,12 +624,12 @@
                         <div class="timeline-date">Noyabr 2021 - Dekabr 2022</div>
                     </div>
                     <p class="timeline-description">
-                        Telegram botlar yaratish va avtomatlash tizimlari.
+                        Telegram botlar yaratish va avtomatlash tizimlari (Python, Aiogram).
                     </p>
                     <ul class="timeline-highlights">
-                        <li>@TezYetkaz_bot - Pochtalarni yetkazish xizmati</li>
-                        <li>@cashback_bot - Cashback tizimi</li>
-                        <li>@newyear_bot - Yangi yil tabrigi boti</li>
+                        <li><strong>@TezYetkaz_bot</strong> - Pochtalarni yetkazish xizmati</li>
+                        <li><strong>@cashback_bot</strong> - Cashback tizimi (QR kod)</li>
+                        <li><strong>@newyear_bot</strong> - Yangi yil tabrigi generatori</li>
                     </ul>
                 </div>
             </div>
@@ -1404,10 +666,10 @@
             </div>
             <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
                 <div class="contact-icon">
-                    <i class="fas fa-phone"></i>
+                    <i class="fab fa-linkedin"></i>
                 </div>
-                <h3>Telefon</h3>
-                <a href="tel:+998977615652">+998 97 761 56 52</a>
+                <h3>LinkedIn</h3>
+                <a href="https://www.linkedin.com/in/rovshenashirov/" target="_blank">rovshenashirov</a>
             </div>
         </div>
     </section>
@@ -1418,6 +680,9 @@
             <div class="social-links">
                 <a href="https://github.com/RovshenAshirov" target="_blank" class="social-link">
                     <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/rovshenashirov/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
                 </a>
                 <a href="https://t.me/Oliy_dasturchi" target="_blank" class="social-link">
                     <i class="fab fa-telegram"></i>
@@ -1430,162 +695,15 @@
                 &copy; 2026 Rovshen Ashirov. Barcha huquqlar himoyalangan.
             </p>
             <p class="footer-text" style="margin-top: 0.5rem; font-size: 0.875rem;">
-                Django | Laravel | Python | PHP | PostgreSQL
+                Django | Laravel | Python | PHP | OAuth2 | Microservices
             </p>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- AOS Animation Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
 
-        // Loading Screen
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('loadingScreen').classList.add('hidden');
-            }, 1000);
-        });
-
-        // Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const htmlElement = document.documentElement;
-        const themeIcon = themeToggle.querySelector('i');
-
-        // Check for saved theme preference
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-        htmlElement.setAttribute('data-theme', currentTheme);
-        updateThemeIcon(currentTheme);
-
-        themeToggle.addEventListener('click', () => {
-            const theme = htmlElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-            htmlElement.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-            updateThemeIcon(theme);
-        });
-
-        function updateThemeIcon(theme) {
-            themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-        }
-
-        // Mobile Menu
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.className = navLinks.classList.contains('active') ? 'fas fa-times' : 'fas fa-bars';
-        });
-
-        // Close mobile menu when clicking on a link
-        navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                mobileMenuBtn.querySelector('i').className = 'fas fa-bars';
-            });
-        });
-
-        // Navbar scroll effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Typing Animation
-        const typingText = document.getElementById('typingText');
-        const texts = [
-            'Backend Developer',
-            'Software Engineer',
-            'Django Expert',
-            'Laravel Specialist',
-            'Full-stack Developer',
-            'AI Enthusiast'
-        ];
-        let textIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-
-        function type() {
-            const currentText = texts[textIndex];
-            
-            if (isDeleting) {
-                typingText.textContent = currentText.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingText.textContent = currentText.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
-            if (!isDeleting && charIndex === currentText.length) {
-                setTimeout(() => isDeleting = true, 2000);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                textIndex = (textIndex + 1) % texts.length;
-            }
-
-            const speed = isDeleting ? 50 : 100;
-            setTimeout(type, speed);
-        }
-
-        type();
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offset = 80;
-                    const targetPosition = target.offsetTop - offset;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-
-        // Counter Animation
-        const counters = document.querySelectorAll('.stat-number');
-        const speed = 200;
-
-        const animateCounters = () => {
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-count');
-                const count = +counter.innerText;
-                const increment = target / speed;
-
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(() => animateCounters(), 10);
-                } else {
-                    counter.innerText = target.toLocaleString();
-                }
-            });
-        };
-
-        // Trigger counter animation when in viewport
-        const statsSection = document.querySelector('.stats');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    animateCounters();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-
-        observer.observe(statsSection);
-    </script>
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 </html>
