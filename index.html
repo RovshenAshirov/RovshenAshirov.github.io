@@ -7,29 +7,29 @@
     <meta name="description" content="Rovshen Ashirov - Experienced Backend Developer specializing in Django, Laravel, and microservices architecture">
     <meta name="keywords" content="Software Engineer, Backend Developer, Django, Laravel, Python, PHP, Full-stack Developer, OAuth2, Microservices, Uzbekistan">
     <meta name="author" content="Rovshen Ashirov">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Rovshen Ashirov - Software Engineer Portfolio">
     <meta property="og:description" content="4+ years experienced Backend Developer - Built 10+ national platforms serving 10,000+ users">
     <meta property="og:url" content="https://rovshenashirov.github.io">
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Rovshen Ashirov - Software Engineer">
     <meta name="twitter:description" content="Backend Developer specializing in Django & Laravel">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- AOS Animation -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -67,6 +67,9 @@
         <div class="hero-bg"></div>
         <div class="hero-content">
             <div class="hero-text" data-aos="fade-right">
+                <div class="profile-image-container">
+                    <img src="images/profile/avatar.svg" alt="Rovshen Ashirov" class="profile-image" id="profileImage" onerror="this.src='images/profile/avatar.png'">
+                </div>
                 <h1>
                     Salom, men<br>
                     <span class="gradient-text">Rovshen Ashirov</span>
@@ -75,7 +78,7 @@
                     <span class="typing-text" id="typingText"></span>
                 </p>
                 <p>
-                    4+ yillik tajribaga ega <strong>Software Engineer</strong> va <strong>Backend Developer</strong>. 
+                    <strong id="experienceYears">4+</strong> yillik tajribaga ega <strong>Software Engineer</strong> va <strong>Backend Developer</strong>.
                     O'zbekistonning eng yirik milliy ilmiy platformalarini yaratishda keng tajribaga egaman.
                 </p>
                 <div class="hero-buttons">
@@ -101,7 +104,7 @@
                         <span class="code-line">    <span class="code-keyword">def</span> <span class="code-function">__init__</span>(self):</span>
                         <span class="code-line">        self.name = <span class="code-string">"Rovshen Ashirov"</span></span>
                         <span class="code-line">        self.role = <span class="code-string">"Backend Developer"</span></span>
-                        <span class="code-line">        self.experience = <span class="code-string">"4+ years"</span></span>
+                        <span class="code-line">        self.experience = <span class="code-string" id="codeExperience>">4+ years"</span></span>
                         <span class="code-line">        self.location = <span class="code-string">"Uzbekistan"</span></span>
                         <span class="code-line"></span>
                         <span class="code-line">    <span class="code-keyword">def</span> <span class="code-function">skills</span>(self):</span>
@@ -122,7 +125,7 @@
     <section class="stats">
         <div class="stats-container">
             <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="stat-number" data-count="4">0</div>
+                <div class="stat-number" id="statExperience" data-count="4">0</div>
                 <div class="stat-label">Yillik Tajriba</div>
             </div>
             <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
@@ -148,25 +151,25 @@
         </div>
         <div style="background: var(--bg-secondary); padding: 3rem; border-radius: 16px; border: 2px solid var(--bg-tertiary);" data-aos="fade-up">
             <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;">
-                Men <strong>Rovshen Rejepbayevich Ashirov</strong>, 4+ yillik tajribaga ega Software Engineer va Backend Developer. 
-                Toshkent Axborot Texnologiyalari Universiteti Urganch filialini tamomlagan bo'lib, hozirda <strong>UZINFOCOM</strong> 
+                Men <strong>Rovshen Rejepbayevich Ashirov</strong>, <strong id="aboutExperience">4+</strong> yillik tajribaga ega Software Engineer va Backend Developer.
+                Toshkent Axborot Texnologiyalari Universiteti Urganch filialini tamomlagan bo'lib, hozirda <strong>UZINFOCOM</strong>
                 kompaniyasida Backend Developer sifatida faoliyat yuritmoqdaman.
             </p>
             <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;">
-                Karyeramda <strong>UZINFOCOM</strong> va <strong>Perspective Team</strong> kabi kompaniyalarda ishlagan holda, 
-                <strong>ScienceID</strong>, <strong>ScienceGate</strong>, <strong>Anjumanlar</strong>, <strong>Plagiat.uz</strong>, 
-                <strong>SLIB.uz</strong>, <strong>ROI.uz</strong>, <strong>EnergoNazorat</strong> kabi milliy darajadagi loyihalarni 
+                Karyeramda <strong>UZINFOCOM</strong> va <strong>Perspective Team</strong> kabi kompaniyalarda ishlagan holda,
+                <strong>ScienceID</strong>, <strong>ScienceGate</strong>, <strong>Anjumanlar</strong>, <strong>Plagiat.uz</strong>,
+                <strong>SLIB.uz</strong>, <strong>ROI.uz</strong>, <strong>EnergoNazorat</strong> kabi milliy darajadagi loyihalarni
                 muvaffaqiyatli amalga oshirganman. Bu loyihalar 10,000+ foydalanuvchiga xizmat ko'rsatmoqda.
             </p>
             <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;">
-                Asosiy yutuqlarim: <strong>OAuth2</strong> protokolini Django DRF'da implementatsiya qilish, <strong>OneID</strong> 
-                tizimi bilan integratsiya, <strong>35,000+</strong> ilmiy maqolalar bilan ishlaydigan platformalarni qo'llab-quvvatlash, 
+                Asosiy yutuqlarim: <strong>OAuth2</strong> protokolini Django DRF'da implementatsiya qilish, <strong>OneID</strong>
+                tizimi bilan integratsiya, <strong>35,000+</strong> ilmiy maqolalar bilan ishlaydigan platformalarni qo'llab-quvvatlash,
                 va <strong>microservices</strong> arxitektura asosida murakkab tizimlarni ishlab chiqish.
             </p>
             <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text-secondary);">
-                Texnologiyalar: <strong>Django, Laravel, Yii2, PostgreSQL, Redis, Celery, OAuth2, Microservices</strong> va boshqa 
-                zamonaviy texnologiyalar bilan ishlashda keng tajribaga egaman. Kelajakda <strong>Senior Backend Developer</strong> 
-                va <strong>Tech Lead</strong> bo'lish, shuningdek <strong>AI/ML</strong> sohasida o'z bilimlarimni rivojlantirish 
+                Texnologiyalar: <strong>Django, Laravel, Yii2, PostgreSQL, Redis, Celery, OAuth2, Microservices</strong> va boshqa
+                zamonaviy texnologiyalar bilan ishlashda keng tajribaga egaman. Kelajakda <strong>Senior Backend Developer</strong>
+                va <strong>Tech Lead</strong> bo'lish, shuningdek <strong>AI/ML</strong> sohasida o'z bilimlarimni rivojlantirish
                 maqsadiga egaman.
             </p>
         </div>
