@@ -1,17 +1,26 @@
 // Typing Animation
-document.addEventListener('DOMContentLoaded', function() {
+let typingTimeout = null;  // Global - to stop the old animation
+
+function initTyping() {
     const typingText = document.getElementById('typingText');
     if (!typingText) return;
 
-    const texts = [
-        'Backend Developer',
-        'Software Engineer',
-        'Django Expert',
-        'Laravel Specialist',
-        'Full-stack Developer',
-        'Microservices Architect',
-        'OAuth2 Specialist'
-    ];
+    // Stop old animation
+    if (typingTimeout) {
+        clearTimeout(typingTimeout);
+        typingTimeout = null;
+    }
+
+    // Get roles from i18n, default if not present
+    const texts = (window.i18n && window.i18n.getTranslation('hero.roles'))
+        || [
+            'Backend Developer',
+            'Software Engineer',
+            'Django Expert',
+            'Laravel Specialist',
+            'Full-stack Developer'
+        ];
+
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -28,15 +37,33 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (!isDeleting && charIndex === currentText.length) {
-            setTimeout(function() { isDeleting = true; }, 2000);
+            typingTimeout = setTimeout(function() {
+                isDeleting = true;
+                typingTimeout = setTimeout(type, 50);
+            }, 2000);
+            return;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             textIndex = (textIndex + 1) % texts.length;
         }
 
         const speed = isDeleting ? 50 : 100;
-        setTimeout(type, speed);
+        typingTimeout = setTimeout(type, speed);
     }
 
+    // Starting over
+    typingText.textContent = '';
     type();
+}
+
+// Waiting for hero.html to load
+document.addEventListener('component-loaded', function(e) {
+    if (e.detail.path.includes('hero.html')) {
+        initTyping();
+    }
+});
+
+// When the language changes - stop the old, start the new
+document.addEventListener('language-changed', function() {
+    initTyping();
 });

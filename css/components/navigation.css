@@ -125,3 +125,116 @@ nav.scrolled {
         display: block;
     }
 }
+
+.logo-image {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-primary);
+    transition: var(--transition);
+}
+
+.logo:hover .logo-image {
+    transform: scale(1.1) rotate(5deg);
+    border-color: var(--accent-secondary);
+}
+
+/* Language Selector */
+.language-selector {
+    position: relative;
+}
+
+.language-toggle {
+    background: var(--bg-tertiary);
+    border: none;
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: var(--transition);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.language-toggle:hover {
+    background: var(--accent-primary);
+    color: white;
+}
+
+.language-toggle .flag {
+    font-size: 1.2rem;
+}
+
+.language-toggle .lang-text {
+    font-weight: 600;
+}
+
+.language-toggle i {
+    font-size: 0.7rem;
+    transition: transform 0.3s;
+}
+
+.language-selector.active .language-toggle i {
+    transform: rotate(180deg);
+}
+
+.language-dropdown {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    right: 0;
+    background: var(--bg-secondary);
+    border: 2px solid var(--bg-tertiary);
+    border-radius: 12px;
+    padding: 0.5rem;
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: var(--transition);
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+}
+
+.language-selector.active .language-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.language-option:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.language-option.active {
+    background: var(--accent-primary);
+    color: white;
+}
+
+.language-option .flag {
+    font-size: 1.5rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 968px) {
+    .language-dropdown {
+        right: auto;
+        left: 0;
+    }
+}

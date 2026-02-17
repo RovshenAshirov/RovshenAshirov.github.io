@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "experience": "Experience",
+    "certificates": "Certificates",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "roles": [
+      "Backend Developer",
+      "Software Engineer",
+      "Django Expert",
+      "Laravel Specialist",
+      "Full-stack Developer"
+    ],
+    "description": "years of experience as a <b>Backend Software Engineer</b>. Extensive experience in building Uzbekistan's largest national scientific platforms.",
+    "btnContact": "Contact Me",
+    "btnProjects": "My Projects"
+  },
+  "stats": {
+    "experience": "Years Experience",
+    "projects": "Completed Projects",
+    "users": "Users",
+    "repos": "GitHub Repositories"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "My professional journey and achievements",
+    "p1": "I am <strong>Rovshen Rejepbayevich Ashirov</strong>, a Backend Software Engineer with <strong id=\"aboutExperience\">4+</strong> years of experience. I graduated from Tashkent University of Information Technologies Urgench branch and currently work as a Backend Software Engineer at <strong>UZINFOCOM</strong>.",
+    "p2": "Throughout my career at companies like <strong>UZINFOCOM</strong> and <strong>Perspective Team</strong>, I have successfully built national-level platforms including <strong>EnergoNazorat</strong>, <strong>ScienceID</strong>, <strong>ScienceGate</strong>, <strong>Anjumanlar</strong>, <strong>Plagiat.uz</strong>, <strong>SLIB.uz</strong>, <strong>ROI.uz</strong>. These platforms serve 10,000+ users.",
+    "p3": "Key achievements: implementing <strong>OAuth2</strong> protocol in Django DRF, integration with <strong>OneID</strong> system, supporting platforms with <strong>35,000+</strong> scientific articles, and building complex systems based on <strong>microservices</strong> architecture.",
+    "p4": "Technologies: extensive experience with <strong>Django, Laravel, Yii2, PostgreSQL, Redis, Celery, OAuth2, Microservices</strong> and other modern technologies."
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "subtitle": "Technologies and tools I work with"
+  }
+}

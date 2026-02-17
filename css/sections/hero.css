@@ -176,3 +176,23 @@
         font-size: 1rem;
     }
 }
+
+/* Code Window - Better Formatting */
+.code-content {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.875rem;
+    line-height: 0.7;
+    white-space: pre;  /* Preserve spaces! */
+    padding: 1rem;
+}
+
+.code-line {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+/* Fix indentation display */
+.code-content span {
+    white-space: pre;
+}

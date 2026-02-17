@@ -1,9 +1,8 @@
 // Counter Animation
-document.addEventListener('DOMContentLoaded', function() {
+function initStatsCounter() {
     const counters = document.querySelectorAll('.stat-number');
     if (counters.length === 0) return;
 
-    const speed = 200;
     let hasAnimated = false;
 
     function animateCounters() {
@@ -12,20 +11,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
         counters.forEach(function(counter) {
             const target = +counter.getAttribute('data-count');
-            const count = +counter.innerText;
-            const increment = target / speed;
+            let current = 0;
 
-            function updateCount() {
-                const current = +counter.innerText;
-                if (current < target) {
-                    counter.innerText = Math.ceil(current + increment);
-                    setTimeout(updateCount, 10);
+            // Slower: interval calculation based on target
+            const duration = 2000; // 2 second
+            const steps = 60;
+            const increment = target / steps;
+            const interval = duration / steps;
+
+            const timer = setInterval(function() {
+                current += increment;
+                if (current >= target) {
+                    counter.textContent = target.toLocaleString() + '+';
+                    clearInterval(timer);
                 } else {
-                    counter.innerText = target.toLocaleString();
+                    counter.textContent = Math.floor(current).toLocaleString() + '+';
                 }
-            }
-
-            updateCount();
+            }, interval);
         });
     }
 
@@ -42,5 +44,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }, { threshold: 0.3 });
 
         observer.observe(statsSection);
+    }
+}
+
+// Waiting for stats.html to load
+document.addEventListener('component-loaded', function(e) {
+    if (e.detail.path.includes('stats.html')) {
+        initStatsCounter();
     }
 });

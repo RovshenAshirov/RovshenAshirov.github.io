@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımda",
+    "skills": "Yetenekler",
+    "projects": "Projeler",
+    "experience": "Deneyim",
+    "certificates": "Sertifikalar",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "greeting": "Merhaba, ben",
+    "roles": [
+      "Backend Geliştirici",
+      "Yazılım Mühendisi",
+      "Django Uzmanı",
+      "Laravel Uzmanı",
+      "Full-stack Geliştirici"
+    ],
+    "description": "yıllık deneyime sahip <b>Backend Yazılım Mühendisi</b>. Özbekistan'ın en büyük ulusal bilimsel platformlarını oluşturmada kapsamlı deneyim.",
+    "btnContact": "İletişim",
+    "btnProjects": "Projelerim"
+  },
+  "stats": {
+    "experience": "Yıllık Deneyim",
+    "projects": "Tamamlanan Projeler",
+    "users": "Kullanıcılar",
+    "repos": "GitHub Depoları"
+  },
+  "about": {
+    "title": "Hakkımda",
+    "subtitle": "Profesyonel yolculuğum ve başarılarım",
+    "p1": "Ben <strong>Rovshen Rejepbayevich Ashirov</strong>, <strong id=\"aboutExperience\">4+</strong> yıllık deneyime sahip bir Backend Yazılım Mühendisiyim. Taşkent Bilgi Teknolojileri Üniversitesi Ürgench şubesinden mezun oldum ve şu anda <strong>UZINFOCOM</strong>'da Backend Software Engineer olarak çalışıyorum.",
+    "p2": "<strong>UZINFOCOM</strong> ve <strong>Perspective Team</strong> gibi şirketlerdeki kariyerim boyunca <strong>EnergoNazorat</strong>, <strong>ScienceID</strong>, <strong>ScienceGate</strong>, <strong>Anjumanlar</strong>, <strong>Plagiat.uz</strong>, <strong>SLIB.uz</strong>, <strong>ROI.uz</strong> gibi ulusal düzeyde projeleri başarıyla hayata geçirdim. Bu platformlar 10,000+ kullanıcıya hizmet vermektedir.",
+    "p3": "Temel başarılar: Django DRF'de <strong>OAuth2</strong> protokolünü uygulama, <strong>OneID</strong> sistemiyle entegrasyon, <strong>35,000+</strong> bilimsel makale içeren platformları destekleme ve <strong>mikroservis</strong> mimarisine dayalı karmaşık sistemler geliştirme.",
+    "p4": "Teknolojiler: <strong>Django, Laravel, Yii2, PostgreSQL, Redis, Celery, OAuth2, Microservices</strong> ve diğer modern teknolojilerle kapsamlı deneyim."
+  },
+  "skills": {
+    "title": "Teknik Yetenekler",
+    "subtitle": "Kullandığım teknolojiler ve araçlar"
+  }
+}

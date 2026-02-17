@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "home": "Главная",
+    "about": "Обо мне",
+    "skills": "Навыки",
+    "projects": "Проекты",
+    "experience": "Опыт",
+    "certificates": "Сертификаты",
+    "contact": "Контакты"
+  },
+  "hero": {
+    "greeting": "Привет, я",
+    "roles": [
+      "Backend-разработчик",
+      "Инженер-программист",
+      "Django эксперт",
+      "Laravel специалист",
+      "Full-stack разработчик"
+    ],
+    "description": "лет опыта работы <b>Backend Инженер-программист</b>. Обширный опыт создания крупнейших национальных научных платформ Узбекистана.",
+    "btnContact": "Связаться",
+    "btnProjects": "Мои проекты"
+  },
+  "stats": {
+    "experience": "Лет опыта",
+    "projects": "Завершенных проектов",
+    "users": "Пользователей",
+    "repos": "GitHub Репозитории"
+  },
+  "about": {
+    "title": "Обо мне",
+    "subtitle": "Мой профессиональный путь и достижения",
+    "p1": "Я <strong>Ровшен Режепбаевич Аширов</strong>, Backend Инженер-программист с <strong id=\"aboutExperience\">4+</strong> летним опытом работы. Окончил Ургенчский филиал Ташкентского университета информационных технологий, в настоящее время работаю Backend Software Engineer в <strong>UZINFOCOM</strong>.",
+    "p2": "За время карьеры в таких компаниях, как <strong>UZINFOCOM</strong> и <strong>Perspective Team</strong>, я успешно реализовал национальные проекты: <strong>EnergoNazorat</strong>, <strong>ScienceID</strong>, <strong>ScienceGate</strong>, <strong>Anjumanlar</strong>, <strong>Plagiat.uz</strong>, <strong>SLIB.uz</strong>, <strong>ROI.uz</strong>. Эти платформы обслуживают 10,000+ пользователей.",
+    "p3": "Ключевые достижения: реализация протокола <strong>OAuth2</strong> в Django DRF, интеграция с системой <strong>OneID</strong>, поддержка платформ с <strong>35,000+</strong> научными статьями и разработка сложных систем на основе архитектуры <strong>микросервисов</strong>.",
+    "p4": "Технологии: обширный опыт работы с <strong>Django, Laravel, Yii2, PostgreSQL, Redis, Celery, OAuth2, Microservices</strong> и другими современными технологиями."
+  },
+  "skills": {
+    "title": "Технические навыки",
+    "subtitle": "Технологии и инструменты которые я использую"
+  }
+}

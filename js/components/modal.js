@@ -1,13 +1,12 @@
 // Modal functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const modals = document.querySelectorAll('.modal');
-    const detailButtons = document.querySelectorAll('.btn-details');
-    const closeButtons = document.querySelectorAll('.modal-close');
-
+function initModals() {
     // Open modal
-    detailButtons.forEach(function(button) {
+    document.querySelectorAll('.btn-details').forEach(function(button) {
+        if (button._initialized) return;
+        button._initialized = true;
+
         button.addEventListener('click', function() {
-            const projectId = button.getAttribute('data-project');
+            const projectId = this.getAttribute('data-project');
             const modal = document.getElementById('modal-' + projectId);
             if (modal) {
                 modal.classList.add('active');
@@ -17,9 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Close modal
-    closeButtons.forEach(function(button) {
+    document.querySelectorAll('.modal-close').forEach(function(button) {
+        if (button._initialized) return;
+        button._initialized = true;
+
         button.addEventListener('click', function() {
-            const modal = button.closest('.modal');
+            const modal = this.closest('.modal');
             if (modal) {
                 modal.classList.remove('active');
                 document.body.style.overflow = 'auto';
@@ -27,23 +29,31 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Close on outside click
-    modals.forEach(function(modal) {
+    // Outside click
+    document.querySelectorAll('.modal').forEach(function(modal) {
+        if (modal._initialized) return;
+        modal._initialized = true;
+
         modal.addEventListener('click', function(e) {
-            if (e.target === modal) {
-                modal.classList.remove('active');
+            if (e.target === this) {
+                this.classList.remove('active');
                 document.body.style.overflow = 'auto';
             }
         });
     });
+}
 
     // Close on Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            modals.forEach(function(modal) {
-                modal.classList.remove('active');
-            });
-            document.body.style.overflow = 'auto';
-        }
-    });
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal.active').forEach(function(modal) {
+            modal.classList.remove('active');
+        });
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// Call initModals when each component is loaded
+document.addEventListener('component-loaded', function() {
+    initModals();
 });
