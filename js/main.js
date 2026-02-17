@@ -1,35 +1,23 @@
-// AOS init
+// Initialize AOS after DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS with better settings
     if (typeof AOS !== 'undefined') {
         AOS.init({
             duration: 800,
             once: true,
             offset: 50,
-            disable: 'mobile'
+            disable: 'mobile' // Disable on mobile for better performance
         });
     }
 });
 
-// Loading Screen - Waiting for loading.html to load
-document.addEventListener('component-loaded', function(e) {
-    if (e.detail.path.includes('loading.html')) {
-        window.addEventListener('load', function() {
-            const loadingScreen = document.getElementById('loadingScreen');
-            if (loadingScreen) {
-                setTimeout(function() {
-                    loadingScreen.classList.add('hidden');
-                }, 500);
-            }
-        });
-
-        // Fallback: load already exists
-        if (document.readyState === 'complete') {
-            const loadingScreen = document.getElementById('loadingScreen');
-            if (loadingScreen) {
-                setTimeout(function() {
-                    loadingScreen.classList.add('hidden');
-                }, 500);
-            }
-        }
+// Loading Screen - Hide after everything is loaded
+window.addEventListener('load', function() {
+    const loadingScreen = document.getElementById('loadingScreen');
+    if (loadingScreen) {
+        // Small delay to ensure smooth transition
+        setTimeout(function() {
+            loadingScreen.classList.add('hidden');
+        }, 500);
     }
 });
