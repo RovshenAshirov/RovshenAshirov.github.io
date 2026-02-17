@@ -38,5 +38,43 @@
   "skills": {
     "title": "Texnik Ko'nikmalar",
     "subtitle": "Ishlatadigan texnologiyalar va vositalar"
+  },
+  "modals": {
+    "common": {
+      "goal": "Maqsad",
+      "stats": "Statistika (20.02.2026)",
+      "role": "Mening Rollim",
+      "tech": "Texnologiyalar",
+      "integrations": "Integratsiyalar",
+      "features": "Asosiy Xususiyatlar",
+      "challenges": "Qiyinchiliklar",
+      "results": "Natijalar",
+      "links": "Havolalar",
+      "users": "Foydalanuvchi",
+      "male": "Erkak",
+      "female": "Ayol",
+      "degree": "Ilmiy Daraja",
+      "visit": "Saytga o'tish",
+      "github": "GitHub"
+    },
+    "scienceid": {
+      "title": "ScienceID - Ilmiy Identifikatsiya Tizimi",
+      "goal_text": "Science ID – ilmiy-innovatsion faoliyat bilan shug'ullanuvchi jismoniy shaxslarning identifikatsiya raqami. Milliy ilmiy ekotizimni raqamlashtirish va olimlarni yagona platformada birlashtirish.",
+      "role_items": [
+        "OAuth2 protokolini Django DRF'da implementatsiya qilish",
+        "OneID tizimi bilan integratsiya qilish va SSO funksiyasini yaratish",
+        "RESTful API'lar yaratish va foydalanuvchi ma'lumotlarini boshqarish",
+        "Ilmiy profillarni qo'llab-quvvatlash va boshqarish tizimlarini rivojlantirish",
+        "Boshqa platformalar uchun OAuth2 provider yaratish",
+        "ScienceGate platformasi bilan integratsiya"
+      ],
+      "integration_items": [
+        "ScienceGate - Olimlar portfolio platformasi",
+        "Anjumanlar - Ilmiy tadbirlar platformasi",
+        "eTaqriz - Taqrizchilar tizimi",
+        "SLIB.uz - Ilmiy kutubxona",
+        "ROI.uz - Raqamli identifikator"
+      ]
+    }
   }
 }

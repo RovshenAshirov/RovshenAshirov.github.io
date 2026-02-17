@@ -38,5 +38,43 @@
   "skills": {
     "title": "Technical Skills",
     "subtitle": "Technologies and tools I work with"
+  },
+  "modals": {
+    "common": {
+      "goal": "Purpose",
+      "stats": "Statistics (20.02.2026)",
+      "role": "My Role",
+      "tech": "Technologies",
+      "integrations": "Integrations",
+      "features": "Key Features",
+      "challenges": "Challenges",
+      "results": "Results",
+      "links": "Links",
+      "users": "Users",
+      "male": "Male",
+      "female": "Female",
+      "degree": "Academic Degree",
+      "visit": "Visit Site",
+      "github": "GitHub"
+    },
+    "scienceid": {
+      "title": "ScienceID - Scientific Identification System",
+      "goal_text": "Science ID is an identification number for individuals engaged in scientific and innovative activities. Digitalizing the national scientific ecosystem and uniting scientists on a single platform.",
+      "role_items": [
+        "Implementing OAuth2 protocol in Django DRF",
+        "Integrating OneID system and creating SSO functionality",
+        "Creating RESTful APIs and managing user data",
+        "Developing scientific profile support and management systems",
+        "Creating OAuth2 provider for other platforms",
+        "Integration with ScienceGate platform"
+      ],
+      "integration_items": [
+        "ScienceGate - Scientists portfolio platform",
+        "Anjumanlar - Scientific events platform",
+        "eTaqriz - Reviewers system",
+        "SLIB.uz - Scientific library",
+        "ROI.uz - Digital identifier"
+      ]
+    }
   }
 }

@@ -38,5 +38,43 @@
   "skills": {
     "title": "Teknik Yetenekler",
     "subtitle": "Kullandığım teknolojiler ve araçlar"
+  },
+  "modals": {
+    "common": {
+      "goal": "Amaç",
+      "stats": "İstatistikler (20.02.2026)",
+      "role": "Benim Rolüm",
+      "tech": "Teknolojiler",
+      "integrations": "Entegrasyonlar",
+      "features": "Temel Özellikler",
+      "challenges": "Zorluklar",
+      "results": "Sonuçlar",
+      "links": "Bağlantılar",
+      "users": "Kullanıcı",
+      "male": "Erkek",
+      "female": "Kadın",
+      "degree": "Akademik Derece",
+      "visit": "Siteyi Ziyaret Et",
+      "github": "GitHub"
+    },
+    "scienceid": {
+      "title": "ScienceID - Bilimsel Kimlik Sistemi",
+      "goal_text": "Science ID – bilimsel ve yenilikçi faaliyetlerle ilgilenen bireylerin kimlik numarası. Ulusal bilimsel ekosistemi dijitalleştirmek ve bilim insanlarını tek bir platformda bir araya getirmek.",
+      "role_items": [
+        "Django DRF'de OAuth2 protokolünü uygulama",
+        "OneID sistemiyle entegrasyon ve SSO işlevselliği oluşturma",
+        "RESTful API oluşturma ve kullanıcı verilerini yönetme",
+        "Bilimsel profil destek ve yönetim sistemleri geliştirme",
+        "Diğer platformlar için OAuth2 sağlayıcı oluşturma",
+        "ScienceGate platformuyla entegrasyon"
+      ],
+      "integration_items": [
+        "ScienceGate - Bilim insanları portföy platformu",
+        "Anjumanlar - Bilimsel etkinlikler platformu",
+        "eTaqriz - Hakemler sistemi",
+        "SLIB.uz - Bilimsel kütüphane",
+        "ROI.uz - Dijital tanımlayıcı"
+      ]
+    }
   }
 }

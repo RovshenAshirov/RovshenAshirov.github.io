@@ -212,3 +212,12 @@
         height: 250px;
     }
 }
+
+.modal-image {
+    cursor: zoom-in;
+    transition: opacity 0.3s;
+}
+
+.modal-image:hover {
+    opacity: 0.9;
+}

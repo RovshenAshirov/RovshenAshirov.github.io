@@ -53,7 +53,11 @@
     <script src="js/i18n.js"></script>
 </head>
 <body>
-    <rosh-component src="components/common/loading.html"></rosh-component>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+
     <rosh-component src="components/common/navigation.html"></rosh-component>
     <rosh-component src="components/sections/hero.html"></rosh-component>
     <rosh-component src="components/sections/stats.html"></rosh-component>
@@ -74,9 +78,6 @@
 
             <!-- eTaqriz -->
             <div class="project-card" data-aos="fade-up" data-aos-delay="250">
-                <div class="project-image">
-                    <img src="images/projects/etaqriz.jpg" alt="eTaqriz" onerror="this.style.background='var(--accent-gradient)'">
-                </div>
                 <div class="project-header">
                     <h3>eTaqriz</h3>
                     <p style="margin-top: 0.5rem; opacity: 0.9;">Taqrizchilar Platformasi</p>
@@ -113,9 +114,6 @@
 
             <!-- SLIB.uz -->
             <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="project-image">
-                    <img src="images/projects/slib.jpg" alt="SLIB.uz" onerror="this.style.background='var(--accent-gradient)'">
-                </div>
                 <div class="project-header">
                     <h3>SLIB.uz</h3>
                     <p style="margin-top: 0.5rem; opacity: 0.9;">O'zbekiston Ilmiy Kutubxonasi</p>
@@ -152,9 +150,6 @@
 
             <!-- ROI.uz -->
             <div class="project-card" data-aos="fade-up" data-aos-delay="350">
-                <div class="project-image">
-                    <img src="images/projects/roi.jpg" alt="ROI.uz" onerror="this.style.background='var(--accent-gradient)'">
-                </div>
                 <div class="project-header">
                     <h3>ROI.uz</h3>
                     <p style="margin-top: 0.5rem; opacity: 0.9;">Raqamli Obyekt Identifikatori</p>
@@ -191,9 +186,6 @@
 
             <!-- EnergoNazorat -->
             <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="project-image">
-                    <img src="images/projects/energonazorat.jpg" alt="EnergoNazorat" onerror="this.style.background='var(--accent-gradient)'">
-                </div>
                 <div class="project-header">
                     <h3>EnergoNazorat</h3>
                     <p style="margin-top: 0.5rem; opacity: 0.9;">Davlat Loyihasi</p>
@@ -227,9 +219,6 @@
 
             <!-- UzTransGaz SCADA -->
             <div class="project-card" data-aos="fade-up" data-aos-delay="450">
-                <div class="project-image">
-                    <img src="images/projects/uztransgaz.jpg" alt="UzTransGaz SCADA" onerror="this.style.background='var(--accent-gradient)'">
-                </div>
                 <div class="project-header">
                     <h3>UzTransGaz SCADA</h3>
                     <p style="margin-top: 0.5rem; opacity: 0.9;">SCADA Monitoring</p>
@@ -263,9 +252,6 @@
 
             <!-- Plagiat.uz -->
             <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                <div class="project-image">
-                    <img src="images/projects/plagiat.jpg" alt="Plagiat.uz" onerror="this.style.background='var(--accent-gradient)'">
-                </div>
                 <div class="project-header">
                     <h3>Plagiat.uz</h3>
                     <p style="margin-top: 0.5rem; opacity: 0.9;">Plagiat Tekshirish</p>
@@ -550,354 +536,18 @@
 
 <!-- ==================== MODALS START ==================== -->
 
-<rosh-component src="components/modals/scienceid-modal.html"></rosh-component>
-<rosh-component src="components/modals/sciencegate-modal.html"></rosh-component>
-<rosh-component src="components/modals/anjumanlar-modal.html"></rosh-component>
-
-
-
-
-
-<!-- eTaqriz Modal -->
-<div class="modal" id="modal-etaqriz">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <div class="modal-header">
-            <img src="images/projects/etaqriz.jpg" alt="eTaqriz" class="modal-image" onerror="this.style.background='var(--accent-gradient)'">
-            <h2>eTaqriz - Taqrizchilar Platformasi</h2>
-        </div>
-        <div class="modal-body">
-            <div class="modal-section">
-                <h3><i class="fas fa-bullseye"></i> Maqsad</h3>
-                <p>Ilmiy va o'quv-uslubiy ishlarni malakali mutaxassislar tomonidan puxta va xolis taqrizdan o'tkazish – tezkor, ishonchli va sifatli natija kafolati bilan. Ilmiy ishlar sifatini baholash va nashrga yaroqliligini aniqlash.</p>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-chart-line"></i> Statistika</h3>
-                <div class="modal-stats">
-                    <div class="modal-stat">
-                        <i class="fas fa-file-alt"></i>
-                        <span>2,280</span>
-                        <small>Taqriz</small>
-                    </div>
-                    <div class="modal-stat">
-                        <i class="fas fa-user-tie"></i>
-                        <span>79</span>
-                        <small>Taqrizchi</small>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-code"></i> Mening Rollim</h3>
-                <ul>
-                    <li>Laravel va Filament PHP yordamida zamonaviy admin panel yaratish</li>
-                    <li>Taqrizchilarni avtomatik tanlash va tayinlash tizimi</li>
-                    <li>Taqriz jarayonini to'liq avtomatlash va statuslarni kuzatish</li>
-                    <li>Email bildirishnomalar va real-time yangilanishlar</li>
-                    <li>ScienceID, Anjumanlar va SLIB bilan integratsiya</li>
-                </ul>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-tools"></i> Texnologiyalar</h3>
-                <div class="project-tech">
-                    <span class="tech-badge">Laravel</span>
-                    <span class="tech-badge">Filament PHP</span>
-                    <span class="tech-badge">PostgreSQL</span>
-                    <span class="tech-badge">Email System</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- SLIB Modal -->
-<div class="modal" id="modal-slib">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <div class="modal-header">
-            <img src="images/projects/slib.jpg" alt="SLIB.uz" class="modal-image" onerror="this.style.background='var(--accent-gradient)'">
-            <h2>SLIB.uz - O'zbekiston Ilmiy Kutubxonasi</h2>
-        </div>
-        <div class="modal-body">
-            <div class="modal-section">
-                <h3><i class="fas fa-bullseye"></i> Maqsad</h3>
-                <p>O'zbekiston Respublikasidagi ilmiy jurnallarni yagona raqamli platformada jamlash, maqolalarning to'liq va barqaror elektron arxivini shakllantirish hamda tadqiqotchilar uchun ishonchli milliy axborot bazasini yaratish.</p>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-chart-line"></i> Statistika</h3>
-                <div class="modal-stats">
-                    <div class="modal-stat">
-                        <i class="fas fa-book"></i>
-                        <span>345</span>
-                        <small>Jurnal</small>
-                    </div>
-                    <div class="modal-stat">
-                        <i class="fas fa-user-graduate"></i>
-                        <span>20,368</span>
-                        <small>Muallif</small>
-                    </div>
-                    <div class="modal-stat">
-                        <i class="fas fa-file-alt"></i>
-                        <span>35,339</span>
-                        <small>Maqola</small>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-code"></i> Mening Rollim</h3>
-                <ul>
-                    <li>Yii2 framework'da legacy tizimlarni refaktor qilish va modernizatsiya</li>
-                    <li>Maqola nashr qilish jarayonini 6 bosqichda avtomatlash</li>
-                    <li>Ochiq va yopiq maqolalar tizimini yaratish</li>
-                    <li>DOI, ROI va eTaqriz bilan integratsiya</li>
-                    <li>SRM (Scientific Resource Management) tizimini joriy etish</li>
-                    <li>Tahririyat-nashriyot jarayonlarini to'liq raqamlashtirish</li>
-                </ul>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-tools"></i> Texnologiyalar</h3>
-                <div class="project-tech">
-                    <span class="tech-badge">Yii2</span>
-                    <span class="tech-badge">PostgreSQL</span>
-                    <span class="tech-badge">SRM</span>
-                    <span class="tech-badge">DOI/ROI</span>
-                </div>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-list-ol"></i> Maqola Nashr Jarayoni</h3>
-                <ul>
-                    <li>Maqola topshirish</li>
-                    <li>Texnik ekspertiza (3-5 kun)</li>
-                    <li>Plagiatga tekshirish (2-3 kun)</li>
-                    <li>Taqriz bosqichi (10-15 kun)</li>
-                    <li>To'lov bosqichi (agar kerak bo'lsa)</li>
-                    <li>Yakuniy bosqich (7-10 kun)</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ROI Modal -->
-<div class="modal" id="modal-roi">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <div class="modal-header">
-            <img src="images/projects/roi.jpg" alt="ROI.uz" class="modal-image" onerror="this.style.background='var(--accent-gradient)'">
-            <h2>ROI.uz - Raqamli Obyekt Identifikatori</h2>
-        </div>
-        <div class="modal-body">
-            <div class="modal-section">
-                <h3><i class="fas fa-bullseye"></i> Maqsad</h3>
-                <p>ROI – raqamli obyekt identifikatori, axborot faoliyati obyektlarini belgilash uchun mo'ljallangan tizim. DOI va ZENODO'ning O'zbekistondagi analogi bo'lib, bir necha barobarga arzon. Ilmiy materiallarga doimiy identifikator berish.</p>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-chart-line"></i> Statistika</h3>
-                <div class="modal-stats">
-                    <div class="modal-stat">
-                        <i class="fas fa-hashtag"></i>
-                        <span>35,339+</span>
-                        <small>Identifikator</small>
-                    </div>
-                    <div class="modal-stat">
-                        <i class="fas fa-bolt"></i>
-                        <span>~236</span>
-                        <small>Soatiga Yangi ROI</small>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-code"></i> Mening Rollim</h3>
-                <ul>
-                    <li>Django va DRF asosida mikroservis arxitektura yaratish</li>
-                    <li>Avtomatik ROI generatsiya algoritmi ishlab chiqish</li>
-                    <li>40+ turdagi raqamli obyektlar uchun identifikator berish tizimi</li>
-                    <li>Nashriyotlar uchun API integratsiya imkoniyati</li>
-                    <li>H-index to'g'ri hisoblanishini kafolatlash</li>
-                    <li>Doimiy elektron arxiv va havola tizimi</li>
-                    <li>ScienceID, Anjumanlar va SLIB bilan integratsiya</li>
-                </ul>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-tools"></i> Texnologiyalar</h3>
-                <div class="project-tech">
-                    <span class="tech-badge">Django</span>
-                    <span class="tech-badge">DRF</span>
-                    <span class="tech-badge">Microservices</span>
-                    <span class="tech-badge">PostgreSQL</span>
-                </div>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-check-circle"></i> Afzalliklar</h3>
-                <ul>
-                    <li>Raqamli obyektni cheklanmagan muddatga saqlash</li>
-                    <li>Jurnal yopilsa ham material saqlanadi</li>
-                    <li>Unikal raqamlar orqali aniq identifikatsiya</li>
-                    <li>DOI'dan bir necha barobarga arzon</li>
-                    <li>Ishonchli milliy xizmat</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- EnergoNazorat Modal -->
-<div class="modal" id="modal-energonazorat">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <div class="modal-header">
-            <img src="images/projects/energonazorat.jpg" alt="EnergoNazorat" class="modal-image" onerror="this.style.background='var(--accent-gradient)'">
-            <h2>EnergoNazorat - Energiya Nazorati Tizimi</h2>
-        </div>
-        <div class="modal-body">
-            <div class="modal-section">
-                <h3><i class="fas fa-bullseye"></i> Maqsad</h3>
-                <p>Davlat loyihasi - energiya iste'molini monitoring qilish va nazorat qilish tizimi. Katta hajmdagi ma'lumotlarni yig'ish, qayta ishlash va tahlil qilish orqali energiya samaradorligini oshirish.</p>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-code"></i> Mening Rollim</h3>
-                <ul>
-                    <li>Microservice arxitektura asosida backend servislarni ishlab chiqish</li>
-                    <li>Katta hajmdagi ma'lumotlarni yig'ish, qayta ishlash va tekshirish</li>
-                    <li>Chart va diagrammalar orqali vizualizatsiya qilish</li>
-                    <li>django-q va cron task'lar orqali rejalashtirilgan jarayonlarni avtomatlash</li>
-                    <li>Excel integratsiyasi (o'qish va yozish)</li>
-                    <li>User role va permission tizimini ishlab chiqish</li>
-                    <li>Code review jarayonlarida ishtirok etish</li>
-                    <li>Vaqtincha Team Leader vazifasini bajarish</li>
-                </ul>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-tools"></i> Texnologiyalar</h3>
-                <div class="project-tech">
-                    <span class="tech-badge">Django</span>
-                    <span class="tech-badge">DRF</span>
-                    <span class="tech-badge">Celery</span>
-                    <span class="tech-badge">PostgreSQL</span>
-                    <span class="tech-badge">Redis</span>
-                    <span class="tech-badge">Excel</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- UzTransGaz SCADA Modal -->
-<div class="modal" id="modal-uztransgaz">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <div class="modal-header">
-            <img src="images/projects/uztransgaz.jpg" alt="UzTransGaz SCADA" class="modal-image" onerror="this.style.background='var(--accent-gradient)'">
-            <h2>UzTransGaz SCADA - SCADA Monitoring Tizimi</h2>
-        </div>
-        <div class="modal-body">
-            <div class="modal-section">
-                <h3><i class="fas fa-bullseye"></i> Maqsad</h3>
-                <p>Davlat loyihasi - gaz tarmoqlarini real-time monitoring qilish va boshqarish tizimi. SCADA (Supervisory Control And Data Acquisition) asosida ma'lumotlarni yig'ish va tahlil qilish.</p>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-code"></i> Mening Rollim</h3>
-                <ul>
-                    <li>Microservice arxitektura asosida backend servislarni ishlab chiqish</li>
-                    <li>Real-time monitoring va vizualizatsiya tizimlari yaratish</li>
-                    <li>Celery va cron task'lar orqali fon jarayonlarni avtomatlash</li>
-                    <li>Chart va diagrammalar orqali monitoring ma'lumotlarini vizualizatsiya</li>
-                    <li>MinIO service integratsiyasi orqali fayllarni boshqarish</li>
-                    <li>Vault yordamida maxfiy konfiguratsiyalarni xavfsiz boshqarish</li>
-                    <li>Redis orqali kesh va ishlash tezligini oshirish</li>
-                    <li>Loyihaning core module ishlab chiqishda ishtirok etish</li>
-                </ul>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-tools"></i> Texnologiyalar</h3>
-                <div class="project-tech">
-                    <span class="tech-badge">Django</span>
-                    <span class="tech-badge">DRF</span>
-                    <span class="tech-badge">Celery</span>
-                    <span class="tech-badge">MinIO</span>
-                    <span class="tech-badge">Vault</span>
-                    <span class="tech-badge">Redis</span>
-                    <span class="tech-badge">PostgreSQL</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Plagiat Modal -->
-<div class="modal" id="modal-plagiat">
-    <div class="modal-content">
-        <span class="modal-close">&times;</span>
-        <div class="modal-header">
-            <img src="images/projects/plagiat.jpg" alt="Plagiat.uz" class="modal-image" onerror="this.style.background='var(--accent-gradient)'">
-            <h2>Plagiat.uz - Plagiat Tekshirish Tizimi</h2>
-        </div>
-        <div class="modal-body">
-            <div class="modal-section">
-                <h3><i class="fas fa-bullseye"></i> Maqsad</h3>
-                <p>Plagiatga tekshirish va sun'iy intellekt yordamida yozilgan matnlarni aniqlash tizimi. Ilmiy ishlar sifatini nazorat qilish va originallikni ta'minlash.</p>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-chart-line"></i> Statistika</h3>
-                <div class="modal-stats">
-                    <div class="modal-stat">
-                        <i class="fas fa-database"></i>
-                        <span>5,375+</span>
-                        <small>Manbalar</small>
-                    </div>
-                    <div class="modal-stat">
-                        <i class="fas fa-file"></i>
-                        <span>6,263+</span>
-                        <small>Hujjat</small>
-                    </div>
-                    <div class="modal-stat">
-                        <i class="fas fa-chart-line"></i>
-                        <span>2+ mlrd</span>
-                        <small>Tekshirilgan</small>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-code"></i> Mening Rollim</h3>
-                <ul>
-                    <li>Ekspert va ekspert-admin rollarini yaratish</li>
-                    <li>Hujjat yuklash va xulosa olish jarayonini to'liq avtomatlash</li>
-                    <li>AI-generated text detection funksiyasini integratsiya qilish</li>
-                    <li>Narx nazorati tizimini joriy qilish</li>
-                    <li>Real-time plagiat tekshirish</li>
-                </ul>
-            </div>
-            
-            <div class="modal-section">
-                <h3><i class="fas fa-tools"></i> Texnologiyalar</h3>
-                <div class="project-tech">
-                    <span class="tech-badge">Laravel</span>
-                    <span class="tech-badge">AI Detection</span>
-                    <span class="tech-badge">PostgreSQL</span>
-                    <span class="tech-badge">Redis</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    <rosh-component src="components/modals/energonazorat-modal.html"></rosh-component>
+    <rosh-component src="components/modals/uztransgaz-scada-modal.html"></rosh-component>
+    <rosh-component src="components/modals/scienceid-modal.html"></rosh-component>
+    <rosh-component src="components/modals/sciencegate-modal.html"></rosh-component>
+    <rosh-component src="components/modals/anjumanlar-modal.html"></rosh-component>
+    <rosh-component src="components/modals/etaqriz-modal.html"></rosh-component>
+    <rosh-component src="components/modals/slib-modal.html"></rosh-component>
+    <rosh-component src="components/modals/roi-modal.html"></rosh-component>
+    <rosh-component src="components/modals/plagiat-modal.html"></rosh-component>
 
 <!-- ==================== MODALS END ==================== -->
+
     <!-- AOS Animation Script -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 
