@@ -1,0 +1,76 @@
+---
+const { title, description, lang } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang={lang}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="keywords" content="Software Engineer, Backend Developer, Django, Laravel, Python, PHP, Full-stack Developer, OAuth2, Microservices, Uzbekistan">
+    <meta name="author" content="Rovshen Ashirov">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rovshen Ashirov - Software Engineer Portfolio">
+    <meta property="og:description" content="4+ years experienced Backend Developer - Built 10+ national platforms serving 10,000+ users">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rovshen Ashirov - Software Engineer">
+    <meta name="twitter:description" content="Backend Developer specializing in Django & Laravel">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/profile/avatar.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/sections/hero.css">
+    <link rel="stylesheet" href="/css/sections/stats.css">
+    <link rel="stylesheet" href="/css/sections/about.css">
+    <link rel="stylesheet" href="/css/sections/skills.css">
+    <link rel="stylesheet" href="/css/sections/projects.css">
+    <link rel="stylesheet" href="/css/sections/experience.css">
+    <link rel="stylesheet" href="/css/sections/certificates.css">
+    <link rel="stylesheet" href="/css/sections/contact.css">
+    <link rel="stylesheet" href="/css/sections/footer.css">
+    <link rel="stylesheet" href="/css/components/navigation.css">
+    <link rel="stylesheet" href="/css/components/modal.css">
+    <link rel="stylesheet" href="/css/components/project-card.css">
+    <link rel="stylesheet" href="/css/components/lightbox.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+
+    <slot />
+
+    <!-- AOS Animation Script -->
+    <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script is:inline src="/js/main.js"></script>
+    <script is:inline src="/js/sections/experience.js"></script>
+    <script is:inline src="/js/sections/theme.js"></script>
+    <script is:inline src="/js/sections/navigation.js"></script>
+    <script is:inline src="/js/sections/hero.js"></script>
+    <script is:inline src="/js/sections/stats.js"></script>
+    <script is:inline src="/js/sections/language.js"></script>
+    <script is:inline src="/js/components/modal.js"></script>
+    <script is:inline src="/js/components/certificates.js"></script>
+</body>
+</html>

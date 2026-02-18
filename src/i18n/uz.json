@@ -1,0 +1,80 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Men haqimda",
+    "skills": "Ko'nikmalar",
+    "projects": "Loyihalar",
+    "experience": "Tajriba",
+    "certificates": "Sertifikatlar",
+    "contact": "Bog'lanish"
+  },
+  "hero": {
+    "greeting": "Salom, men",
+    "roles": [
+      "Backend Developer",
+      "Software Engineer",
+      "Django Expert",
+      "Laravel Specialist",
+      "Full-stack Developer"
+    ],
+    "description": "yillik tajribaga ega <b>Backend Software Engineer</b>. O'zbekistonning eng yirik milliy ilmiy platformalarini yaratishda keng tajribaga egaman.",
+    "btnContact": "Bog'lanish",
+    "btnProjects": "Loyihalarim"
+  },
+  "stats": {
+    "experience": "Yillik Tajriba",
+    "projects": "Tugallangan Loyihalar",
+    "users": "Foydalanuvchilar",
+    "repos": "GitHub Repositories"
+  },
+  "about": {
+    "title": "Men Haqimda",
+    "subtitle": "Professional yo'lim va yutuqlarim",
+    "p1": "Men <strong>Rovshen Rejepbayevich Ashirov</strong>, <strong id=\"aboutExperience\">4+</strong> yillik tajribaga ega Backend Software Engineer. Toshkent Axborot Texnologiyalari Universiteti Urganch filialini tamomlagan bo'lib, hozirda <strong>UZINFOCOM</strong> kompaniyasida Backend Software Engineer sifatida faoliyat yuritmoqdaman.",
+    "p2": "Karyeramda <strong>UZINFOCOM</strong> va <strong>Perspective Team</strong> kabi kompaniyalarda ishlagan holda, <strong>EnergoNazorat</strong>, <strong>ScienceID</strong>, <strong>ScienceGate</strong>, <strong>Anjumanlar</strong>, <strong>Plagiat.uz</strong>, <strong>SLIB.uz</strong>, <strong>ROI.uz</strong> kabi milliy darajadagi loyihalarni muvaffaqiyatli amalga oshirganman. Bu loyihalar 10,000+ foydalanuvchiga xizmat ko'rsatmoqda.",
+    "p3": "Asosiy yutuqlarim: <strong>OAuth2</strong> protokolini Django DRF'da implementatsiya qilish, <strong>OneID</strong> tizimi bilan integratsiya, <strong>35,000+</strong> ilmiy maqolalar bilan ishlaydigan platformalarni qo'llab-quvvatlash, va <strong>microservices</strong> arxitektura asosida murakkab tizimlarni ishlab chiqish.",
+    "p4": "Texnologiyalar: <strong>Django, Laravel, Yii2, PostgreSQL, Redis, Celery, OAuth2, Microservices</strong> va boshqa zamonaviy texnologiyalar bilan ishlashda keng tajribaga egaman."
+  },
+  "skills": {
+    "title": "Texnik Ko'nikmalar",
+    "subtitle": "Ishlatadigan texnologiyalar va vositalar"
+  },
+  "modals": {
+    "common": {
+      "goal": "Maqsad",
+      "stats": "Statistika (20.02.2026)",
+      "role": "Mening Rollim",
+      "tech": "Texnologiyalar",
+      "integrations": "Integratsiyalar",
+      "features": "Asosiy Xususiyatlar",
+      "challenges": "Qiyinchiliklar",
+      "results": "Natijalar",
+      "links": "Havolalar",
+      "users": "Foydalanuvchi",
+      "male": "Erkak",
+      "female": "Ayol",
+      "degree": "Ilmiy Daraja",
+      "visit": "Saytga o'tish",
+      "github": "GitHub"
+    },
+    "scienceid": {
+      "title": "ScienceID - Ilmiy Identifikatsiya Tizimi",
+      "goal_text": "Science ID – ilmiy-innovatsion faoliyat bilan shug'ullanuvchi jismoniy shaxslarning identifikatsiya raqami. Milliy ilmiy ekotizimni raqamlashtirish va olimlarni yagona platformada birlashtirish.",
+      "role_items": [
+        "OAuth2 protokolini Django DRF'da implementatsiya qilish",
+        "OneID tizimi bilan integratsiya qilish va SSO funksiyasini yaratish",
+        "RESTful API'lar yaratish va foydalanuvchi ma'lumotlarini boshqarish",
+        "Ilmiy profillarni qo'llab-quvvatlash va boshqarish tizimlarini rivojlantirish",
+        "Boshqa platformalar uchun OAuth2 provider yaratish",
+        "ScienceGate platformasi bilan integratsiya"
+      ],
+      "integration_items": [
+        "ScienceGate - Olimlar portfolio platformasi",
+        "Anjumanlar - Ilmiy tadbirlar platformasi",
+        "eTaqriz - Taqrizchilar tizimi",
+        "SLIB.uz - Ilmiy kutubxona",
+        "ROI.uz - Raqamli identifikator"
+      ]
+    }
+  }
+}

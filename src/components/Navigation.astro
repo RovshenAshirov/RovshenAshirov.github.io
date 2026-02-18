@@ -1,0 +1,61 @@
+---
+const { t, currentLang } = Astro.props;
+
+const languages = [
+  { code: 'uz', flag: '🇺🇿', name: "O'zbekcha", url: '/' },
+  { code: 'ru', flag: '🇷🇺', name: 'Русский', url: '/ru/' },
+  { code: 'en', flag: '🇬🇧', name: 'English', url: '/en/' },
+  { code: 'tr', flag: '🇹🇷', name: 'Türkçe', url: '/tr/' }
+];
+
+const currentLangData = languages.find(l => l.code === currentLang);
+console.log(t)
+console.log(currentLang)
+---
+
+<!-- Navigation -->
+<nav id="navbar">
+    <div class="nav-container">
+        <div class="logo">
+            <img src="/images/profile/avatar.png" alt="RA" class="logo-image">
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">{t.nav.home}</a></li>
+            <li><a href="#about">{t.nav.about}</a></li>
+            <li><a href="#skills">{t.nav.skills}</a></li>
+            <li><a href="#projects">{t.nav.projects}</a></li>
+            <li><a href="#experience">{t.nav.experience}</a></li>
+            <li><a href="#certificates">{t.nav.certificates}</a></li>
+            <li><a href="#contact">{t.nav.contact}</a></li>
+        </ul>
+        <div style="display: flex; gap: 1rem; align-items: center;">
+            <!-- Language Selector -->
+            <div class="language-selector">
+                <button class="language-toggle" id="languageToggle">
+                    <span class="flag">{currentLangData?.flag}</span>
+                    <span class="lang-text">{currentLang.toUpperCase()}</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="language-dropdown" id="languageDropdown">
+                    {languages.map(lang => (
+                        <a
+                            href={lang.url}
+                            class={`language-option ${lang.code === currentLang ? 'active' : ''}`}
+                            data-lang={lang.code}
+                        >
+                            <span class="flag">{lang.flag}</span>
+                            <span>{lang.name}</span>
+                        </a>
+                    ))}
+                </div>
+            </div>
+
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </div>
+</nav>
