@@ -5,6 +5,9 @@ on:
     branches:
       - dev  # yoki master branch
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
