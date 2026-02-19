@@ -3,6 +3,8 @@ import Layout from '../../layouts/Layout.astro';
 import Navigation from '../../components/common/Navigation.astro';
 import Hero from '../../components/sections/Hero.astro';
 import Stats from "../../components/sections/Stats.astro";
+import About from "../../components/sections/About.astro";
+import Skills from "../../components/sections/Skills.astro";
 import en from '../../i18n/en.json';
 
 
@@ -12,4 +14,6 @@ const currentLang = 'en';
     <Navigation t={en} currentLang={currentLang}/>
     <Hero t={en}/>
     <Stats t={en}/>
+    <About t={en}/>
+    <Skills t={en}/>
 </Layout>

@@ -1,0 +1,26 @@
+---
+const { t } = Astro.props;
+---
+
+<!-- About Section -->
+<section class="container" id="about">
+    <div class="section-title" data-aos="fade-up">
+        <h2><span class="gradient-text">{t.about.title}</span></h2>
+        <p>{t.about.subtitle}</p>
+    </div>
+    <div style="background: var(--bg-secondary); padding: 3rem; border-radius: 16px; border: 2px solid var(--bg-tertiary);"
+         data-aos="fade-up">
+        <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;"
+           set:html={t.about.p1}>
+        </p>
+        <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;"
+           set:html={t.about.p2}>
+        </p>
+        <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 2rem;"
+           set:html={t.about.p3}>
+        </p>
+        <p style="font-size: 1.125rem; line-height: 1.8; color: var(--text-secondary);"
+           set:html={t.about.p4}>
+        </p>
+    </div>
+</section>

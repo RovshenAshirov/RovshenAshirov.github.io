@@ -1,0 +1,62 @@
+---
+const { t } = Astro.props;
+
+const skillCategories = [
+    {
+        icon: 'fas fa-layer-group',
+        title: 'Frontend Development',
+        delay: 100,
+        skills: ['JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'jQuery']
+    },
+    {
+        icon: 'fas fa-code',
+        title: 'Backend Development',
+        delay: 200,
+        skills: ['Python', 'Django', 'Django REST Framework', 'PHP', 'Laravel', 'Yii2', 'Filament PHP', 'Laravel Nova', 'Laravel Livewire']
+    },
+    {
+        icon: 'fas fa-database',
+        title: 'Database & Caching',
+        delay: 300,
+        skills: ['PostgreSQL', 'MySQL', 'Redis', 'Query Optimization', 'Database Design']
+    },
+    {
+        icon: 'fas fa-tasks',
+        title: 'Project Management',
+        delay: 400,
+        skills: ['Jira', 'Trello', 'Agile', 'Team Leadership', 'Code Review']
+    },
+    {
+        icon: 'fas fa-tools',
+        title: 'DevOps & Tools',
+        delay: 500,
+        skills: ['Git', 'GitHub', 'GitLab', 'Linux', 'Docker', 'Celery', 'MinIO', 'Vault']
+    },
+    {
+        icon: 'fas fa-robot',
+        title: 'Additional Skills',
+        delay: 600,
+        skills: ['OAuth2', 'Telegram Bots', 'Aiogram', 'RESTful APIs', 'Microservices', 'Code Refactoring', 'Clean Code']
+    },
+];
+---
+
+<!-- Skills Section -->
+<section class="container" id="skills">
+    <div class="section-title" data-aos="fade-up">
+        <h2><span class="gradient-text">{t.skills.title}</span></h2>
+        <p>{t.skills.subtitle}</p>
+    </div>
+    <div class="skills-grid">
+        {skillCategories.map(category => (
+            <div class="skill-category" data-aos="fade-up" data-aos-delay={category.delay}>
+                <h3><i class={category.icon}></i> {category.title}</h3>
+                <div class="skills-list">
+                    {category.skills.map(skill => (
+                        <span class="skill-tag">{skill}</span>
+                    ))}
+                </div>
+            </div>
+        ))}
+    </div>
+</section>
