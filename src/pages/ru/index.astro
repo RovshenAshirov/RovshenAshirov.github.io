@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Hero from '../../components/Hero.astro';
+import ru from '../../i18n/ru.json';
+const currentLang = 'ru';
+---
+<Layout title="Rovshen Ashirov - Portfolio" description="Backend Developer" lang="ru">
+    <Navigation t={ru} currentLang={currentLang}/>
+    <Hero t={ru} />
+</Layout>
