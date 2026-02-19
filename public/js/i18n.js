@@ -1,14 +1,24 @@
+// i18n - Internationalization System (Astro optimized)
 const i18n = {
     currentLang: 'uz',
     translations: {},
 
+    // Initialize i18n
     init: function(lang) {
+        if (window._i18nInitialized) return;
+        window._i18nInitialized = true;
+
         const savedLang = localStorage.getItem('language') || lang || 'uz';
+        this.currentLang = savedLang;
+        
+        // Load translations for dynamic features (typing animation, etc.)
         this.loadLanguage(savedLang);
     },
 
+    // Load translation file
     loadLanguage: function(lang) {
-        fetch(`translations/${lang}.json`)
+        // Astro SSG: content already rendered, just load for dynamic features
+        fetch(`/translations/${lang}.json`)
             .then(res => {
                 if (!res.ok) throw new Error('Translation file not found');
                 return res.json();
@@ -17,7 +27,8 @@ const i18n = {
                 this.translations = data;
                 this.currentLang = lang;
                 localStorage.setItem('language', lang);
-                this.translatePage();
+                
+                // Dispatch event for dynamic features
                 document.dispatchEvent(new CustomEvent('language-changed', {
                     detail: { lang: lang, translations: data }
                 }));
@@ -28,27 +39,14 @@ const i18n = {
             });
     },
 
-    translatePage: function() {
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            const translation = this.getTranslation(key);
-            if (translation === null || typeof translation === 'object') return;
-
-            if (typeof translation === 'string' && translation.includes('<')) {
-                el.innerHTML = translation;
-            } else {
-                el.textContent = translation;
-            }
-        });
-    },
-
-    // Array index ham ishlaydi: "modals.scienceid.role_items.0"
+    // Get translation value
     getTranslation: function(key) {
         const keys = key.split('.');
         let value = this.translations;
+        
         for (let k of keys) {
             if (value === null || value === undefined) return null;
-            // Array index
+            // Array index support
             if (Array.isArray(value) && !isNaN(k)) {
                 value = value[parseInt(k)];
             } else if (value[k] !== undefined) {
@@ -60,15 +58,56 @@ const i18n = {
         return value;
     },
 
+    // Change language (redirect to appropriate page)
     changeLanguage: function(lang) {
         if (lang !== this.currentLang) {
-            this.loadLanguage(lang);
+            // Astro SSG: redirect to language page
+            const urls = {
+                'uz': '/',
+                'en': '/en/',
+                'ru': '/ru/',
+                'tr': '/tr/'
+            };
+            
+            if (urls[lang]) {
+                localStorage.setItem('language', lang);
+                window.location.href = urls[lang];
+            }
         }
     }
 };
 
-document.addEventListener('component-loaded', function() {
-    setTimeout(function() { i18n.translatePage(); }, 100);
+// Initialize on page load
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get current language from URL
+        const path = window.location.pathname;
+        let currentLang = 'uz';
+        if (path.startsWith('/en')) currentLang = 'en';
+        else if (path.startsWith('/ru')) currentLang = 'ru';
+        else if (path.startsWith('/tr')) currentLang = 'tr';
+        
+        i18n.init(currentLang);
+    });
+} else {
+    const path = window.location.pathname;
+    let currentLang = 'uz';
+    if (path.startsWith('/en')) currentLang = 'en';
+    else if (path.startsWith('/ru')) currentLang = 'ru';
+    else if (path.startsWith('/tr')) currentLang = 'tr';
+    
+    i18n.init(currentLang);
+}
+
+// Re-run on Astro page transitions
+document.addEventListener('astro:page-load', function() {
+    const path = window.location.pathname;
+    let currentLang = 'uz';
+    if (path.startsWith('/en')) currentLang = 'en';
+    else if (path.startsWith('/ru')) currentLang = 'ru';
+    else if (path.startsWith('/tr')) currentLang = 'tr';
+    
+    i18n.init(currentLang);
 });
 
 // Export for global use

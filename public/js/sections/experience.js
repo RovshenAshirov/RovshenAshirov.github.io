@@ -32,7 +32,12 @@ function updateExperience() {
     if (codeExperience) codeExperience.textContent = exp.display + '+ years';
 }
 
-// Update every time a component is loaded
-document.addEventListener('component-loaded', function() {
+// Initialize on page load (Astro SSG: all sections already rendered)
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', updateExperience);
+} else {
     updateExperience();
-});
+}
+
+// Re-run on Astro page transitions
+document.addEventListener('astro:page-load', updateExperience);

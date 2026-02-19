@@ -56,14 +56,17 @@ function initTyping() {
     type();
 }
 
-// Waiting for hero.html to load
-document.addEventListener('component-loaded', function(e) {
-    if (e.detail.path.includes('hero.html')) {
-        initTyping();
-    }
-});
+// Initialize on page load (Astro SSG: hero already rendered)
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTyping);
+} else {
+    initTyping();
+}
 
-// When the language changes - stop the old, start the new
+// When i18n loads (for typing texts)
 document.addEventListener('language-changed', function() {
     initTyping();
 });
+
+// Re-run on Astro page transitions
+document.addEventListener('astro:page-load', initTyping);

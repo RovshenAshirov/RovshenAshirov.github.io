@@ -19,43 +19,23 @@ function initLanguageSelector() {
         }
     });
 
-    // Language option click - port to i18n
+    // Language option click - Astro SSG: just redirect
     document.querySelectorAll('.language-option').forEach(function(option) {
+        // Already has href attribute from Navigation.astro
+        // No need to add click handler - let the link work naturally
         option.addEventListener('click', function(e) {
-            e.preventDefault();
-            const lang = this.getAttribute('data-lang');
             languageSelector.classList.remove('active');
-
-            // Language switching via i18n
-            if (window.i18n) {
-                window.i18n.changeLanguage(lang);
-            }
+            // href will handle the navigation
         });
     });
 }
 
-// waiting for navigation.html to load
-document.addEventListener('component-loaded', function(e) {
-    if (e.detail.path.includes('navigation.html')) {
-        initLanguageSelector();
-    }
-});
+// Initialize on page load (Astro SSG: navigation already rendered)
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLanguageSelector);
+} else {
+    initLanguageSelector();
+}
 
-// UI update when language changes
-document.addEventListener('language-changed', function(e) {
-    const lang = e.detail.lang;
-
-    const flags = { 'uz': '🇺🇿', 'ru': '🇷🇺', 'en': '🇬🇧', 'tr': '🇹🇷' };
-    const langTexts = { 'uz': 'UZ', 'ru': 'RU', 'en': 'EN', 'tr': 'TR' };
-
-    // Toggle button update
-    const flagEl = document.querySelector('.language-toggle .flag');
-    const textEl = document.querySelector('.language-toggle .lang-text');
-    if (flagEl) flagEl.textContent = flags[lang];
-    if (textEl) textEl.textContent = langTexts[lang];
-
-    // Active state update
-    document.querySelectorAll('.language-option').forEach(function(option) {
-        option.classList.toggle('active', option.getAttribute('data-lang') === lang);
-    });
-});
+// Re-run on Astro page transitions
+document.addEventListener('astro:page-load', initLanguageSelector);
