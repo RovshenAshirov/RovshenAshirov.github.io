@@ -14,7 +14,7 @@ function initStatsCounter() {
             let current = 0;
 
             // Slower: interval calculation based on target
-            const duration = 2000; // 2 second
+            const duration = 2000; // 2 seconds
             const steps = 60;
             const increment = target / steps;
             const interval = duration / steps;
@@ -47,9 +47,15 @@ function initStatsCounter() {
     }
 }
 
-// Waiting for stats.html to load
-document.addEventListener('component-loaded', function(e) {
-    if (e.detail.path.includes('stats.html')) {
-        initStatsCounter();
-    }
+// Initialize on page load (Astro SSG: stats section already rendered)
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initStatsCounter);
+} else {
+    initStatsCounter();
+}
+
+// Re-run on Astro page transitions
+document.addEventListener('astro:page-load', function() {
+    // Reset animation flag for new page
+    initStatsCounter();
 });

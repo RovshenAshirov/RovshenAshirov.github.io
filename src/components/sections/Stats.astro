@@ -1,0 +1,22 @@
+---
+const { t } = Astro.props;
+
+const stats = [
+    { id: 'statExperience', count: 4, label: t.stats.experience, delay: 100 },
+    { count: 15, label: t.stats.projects, delay: 200 },
+    { count: 10000, label: t.stats.users, delay: 300 },
+    { count: 100, label: t.stats.repos, delay: 400 }
+];
+---
+
+<!-- Stats Section -->
+<section class="stats">
+    <div class="stats-container">
+        {stats.map(stat => (
+            <div class="stat-card" data-aos="fade-up" data-aos-delay={stat.delay}>
+                <div class="stat-number" id={stat.id} data-count={stat.count}>0</div>
+                <div class="stat-label">{stat.label}</div>
+            </div>
+        ))}
+    </div>
+</section>

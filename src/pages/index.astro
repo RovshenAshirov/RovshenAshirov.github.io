@@ -1,7 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Navigation from '../components/sections/Navigation.astro';
-import Hero from '../components/common/Hero.astro';
+import Navigation from '../components/common/Navigation.astro';
+import Hero from '../components/sections/Hero.astro';
+import Stats from '../components/sections/Stats.astro';
 import uz from '../i18n/uz.json';
 
 
@@ -9,5 +10,6 @@ const currentLang = 'uz';
 ---
 <Layout title="Rovshen Ashirov - Portfolio" description="Backend Developer" lang="uz">
     <Navigation t={uz} currentLang={currentLang}/>
-    <Hero t={uz} />
+    <Hero t={uz}/>
+    <Stats t={uz}/>
 </Layout>
