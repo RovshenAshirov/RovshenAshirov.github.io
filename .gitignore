@@ -1,2 +1,5 @@
+.astro/
 .idea/
 node_modules/
+src/env.d.ts
+package-lock.json
