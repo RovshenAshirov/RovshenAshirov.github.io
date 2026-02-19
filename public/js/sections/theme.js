@@ -26,9 +26,12 @@ function initTheme() {
     }
 }
 
-// waiting for navigation.html to load
-document.addEventListener('component-loaded', function(e) {
-    if (e.detail.path.includes('navigation.html')) {
-        initTheme();
-    }
-});
+// Initialize on page load (Astro SSG: navigation already rendered)
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTheme);
+} else {
+    initTheme();
+}
+
+// Re-run on Astro page transitions
+document.addEventListener('astro:page-load', initTheme);
