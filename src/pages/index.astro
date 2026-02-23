@@ -5,6 +5,8 @@ import Hero from '../components/sections/Hero.astro';
 import Stats from '../components/sections/Stats.astro';
 import About from "../components/sections/About.astro";
 import Skills from "../components/sections/Skills.astro";
+import Projects from "../components/sections/Projects.astro";
+import ProjectsModal from "../components/sections/ProjectsModal.astro";
 import uz from '../i18n/uz.json';
 
 
@@ -16,4 +18,12 @@ const currentLang = 'uz';
     <Stats t={uz}/>
     <About t={uz}/>
     <Skills t={uz}/>
+    <Projects t={uz}/>
+
+<!-- ==================== MODALS START ==================== -->
+
+    <ProjectsModal t={uz}/>
+
+<!-- ==================== MODALS END ==================== -->
+
 </Layout>

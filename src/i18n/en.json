@@ -39,41 +39,320 @@
     "title": "Technical Skills",
     "subtitle": "Technologies and tools I work with"
   },
+  "projects": {
+    "title": "Major Projects",
+    "subtitle": "My largest projects I participated in",
+    "btnDetails": "Details",
+    "btnView": "View",
+    "uztransgaz": {
+      "subtitle": "Gas Infrastructure SCADA Platform",
+      "stat1": "Real-time",
+      "stat2": "Active",
+      "description": "National monitoring system developed based on Presidential Decree. Real-time control of main gas pipelines, dispatching management and gas transmission system modernization."
+    },
+    "energonazorat": {
+      "subtitle": "Digital Energy Control System",
+      "stat1": "Energy monitoring",
+      "stat2": "Active",
+      "description": "National platform created based on Presidential Decree. Real-time monitoring of energy resources, detection of illegal consumption and ensuring public control."
+    },
+    "scienceid": {
+      "subtitle": "Scientific Identification System",
+      "stat1": "4,000+ users",
+      "stat2": "Active",
+      "description": "National identification platform for individuals engaged in scientific and innovative activities. With OAuth2 and OneID integration."
+    },
+    "sciencegate": {
+      "subtitle": "Scientific Evaluation Platform",
+      "stat1": "Scientists platform",
+      "stat2": "Restricted",
+      "description": "Portfolio for scientists, academic and pedagogical activity rating."
+    },
+    "anjumanlar": {
+      "subtitle": "Scientific Events Platform",
+      "stat1": "1,500+ users",
+      "stat2": "3,600+ conferences",
+      "description": "Gathering all scientific conferences in the republic on one platform"
+    },
+    "etaqriz": {
+      "subtitle": "Reviewers Platform",
+      "stat1": "2,280+ reviews",
+      "stat2": "79+ reviewers",
+      "description": "System for reviewing scientific works by qualified experts. Fast and quality service."
+    },
+    "slib": {
+      "subtitle": "Uzbekistan Scientific Library",
+      "stat1": "345+ journals",
+      "stat2": "35,000+ articles",
+      "description": "National scientific journals and articles platform. With SRM system."
+    },
+    "roi": {
+      "subtitle": "Digital Object Identifier",
+      "stat1": "35,339+ ROI",
+      "stat2": "~236/hour",
+      "description": "Uzbekistan analog of DOI and ZENODO. Digital identifier for scientific materials."
+    },
+    "plagiat": {
+      "subtitle": "Plagiarism Detection",
+      "stat1": "5,000+ sources",
+      "stat2": "6,000+ documents",
+      "description": "Plagiarism detection and AI-generated text detection. 2+ billion checked data."
+    }
+  },
   "modals": {
     "common": {
-      "goal": "Purpose",
+      "goal": "Goal",
       "stats": "Statistics (20.02.2026)",
       "role": "My Role",
       "tech": "Technologies",
       "integrations": "Integrations",
-      "features": "Key Features",
-      "challenges": "Challenges",
-      "results": "Results",
-      "links": "Links",
-      "users": "Users",
-      "male": "Male",
-      "female": "Female",
-      "degree": "Academic Degree",
-      "visit": "Visit Site",
-      "github": "GitHub"
+      "audience": "Audience",
+      "process": "Publishing Process",
+      "advantages": "Advantages"
+    },
+    "uztransgaz": {
+      "subtitle": "SCADA Monitoring System",
+      "goal": "Within the framework of the 2020-2024 State Investment Program, modernize main gas pipelines and implement SCADA (Supervisory Control and Data Acquisition) system. Increase the capacity of the gas transmission system, introduce modern energy-saving technologies and reduce polluting emissions into the atmosphere.",
+      "role": [
+        "Developing backend services based on microservice architecture",
+        "Creating APIs using Django and Django Rest Framework",
+        "Integration with external services",
+        "Creating real-time monitoring and visualization systems",
+        "Automating background processes through Celery and cron tasks",
+        "Visualizing monitoring data through charts and diagrams",
+        "File management through MinIO service integration",
+        "Secure management of confidential configurations using Vault",
+        "Improving cache and performance through Redis",
+        "Developing custom permissions and user role system",
+        "Writing large and complex queries in PostgreSQL, optimization",
+        "Participating in the development of the project's core module",
+        "Participating in code review processes",
+        "Temporarily performing Team Leader duties"
+      ]
+    },
+    "energonazorat": {
+      "subtitle": "Digital Energy Control System",
+      "goal": "Based on the Presidential Decree (PF-5421, 18.04.2023), strengthen state control over the use of fuel and energy resources and implement the \"digital energy control\" system. Prevent cases of plundering of energy resources, ensure public control and ensure the inevitability of responsibility for persons who violate legal requirements.",
+      "role": [
+        "Developing backend services using Django and Django REST Framework based on microservice architecture",
+        "Collecting, processing large amounts of data, generating reports",
+        "Integration with external services",
+        "Automating scheduled processes through django-q and cron tasks",
+        "Visualization through charts and diagrams",
+        "Excel integration (reading and writing)",
+        "File management through MinIO service",
+        "Writing complex and large queries in PostgreSQL and optimization",
+        "Participating in the development process of the project's base package (core module)",
+        "Participating in code review processes",
+        "Temporarily performing Team Leader duties"
+      ]
     },
     "scienceid": {
-      "title": "ScienceID - Scientific Identification System",
-      "goal_text": "Science ID is an identification number for individuals engaged in scientific and innovative activities. Digitalizing the national scientific ecosystem and uniting scientists on a single platform.",
-      "role_items": [
-        "Implementing OAuth2 protocol in Django DRF",
-        "Integrating OneID system and creating SSO functionality",
-        "Creating RESTful APIs and managing user data",
-        "Developing scientific profile support and management systems",
-        "Creating OAuth2 provider for other platforms",
-        "Integration with ScienceGate platform"
+      "subtitle": "Scientific Identification System",
+      "goal": "Science ID is an identification number for individuals engaged in scientific and innovative activities.",
+      "stats": [
+        {
+          "icon": "fas fa-users",
+          "value": "4,184+",
+          "label": "Users"
+        },
+        {
+          "icon": "fas fa-male",
+          "value": "2,242+",
+          "label": "Male"
+        },
+        {
+          "icon": "fas fa-female",
+          "value": "1,942+",
+          "label": "Female"
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "value": "830+",
+          "label": "Academic Degree"
+        }
       ],
-      "integration_items": [
+      "role": [
+        "Implementing OAuth2 protocol in Django DRF",
+        "Integration with OneID system and creating SSO functionality",
+        "Creating RESTful APIs and managing user data",
+        "Developing systems for supporting and managing scientific profiles",
+        "Creating OAuth2 provider for other platforms"
+      ],
+      "integrations": [
         "ScienceGate - Scientists portfolio platform",
         "Anjumanlar - Scientific events platform",
         "eTaqriz - Reviewers system",
         "SLIB.uz - Scientific library",
         "ROI.uz - Digital identifier"
+      ]
+    },
+    "sciencegate": {
+      "subtitle": "Scientific Evaluation Platform",
+      "goal": "Portfolio for scientists, academic and pedagogical activity rating. Platform integrated with ScienceID.",
+      "role": [
+        "Creating backend APIs based on Django DRF",
+        "H-index calculation algorithms",
+        "Managing scientific publications and activity data",
+        "Integration with ScienceID"
+      ]
+    },
+    "anjumanlar": {
+      "subtitle": "Scientific Events Platform",
+      "goal": "Gathering all scientific conferences in our republic on one platform and creating a special automated web platform for organizations. Platform for scientific and scientific-technical events held at international and republican level.",
+      "stats": [
+        {
+          "icon": "fas fa-users",
+          "value": "1,580+",
+          "label": "Users"
+        },
+        {
+          "icon": "fas fa-building",
+          "value": "329+",
+          "label": "Organizations"
+        },
+        {
+          "icon": "fas fa-calendar",
+          "value": "3,690+",
+          "label": "Conferences"
+        },
+        {
+          "icon": "fas fa-file-alt",
+          "value": "1,376+",
+          "label": "Articles/Abstracts"
+        }
+      ],
+      "role": [
+        "Creating real-time updating interface using Laravel and Livewire",
+        "Managing conferences and automatic registration of participants",
+        "Creating and customizing admin panel with Laravel Nova",
+        "Uploading, managing articles and abstracts and tracking statuses",
+        "Full integration with ScienceID, DOI, ROI, Savodxonlik and eTaqriz",
+        "Full automation of conference holding process"
+      ],
+      "audience": [
+        "Teachers-professors",
+        "Scientific researchers",
+        "Scientific staff",
+        "Student-masters"
+      ]
+    },
+    "etaqriz": {
+      "subtitle": "Reviewers Platform",
+      "goal": "Conducting scientific and educational-methodical works through thorough and impartial review by qualified specialists - with guarantee of fast, reliable and quality result. Assessing the quality of scientific works and determining their suitability for publication.",
+      "stats": [
+        {
+          "icon": "fas fa-file-alt",
+          "value": "2,280+",
+          "label": "Reviews"
+        },
+        {
+          "icon": "fas fa-user-tie",
+          "value": "79+",
+          "label": "Reviewers"
+        }
+      ],
+      "role": [
+        "Creating modern admin panel using Laravel and Filament PHP",
+        "Automatic selection and assignment system for reviewers",
+        "Full automation of review process and status tracking",
+        "Email notifications and real-time updates",
+        "Integration with ScienceID, Anjumanlar and SLIB"
+      ]
+    },
+    "slib": {
+      "subtitle": "Uzbekistan Scientific Library",
+      "goal": "Gathering scientific journals of the Republic of Uzbekistan on a single digital platform, forming a complete and stable electronic archive of articles and creating a reliable national information base for researchers.",
+      "stats": [
+        {
+          "icon": "fas fa-book",
+          "value": "345+",
+          "label": "Journals"
+        },
+        {
+          "icon": "fas fa-user-graduate",
+          "value": "20,368+",
+          "label": "Authors"
+        },
+        {
+          "icon": "fas fa-file-alt",
+          "value": "35,339+",
+          "label": "Articles"
+        }
+      ],
+      "role": [
+        "Refactoring and modernizing old systems in Yii2 framework",
+        "Automating article publishing process in 6 stages",
+        "Creating open and closed articles system",
+        "Integration with DOI, ROI and eTaqriz",
+        "Implementing SRM (Scientific Resource Management) system",
+        "Full digitalization of editorial-publishing processes"
+      ],
+      "process": [
+        "Article submission",
+        "Technical expertise (3-5 days)",
+        "Plagiarism check (2-3 days)",
+        "Review stage (10-15 days)",
+        "Payment stage (if necessary)",
+        "Final stage (7-10 days)"
+      ]
+    },
+    "roi": {
+      "subtitle": "Digital Object Identifier",
+      "goal": "ROI is a digital object identifier, a system designed to identify information activity objects. It is the Uzbek analogue of DOI and ZENODO, several times cheaper. Providing permanent identifiers for scientific materials.",
+      "stats": [
+        {
+          "icon": "fas fa-hashtag",
+          "value": "35,339+",
+          "label": "Identifiers"
+        },
+        {
+          "icon": "fas fa-bolt",
+          "value": "~236",
+          "label": "New ROI per Hour"
+        }
+      ],
+      "role": [
+        "Creating architecture based on Django and DRF",
+        "Custom writing Django admin",
+        "Developing automatic ROI generation algorithm",
+        "Identifier system for 40+ types of digital objects",
+        "API integration capability for publishers",
+        "Permanent electronic archive and link system",
+        "Integration with ScienceID, Anjumanlar and SLIB"
+      ],
+      "advantages": [
+        "Storing digital object for unlimited period",
+        "Material is preserved even if journal closes",
+        "Accurate identification through unique numbers",
+        "Several times cheaper than DOI",
+        "Reliable national service"
+      ]
+    },
+    "plagiat": {
+      "subtitle": "Plagiarism Detection System",
+      "goal": "System for plagiarism detection and identifying texts written with the help of artificial intelligence. Controlling the quality of scientific works and ensuring originality.",
+      "stats": [
+        {
+          "icon": "fas fa-database",
+          "value": "5,375+",
+          "label": "Sources"
+        },
+        {
+          "icon": "fas fa-file",
+          "value": "6,263+",
+          "label": "Documents"
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "value": "2+ bln",
+          "label": "Checked"
+        }
+      ],
+      "role": [
+        "Creating expert and expert-admin roles",
+        "Full automation of document upload and conclusion process",
+        "Implementing price control system"
       ]
     }
   }

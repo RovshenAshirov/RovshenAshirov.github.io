@@ -39,41 +39,320 @@
     "title": "Teknik Yetenekler",
     "subtitle": "Kullandığım teknolojiler ve araçlar"
   },
+  "projects": {
+    "title": "Önemli Projeler",
+    "subtitle": "Katıldığım en büyük projeler",
+    "btnDetails": "Detaylar",
+    "btnView": "Görüntüle",
+    "uztransgaz": {
+      "subtitle": "Gaz Altyapısı SCADA Platformu",
+      "stat1": "Gerçek zamanlı",
+      "stat2": "Aktif",
+      "description": "Cumhurbaşkanlığı Kararnamesi temelinde geliştirilen ulusal izleme sistemi. Ana gaz boru hatlarının gerçek zamanlı kontrolü, sevk yönetimi ve gaz iletim sisteminin modernizasyonu."
+    },
+    "energonazorat": {
+      "subtitle": "Dijital Enerji Kontrol Sistemi",
+      "stat1": "Enerji izleme",
+      "stat2": "Aktif",
+      "description": "Cumhurbaşkanlığı Kararnamesi temelinde oluşturulan ulusal platform. Enerji kaynaklarının gerçek zamanlı izlenmesi, yasadışı tüketimin tespiti ve kamu denetiminin sağlanması."
+    },
+    "scienceid": {
+      "subtitle": "Bilimsel Kimlik Sistemi",
+      "stat1": "4,000+ kullanıcı",
+      "stat2": "Aktif",
+      "description": "Bilimsel ve yenilikçi faaliyetlerle uğraşan kişiler için ulusal kimlik platformu. OAuth2 ve OneID entegrasyonu ile."
+    },
+    "sciencegate": {
+      "subtitle": "Bilimsel Değerlendirme Platformu",
+      "stat1": "Bilim insanları platformu",
+      "stat2": "Kısıtlı",
+      "description": "Bilim insanları için portföy, akademik ve pedagojik faaliyet derecelendirmesi."
+    },
+    "anjumanlar": {
+      "subtitle": "Bilimsel Etkinlikler Platformu",
+      "stat1": "1,500+ kullanıcı",
+      "stat2": "3,600+ konferans",
+      "description": "Cumhuriyetteki tüm bilimsel konferansları tek platformda toplama"
+    },
+    "etaqriz": {
+      "subtitle": "Hakemler Platformu",
+      "stat1": "2,280+ inceleme",
+      "stat2": "79+ hakem",
+      "description": "Bilimsel çalışmaların nitelikli uzmanlar tarafından incelenmesi sistemi. Hızlı ve kaliteli hizmet."
+    },
+    "slib": {
+      "subtitle": "Özbekistan Bilimsel Kütüphanesi",
+      "stat1": "345+ dergi",
+      "stat2": "35,000+ makale",
+      "description": "Ulusal bilimsel dergiler ve makaleler platformu. SRM sistemi ile."
+    },
+    "roi": {
+      "subtitle": "Dijital Nesne Tanımlayıcı",
+      "stat1": "35,339+ ROI",
+      "stat2": "~236/saat",
+      "description": "DOI ve ZENODO'nun Özbekistan analogu. Bilimsel materyaller için dijital tanımlayıcı."
+    },
+    "plagiat": {
+      "subtitle": "İntihal Tespiti",
+      "stat1": "5,000+ kaynak",
+      "stat2": "6,000+ belge",
+      "description": "İntihal tespiti ve AI tarafından oluşturulan metin tespiti. 2+ milyar kontrol edilen veri."
+    }
+  },
   "modals": {
     "common": {
       "goal": "Amaç",
       "stats": "İstatistikler (20.02.2026)",
-      "role": "Benim Rolüm",
+      "role": "Rolüm",
       "tech": "Teknolojiler",
       "integrations": "Entegrasyonlar",
-      "features": "Temel Özellikler",
-      "challenges": "Zorluklar",
-      "results": "Sonuçlar",
-      "links": "Bağlantılar",
-      "users": "Kullanıcı",
-      "male": "Erkek",
-      "female": "Kadın",
-      "degree": "Akademik Derece",
-      "visit": "Siteyi Ziyaret Et",
-      "github": "GitHub"
+      "audience": "Hedef Kitle",
+      "process": "Yayın Süreci",
+      "advantages": "Avantajlar"
+    },
+    "uztransgaz": {
+      "subtitle": "SCADA İzleme Sistemi",
+      "goal": "2020-2024 Devlet Yatırım Programı çerçevesinde ana gaz boru hatlarını modernize etmek ve SCADA (Supervisory Control and Data Acquisition) sistemini uygulamak. Gaz iletim sisteminin kapasitesini artırmak, modern enerji tasarruflu teknolojileri uygulamak ve atmosfere kirletici emisyonları azaltmak.",
+      "role": [
+        "Mikro hizmet mimarisine dayalı backend hizmetleri geliştirme",
+        "Django ve Django Rest Framework kullanarak API'ler oluşturma",
+        "Harici hizmetlerle entegrasyon",
+        "Gerçek zamanlı izleme ve görselleştirme sistemleri oluşturma",
+        "Celery ve cron görevleri aracılığıyla arka plan süreçlerini otomatikleştirme",
+        "Grafikler ve diyagramlar aracılığıyla izleme verilerini görselleştirme",
+        "MinIO hizmet entegrasyonu aracılığıyla dosya yönetimi",
+        "Vault kullanarak gizli yapılandırmaların güvenli yönetimi",
+        "Redis aracılığıyla önbellek ve performansı iyileştirme",
+        "Özel izinler ve kullanıcı rolü sistemini geliştirme",
+        "PostgreSQL'de büyük ve karmaşık sorgular yazma, optimizasyon",
+        "Projenin core modülünün geliştirilmesine katılma",
+        "Code review süreçlerine katılma",
+        "Geçici olarak Team Leader görevini yerine getirme"
+      ]
+    },
+    "energonazorat": {
+      "subtitle": "Dijital Enerji Kontrol Sistemi",
+      "goal": "Cumhurbaşkanlığı Kararnamesi (PF-5421, 18.04.2023) temelinde yakıt ve enerji kaynaklarının kullanımı üzerinde devlet kontrolünü güçlendirmek ve \"dijital enerji kontrolü\" sistemini uygulamak. Enerji kaynaklarının yağmalanması vakalarını önlemek, kamu kontrolünü sağlamak ve yasal gereksinimleri ihlal eden kişiler için sorumluluğun kaçınılmazlığını sağlamak.",
+      "role": [
+        "Mikro hizmet mimarisine dayalı Django ve Django REST Framework kullanarak backend hizmetleri geliştirme",
+        "Büyük miktarda veri toplama, işleme, rapor oluşturma",
+        "Harici hizmetlerle entegrasyon",
+        "django-q ve cron görevleri aracılığıyla zamanlanmış süreçleri otomatikleştirme",
+        "Grafikler ve diyagramlar aracılığıyla görselleştirme",
+        "Excel entegrasyonu (okuma ve yazma)",
+        "MinIO hizmeti aracılığıyla dosya yönetimi",
+        "PostgreSQL'de karmaşık ve büyük sorgular yazma ve optimizasyon",
+        "Projenin temel paketinin (core modül) geliştirilme sürecine katılma",
+        "Code review süreçlerine katılma",
+        "Geçici olarak Team Leader görevini yerine getirme"
+      ]
     },
     "scienceid": {
-      "title": "ScienceID - Bilimsel Kimlik Sistemi",
-      "goal_text": "Science ID – bilimsel ve yenilikçi faaliyetlerle ilgilenen bireylerin kimlik numarası. Ulusal bilimsel ekosistemi dijitalleştirmek ve bilim insanlarını tek bir platformda bir araya getirmek.",
-      "role_items": [
-        "Django DRF'de OAuth2 protokolünü uygulama",
-        "OneID sistemiyle entegrasyon ve SSO işlevselliği oluşturma",
-        "RESTful API oluşturma ve kullanıcı verilerini yönetme",
-        "Bilimsel profil destek ve yönetim sistemleri geliştirme",
-        "Diğer platformlar için OAuth2 sağlayıcı oluşturma",
-        "ScienceGate platformuyla entegrasyon"
+      "subtitle": "Bilimsel Kimlik Sistemi",
+      "goal": "Science ID – bilimsel ve yenilikçi faaliyetlerle uğraşan gerçek kişilerin kimlik numarasıdır.",
+      "stats": [
+        {
+          "icon": "fas fa-users",
+          "value": "4,184+",
+          "label": "Kullanıcı"
+        },
+        {
+          "icon": "fas fa-male",
+          "value": "2,242+",
+          "label": "Erkek"
+        },
+        {
+          "icon": "fas fa-female",
+          "value": "1,942+",
+          "label": "Kadın"
+        },
+        {
+          "icon": "fas fa-graduation-cap",
+          "value": "830+",
+          "label": "Akademik Derece"
+        }
       ],
-      "integration_items": [
+      "role": [
+        "Django DRF'de OAuth2 protokolünü uygulama",
+        "OneID sistemi ile entegrasyon ve SSO işlevselliğini oluşturma",
+        "RESTful API'ler oluşturma ve kullanıcı verilerini yönetme",
+        "Bilimsel profilleri destekleme ve yönetme sistemleri geliştirme",
+        "Diğer platformlar için OAuth2 sağlayıcı oluşturma"
+      ],
+      "integrations": [
         "ScienceGate - Bilim insanları portföy platformu",
         "Anjumanlar - Bilimsel etkinlikler platformu",
         "eTaqriz - Hakemler sistemi",
         "SLIB.uz - Bilimsel kütüphane",
         "ROI.uz - Dijital tanımlayıcı"
+      ]
+    },
+    "sciencegate": {
+      "subtitle": "Bilimsel Değerlendirme Platformu",
+      "goal": "Bilim insanları için portföy, akademik ve pedagojik faaliyet derecelendirmesi. ScienceID ile entegre platform.",
+      "role": [
+        "Django DRF tabanlı backend API'leri oluşturma",
+        "H-index hesaplama algoritmaları",
+        "Bilimsel yayınlar ve faaliyet verilerini yönetme",
+        "ScienceID ile entegrasyon"
+      ]
+    },
+    "anjumanlar": {
+      "subtitle": "Bilimsel Etkinlikler Platformu",
+      "goal": "Cumhuriyetimizdeki tüm bilimsel konferansları tek platformda toplama ve kuruluşlar için özel otomatik web platformu oluşturma. Uluslararası ve cumhuriyet düzeyinde düzenlenen bilimsel ve bilimsel-teknik etkinlikler platformu.",
+      "stats": [
+        {
+          "icon": "fas fa-users",
+          "value": "1,580+",
+          "label": "Kullanıcı"
+        },
+        {
+          "icon": "fas fa-building",
+          "value": "329+",
+          "label": "Organizasyon"
+        },
+        {
+          "icon": "fas fa-calendar",
+          "value": "3,690+",
+          "label": "Konferans"
+        },
+        {
+          "icon": "fas fa-file-alt",
+          "value": "1,376+",
+          "label": "Makale/Bildiri"
+        }
+      ],
+      "role": [
+        "Laravel ve Livewire kullanarak gerçek zamanlı güncellemeli arayüz oluşturma",
+        "Konferansları yönetme ve katılımcıların otomatik kaydı",
+        "Laravel Nova ile yönetici paneli oluşturma ve özelleştirme",
+        "Makale ve bildirileri yükleme, yönetme ve durumları izleme",
+        "ScienceID, DOI, ROI, Savodxonlik ve eTaqriz ile tam entegrasyon",
+        "Konferans düzenleme sürecinin tam otomasyonu"
+      ],
+      "audience": [
+        "Öğretim görevlileri-profesörler",
+        "Bilimsel araştırmacılar",
+        "Bilimsel personel",
+        "Öğrenci-yüksek lisans öğrencileri"
+      ]
+    },
+    "etaqriz": {
+      "subtitle": "Hakemler Platformu",
+      "goal": "Bilimsel ve eğitim-metodolojik çalışmaların nitelikli uzmanlar tarafından kapsamlı ve tarafsız incelenmesi - hızlı, güvenilir ve kaliteli sonuç garantisi ile. Bilimsel çalışmaların kalitesini değerlendirme ve yayın için uygunluğunu belirleme.",
+      "stats": [
+        {
+          "icon": "fas fa-file-alt",
+          "value": "2,280+",
+          "label": "İnceleme"
+        },
+        {
+          "icon": "fas fa-user-tie",
+          "value": "79+",
+          "label": "Hakem"
+        }
+      ],
+      "role": [
+        "Laravel ve Filament PHP kullanarak modern yönetici paneli oluşturma",
+        "Hakemlerin otomatik seçimi ve atama sistemi",
+        "İnceleme sürecinin tam otomasyonu ve durum takibi",
+        "Email bildirimleri ve gerçek zamanlı güncellemeler",
+        "ScienceID, Anjumanlar ve SLIB ile entegrasyon"
+      ]
+    },
+    "slib": {
+      "subtitle": "Özbekistan Bilimsel Kütüphanesi",
+      "goal": "Özbekistan Cumhuriyeti'nin bilimsel dergilerini tek bir dijital platformda toplama, makalelerin eksiksiz ve istikrarlı elektronik arşivini oluşturma ve araştırmacılar için güvenilir ulusal bilgi tabanı oluşturma.",
+      "stats": [
+        {
+          "icon": "fas fa-book",
+          "value": "345+",
+          "label": "Dergi"
+        },
+        {
+          "icon": "fas fa-user-graduate",
+          "value": "20,368+",
+          "label": "Yazar"
+        },
+        {
+          "icon": "fas fa-file-alt",
+          "value": "35,339+",
+          "label": "Makale"
+        }
+      ],
+      "role": [
+        "Yii2 framework'ünde eski sistemleri yeniden düzenleme ve modernizasyon",
+        "Makale yayınlama sürecini 6 aşamada otomatikleştirme",
+        "Açık ve kapalı makaleler sistemi oluşturma",
+        "DOI, ROI ve eTaqriz ile entegrasyon",
+        "SRM (Scientific Resource Management) sistemini uygulama",
+        "Editoryal-yayın süreçlerinin tam dijitalleştirilmesi"
+      ],
+      "process": [
+        "Makale gönderimi",
+        "Teknik inceleme (3-5 gün)",
+        "İntihal kontrolü (2-3 gün)",
+        "Hakem aşaması (10-15 gün)",
+        "Ödeme aşaması (gerekirse)",
+        "Son aşama (7-10 gün)"
+      ]
+    },
+    "roi": {
+      "subtitle": "Dijital Nesne Tanımlayıcı",
+      "goal": "ROI – dijital nesne tanımlayıcı, bilgi faaliyeti nesnelerini tanımlamak için tasarlanmış bir sistemdir. DOI ve ZENODO'nun Özbekistan analogu olup, birkaç kat daha ucuzdur. Bilimsel materyaller için kalıcı tanımlayıcılar sağlama.",
+      "stats": [
+        {
+          "icon": "fas fa-hashtag",
+          "value": "35,339+",
+          "label": "Tanımlayıcı"
+        },
+        {
+          "icon": "fas fa-bolt",
+          "value": "~236",
+          "label": "Saatte Yeni ROI"
+        }
+      ],
+      "role": [
+        "Django ve DRF tabanlı mimari oluşturma",
+        "Django admin'i özel yazma",
+        "Otomatik ROI üretim algoritması geliştirme",
+        "40+ dijital nesne türü için tanımlayıcı sistemi",
+        "Yayıncılar için API entegrasyon imkanı",
+        "Kalıcı elektronik arşiv ve bağlantı sistemi",
+        "ScienceID, Anjumanlar ve SLIB ile entegrasyon"
+      ],
+      "advantages": [
+        "Dijital nesneyi sınırsız süre saklama",
+        "Dergi kapansa bile materyal korunur",
+        "Benzersiz numaralar aracılığıyla kesin tanımlama",
+        "DOI'den birkaç kat daha ucuz",
+        "Güvenilir ulusal hizmet"
+      ]
+    },
+    "plagiat": {
+      "subtitle": "İntihal Tespit Sistemi",
+      "goal": "İntihal kontrolü ve yapay zeka yardımıyla yazılan metinleri tespit eden sistem. Bilimsel çalışmaların kalitesini kontrol etme ve özgünlüğü sağlama.",
+      "stats": [
+        {
+          "icon": "fas fa-database",
+          "value": "5,375+",
+          "label": "Kaynak"
+        },
+        {
+          "icon": "fas fa-file",
+          "value": "6,263+",
+          "label": "Belge"
+        },
+        {
+          "icon": "fas fa-chart-line",
+          "value": "2+ mlyr",
+          "label": "Kontrol Edildi"
+        }
+      ],
+      "role": [
+        "Uzman ve uzman-admin rollerini oluşturma",
+        "Belge yükleme ve sonuç alma sürecinin tam otomasyonu",
+        "Fiyat kontrol sistemini uygulama"
       ]
     }
   }

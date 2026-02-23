@@ -85,7 +85,12 @@ document.addEventListener('keydown', function (e) {
     }
 });
 
-// Call initModals when each component is loaded
-document.addEventListener('component-loaded', function () {
+// Initialize on page load (Astro SSG: hero already rendered)
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initModals);
+} else {
     initModals();
-});
+}
+
+// Re-run on Astro page transitions
+document.addEventListener('astro:page-load', initModals);

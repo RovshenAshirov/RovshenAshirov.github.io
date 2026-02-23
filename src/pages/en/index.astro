@@ -5,6 +5,8 @@ import Hero from '../../components/sections/Hero.astro';
 import Stats from "../../components/sections/Stats.astro";
 import About from "../../components/sections/About.astro";
 import Skills from "../../components/sections/Skills.astro";
+import Projects from "../../components/sections/Projects.astro";
+import ProjectsModal from "../../components/sections/ProjectsModal.astro";
 import en from '../../i18n/en.json';
 
 
@@ -16,4 +18,12 @@ const currentLang = 'en';
     <Stats t={en}/>
     <About t={en}/>
     <Skills t={en}/>
+    <Projects t={en}/>
+
+<!-- ==================== MODALS START ==================== -->
+
+    <ProjectsModal t={en}/>
+
+<!-- ==================== MODALS END ==================== -->
+
 </Layout>

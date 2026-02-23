@@ -1,0 +1,296 @@
+---
+const { t } = Astro.props;
+
+const modals = [
+    {
+        id: "uztransgaz",
+        title: "UzTransGaz SCADA",
+        subtitle: t.modals?.uztransgaz?.subtitle || "Gaz Infratuzilmasi SCADA Platformasi",
+        goal: t.modals?.uztransgaz?.goal || "2020-2024 yillar Davlat Investitsiya Dasturi doirasida magistral gaz quvurlarini modernizatsiya qilish va SCADA (Supervisory Control and Data Acquisition) tizimini joriy etish. Gaz uzatish tizimining o'tkazuvchanligini oshirish, zamonaviy energiya tejaydigan texnologiyalarni joriy etish va atmosferaga ifloslantiruvchi chiqindilarni kamaytirish.",
+        role: t.modals?.uztransgaz?.role || [
+            "Microservice arxitektura asosida backend servislarni ishlab chiqish",
+            "Django va Django Rest Framework yordamida API'lar yaratish",
+            "Tashqi servislar bilan integratsiya qilish",
+            "Real-time monitoring va vizualizatsiya tizimlari yaratish",
+            "Celery va cron task'lar orqali fon jarayonlarni avtomatlash",
+            "Chart va diagrammalar orqali monitoring ma'lumotlarini vizualizatsiya",
+            "MinIO service integratsiyasi orqali fayllarni boshqarish",
+            "Vault yordamida maxfiy konfiguratsiyalarni xavfsiz boshqarish",
+            "Redis orqali kesh va ishlash tezligini oshirish",
+            "Custom permission'lar va user role tizimini ishlab chiqish",
+            "PostgreSQL'da katta va murakkab so'rovlarni yozish, optimizatsiya qilish",
+            "Loyihaning core module ishlab chiqishda ishtirok etish",
+            "Code review jarayonlarida ishtirok etish",
+            "Vaqtincha Team Leader vazifasini bajarish"
+        ],
+        tech: ["Django", "Django Rest Framework", "Celery", "MinIO", "Vault", "Redis", "PostgreSQL"]
+    },
+    {
+        id: "energonazorat",
+        title: "EnergoNazorat",
+        subtitle: t.modals?.energonazorat?.subtitle || "Raqamli Energiya Nazorat tizimi",
+        goal: t.modals?.energonazorat?.goal || "Prezident Farmoni (PF-5421, 18.04.2023) asosida yoqilg'i-energiya resurslaridan foydalanish ustidan davlat nazoratini kuchaytirish va \"raqamli energonazorat\" tizimini joriy etish. Energiya resurslarini talon-toroj qilish holatlarining oldini olish, jamoatchilik nazoratini ta'minlash va qonun talablarini buzgan shaxslarga nisbatan javobgarlik muqarrarligini ta'minlash.",
+        role: t.modals?.energonazorat?.role || [
+            "Microservice arxitektura asosida Django va Django REST Framework yordamida backend servislarni ishlab chiqish",
+            "Katta hajmdagi ma'lumotlarni yig'ish, qayta ishlash, hisobotlar chiqarish",
+            "Tashqi servislar bilan integratsiya qilish",
+            "django-q va cron task'lar orqali rejalashtirilgan jarayonlarni avtomatlash",
+            "Chart va diagrammalar orqali vizualizatsiya qilish",
+            "Excel integratsiyasi (o'qish va yozish)",
+            "MinIO service orqali fayllarni boshqarish",
+            "PostgreSQL'da murakkab va katta so'rovlar yozish hamda optimizatsiya qilish",
+            "Loyihaning base package (core modul) ishlab chiqish jarayonida qatnashish",
+            "Code review jarayonlarida ishtirok etish",
+            "Vaqtincha Team Leader vazifasini bajarish"
+        ],
+        tech: ["Django", "Django Rest Framework", "PostgreSQL", "Redis", "MinIO", "Excel"]
+    },
+    {
+        id: "scienceid",
+        title: "ScienceID",
+        subtitle: t.modals?.scienceid?.subtitle || "Ilmiy Identifikatsiya Tizimi",
+        goal: t.modals?.scienceid?.goal || "Science ID – ilmiy-innovatsion faoliyat bilan shug'ullanuvchi jismoniy shaxslarning identifikatsiya raqami.",
+        stats: t.modals?.scienceid?.stats || [
+            { icon: "fas fa-users", value: "4,184+", label: "Foydalanuvchi" },
+            { icon: "fas fa-male", value: "2,242+", label: "Erkak" },
+            { icon: "fas fa-female", value: "1,942+", label: "Ayol" },
+            { icon: "fas fa-graduation-cap", value: "830+", label: "Ilmiy Daraja" }
+        ],
+        role: t.modals?.scienceid?.role || [
+            "OAuth2 protokolini Django DRF'da implementatsiya qilish",
+            "OneID tizimi bilan integratsiya qilish va SSO funksiyasini yaratish",
+            "RESTful API'lar yaratish va foydalanuvchi ma'lumotlarini boshqarish",
+            "Ilmiy profillarni qo'llab-quvvatlash va boshqarish tizimlarini rivojlantirish",
+            "Boshqa platformalar uchun OAuth2 provider yaratish"
+        ],
+        tech: ["Django", "Django REST Framework", "OAuth2", "PostgreSQL"],
+        integrations: t.modals?.scienceid?.integrations || [
+            "ScienceGate - Olimlar portfolio platformasi",
+            "Anjumanlar - Ilmiy tadbirlar platformasi",
+            "eTaqriz - Taqrizchilar tizimi",
+            "SLIB.uz - Ilmiy kutubxona",
+            "ROI.uz - Raqamli identifikator"
+        ]
+    },
+    {
+        id: "anjumanlar",
+        title: "Anjumanlar",
+        subtitle: t.modals?.anjumanlar?.subtitle || "Ilmiy Tadbirlar Platformasi",
+        goal: t.modals?.anjumanlar?.goal || "Respublikamizdagi barcha ilmiy anjumanlarni bir platformada yig'ish va tashkilotlar uchun maxsus avtomatlashtirilgan web platforma yaratish. Xalqaro va respublika miqyosida o'tkaziladigan ilmiy va ilmiy-texnik tadbirlar platformasi.",
+        stats: t.modals?.anjumanlar?.stats || [
+            { icon: "fas fa-users", value: "1,580+", label: "Foydalanuvchi" },
+            { icon: "fas fa-building", value: "329+", label: "Tashkilot" },
+            { icon: "fas fa-calendar", value: "3,690+", label: "Anjuman" },
+            { icon: "fas fa-file-alt", value: "1,376+", label: "Maqola/Tezis" }
+        ],
+        role: t.modals?.anjumanlar?.role || [
+            "Laravel va Livewire yordamida real-time yangilanuvchi interface yaratish",
+            "Konferensiyalarni boshqarish va ishtirokchilarni avtomatik ro'yxatdan o'tish",
+            "Laravel Nova bilan admin panel yaratish va moslashtirish",
+            "Maqola va tezislarni yuklash, boshqarish va statuslarni kuzatish",
+            "ScienceID, DOI, ROI, Savodxonlik va eTaqriz bilan to'liq integratsiya",
+            "Anjuman o'tkazish jarayonini to'liq avtomatlash"
+        ],
+        tech: ["Laravel", "Laravel Livewire", "Laravel Nova", "PostgreSQL", "HTML", "CSS", "JavaScript"],
+        audience: t.modals?.anjumanlar?.audience || [
+            "O'qituvchi-professorlar",
+            "Ilmiy tadqiqotchilar",
+            "Ilmiy hodimlar",
+            "Talaba-magistrlar"
+        ]
+    },
+    {
+        id: "etaqriz",
+        title: "eTaqriz",
+        subtitle: t.modals?.etaqriz?.subtitle || "Taqrizchilar Platformasi",
+        goal: t.modals?.etaqriz?.goal || "Ilmiy va o'quv-uslubiy ishlarni malakali mutaxassislar tomonidan puxta va xolis taqrizdan o'tkazish – tezkor, ishonchli va sifatli natija kafolati bilan. Ilmiy ishlar sifatini baholash va nashrga yaroqliligini aniqlash.",
+        stats: t.modals?.etaqriz?.stats || [
+            { icon: "fas fa-file-alt", value: "2,280+", label: "Taqriz" },
+            { icon: "fas fa-user-tie", value: "79+", label: "Taqrizchi" }
+        ],
+        role: t.modals?.etaqriz?.role || [
+            "Laravel va Filament PHP yordamida zamonaviy admin panel yaratish",
+            "Taqrizchilarni tanlash va tayinlash tizimi",
+            "Taqriz jarayonini to'liq avtomatlash va statuslarni kuzatish",
+            "Email bildirishnomalar va real-time yangilanishlar",
+            "ScienceID, Anjumanlar va SLIB bilan integratsiya"
+        ],
+        tech: ["Laravel", "Filament PHP", "PostgreSQL", "Email System"]
+    },
+    {
+        id: "slib",
+        title: "SLIB.uz",
+        subtitle: t.modals?.slib?.subtitle || "O'zbekiston Ilmiy Kutubxonasi",
+        goal: t.modals?.slib?.goal || "O'zbekiston Respublikasidagi ilmiy jurnallarni yagona raqamli platformada jamlash, maqolalarning to'liq va barqaror elektron arxivini shakllantirish hamda tadqiqotchilar uchun ishonchli milliy axborot bazasini yaratish.",
+        stats: t.modals?.slib?.stats || [
+            { icon: "fas fa-book", value: "345+", label: "Jurnal" },
+            { icon: "fas fa-user-graduate", value: "20,368+", label: "Muallif" },
+            { icon: "fas fa-file-alt", value: "35,339+", label: "Maqola" }
+        ],
+        role: t.modals?.slib?.role || [
+            "Yii2 framework'da eski tizimlarni refaktor qilish va modernizatsiya",
+            "Maqola nashr qilish jarayonini 6 bosqichda avtomatlash",
+            "Ochiq va yopiq maqolalar tizimini yaratish",
+            "DOI, ROI va eTaqriz bilan integratsiya",
+            "SRM (Scientific Resource Management) tizimini joriy etish",
+            "Tahririyat-nashriyot jarayonlarini to'liq raqamlashtirish"
+        ],
+        tech: ["Yii2", "MySQL", "HTML", "CSS", "JavaScript"],
+        process: t.modals?.slib?.process || [
+            "Maqola topshirish",
+            "Texnik ekspertiza (3-5 kun)",
+            "Plagiatga tekshirish (2-3 kun)",
+            "Taqriz bosqichi (10-15 kun)",
+            "To'lov bosqichi (agar kerak bo'lsa)",
+            "Yakuniy bosqich (7-10 kun)"
+        ]
+    },
+    {
+        id: "roi",
+        title: "ROI.uz",
+        subtitle: t.modals?.roi?.subtitle || "Raqamli Obyekt Identifikatori",
+        goal: t.modals?.roi?.goal || "ROI – raqamli obyekt identifikatori, axborot faoliyati obyektlarini belgilash uchun mo'ljallangan tizim. DOI va ZENODO'ning O'zbekistondagi analogi bo'lib, bir necha barobarga arzon. Ilmiy materiallarga doimiy identifikator berish.",
+        stats: t.modals?.roi?.stats || [
+            { icon: "fas fa-hashtag", value: "35,339+", label: "Identifikator" },
+            { icon: "fas fa-bolt", value: "~236", label: "Soatiga Yangi ROI" }
+        ],
+        role: t.modals?.roi?.role || [
+            "Django va DRF asosida arxitektura yaratish",
+            "Django adminni custom yozib chiqish",
+            "Avtomatik ROI generatsiya algoritmi ishlab chiqish",
+            "40+ turdagi raqamli obyektlar uchun identifikator berish tizimi",
+            "Nashriyotlar uchun API integratsiya imkoniyati",
+            "Doimiy elektron arxiv va havola tizimi",
+            "ScienceID, Anjumanlar va SLIB bilan integratsiya"
+        ],
+        tech: ["Django", "Django Rest Framework", "Microservices", "PostgreSQL", "HTML", "CSS", "JavaScript"],
+        advantages: t.modals?.roi?.advantages || [
+            "Raqamli obyektni cheklanmagan muddatga saqlash",
+            "Jurnal yopilsa ham material saqlanadi",
+            "Unikal raqamlar orqali aniq identifikatsiya",
+            "DOI'dan bir necha barobarga arzon",
+            "Ishonchli milliy xizmat"
+        ]
+    },
+    {
+        id: "plagiat",
+        title: "Plagiat.uz",
+        subtitle: t.modals?.plagiat?.subtitle || "Plagiat Tekshirish Tizimi",
+        goal: t.modals?.plagiat?.goal || "Plagiatga tekshirish va sun'iy intellekt yordamida yozilgan matnlarni aniqlash tizimi. Ilmiy ishlar sifatini nazorat qilish va originallikni ta'minlash.",
+        stats: t.modals?.plagiat?.stats || [
+            { icon: "fas fa-database", value: "5,375+", label: "Manbalar" },
+            { icon: "fas fa-file", value: "6,263+", label: "Hujjat" },
+            { icon: "fas fa-chart-line", value: "2+ mlrd", label: "Tekshirilgan" }
+        ],
+        role: t.modals?.plagiat?.role || [
+            "Ekspert va ekspert-admin rollarini yaratish",
+            "Hujjat yuklash va ekspert xulosasini olish jarayonini to'liq avtomatlash",
+            "Narx nazorati tizimini joriy qilish"
+        ],
+        tech: ["Laravel", "Django", "PostgreSQL", "Microservices", "HTML", "CSS", "JavaScript"]
+    }
+];
+---
+
+<!-- All Project Modals -->
+{modals.map(modal => (
+    <div class="modal" id={`modal-${modal.id}`}>
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-header">
+                <img
+                    src={`/images/projects/${modal.id}.png`}
+                    alt={modal.title}
+                    class="modal-image"
+                    onerror="this.style.background='var(--accent-gradient)'"
+                />
+                <h2>{modal.title} - {modal.subtitle}</h2>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3><i class="fas fa-bullseye"></i> {t.modals?.common?.goal || "Maqsad"}</h3>
+                    <p>{modal.goal}</p>
+                </div>
+
+                {modal.stats && modal.stats.length > 0 && (
+                    <div class="modal-section">
+                        <h3><i class="fas fa-chart-line"></i> {t.modals?.common?.stats || "Statistika (20.02.2026)"}</h3>
+                        <div class="modal-stats">
+                            {modal.stats.map((stat: any) => (
+                                <div class="modal-stat">
+                                    <i class={stat.icon}></i>
+                                    <span>{stat.value}</span>
+                                    <small>{stat.label}</small>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {modal.role && modal.role.length > 0 && (
+                    <div class="modal-section">
+                        <h3><i class="fas fa-code"></i> {t.modals?.common?.role || "Mening Rollim"}</h3>
+                        <ul>
+                            {modal.role.map((item: string) => (
+                                <li>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+
+                <div class="modal-section">
+                    <h3><i class="fas fa-tools"></i> {t.modals?.common?.tech || "Texnologiyalar"}</h3>
+                    <div class="project-tech">
+                        {modal.tech.map((tech: string) => (
+                            <span class="tech-badge">{tech}</span>
+                        ))}
+                    </div>
+                </div>
+
+                {modal.integrations && modal.integrations.length > 0 && (
+                    <div class="modal-section">
+                        <h3><i class="fas fa-link"></i> {t.modals?.common?.integrations || "Integratsiyalar"}</h3>
+                        <ul>
+                            {modal.integrations.map((item: string) => (
+                                <li>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+
+                {modal.audience && modal.audience.length > 0 && (
+                    <div class="modal-section">
+                        <h3><i class="fas fa-users"></i> {t.modals?.common?.audience || "Auditoriya"}</h3>
+                        <ul>
+                            {modal.audience.map((item: string) => (
+                                <li>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+
+                {modal.process && modal.process.length > 0 && (
+                    <div class="modal-section">
+                        <h3><i class="fas fa-list-ol"></i> {t.modals?.common?.process || "Maqola Nashr Jarayoni"}</h3>
+                        <ul>
+                            {modal.process.map((item: string) => (
+                                <li>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+
+                {modal.advantages && modal.advantages.length > 0 && (
+                    <div class="modal-section">
+                        <h3><i class="fas fa-check-circle"></i> {t.modals?.common?.advantages || "Afzalliklar"}</h3>
+                        <ul>
+                            {modal.advantages.map((item: string) => (
+                                <li>{item}</li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+            </div>
+        </div>
+    </div>
+))}

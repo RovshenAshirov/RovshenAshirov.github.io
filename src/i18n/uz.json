@@ -39,42 +39,323 @@
     "title": "Texnik Ko'nikmalar",
     "subtitle": "Ishlatadigan texnologiyalar va vositalar"
   },
-  "modals": {
-    "common": {
-      "goal": "Maqsad",
-      "stats": "Statistika (20.02.2026)",
-      "role": "Mening Rollim",
-      "tech": "Texnologiyalar",
-      "integrations": "Integratsiyalar",
-      "features": "Asosiy Xususiyatlar",
-      "challenges": "Qiyinchiliklar",
-      "results": "Natijalar",
-      "links": "Havolalar",
-      "users": "Foydalanuvchi",
-      "male": "Erkak",
-      "female": "Ayol",
-      "degree": "Ilmiy Daraja",
-      "visit": "Saytga o'tish",
-      "github": "GitHub"
+  "projects": {
+    "title": "Muhim Loyihalar",
+    "subtitle": "Ishtirok etgan eng katta loyihalarim",
+    "btnDetails": "Batafsil",
+    "btnView": "Ko'rish",
+    "uztransgaz": {
+      "subtitle": "Gaz Infratuzilmasi SCADA Platformasi",
+      "stat1": "Real-time",
+      "stat2": "Active",
+      "description": "Prezident Qaroriga asosan ishlab chiqilgan milliy monitoring tizimi. Magistral gaz quvurlarini real-time nazorat qilish, dispetcherlik boshqaruvi va gaz uzatish tizimini modernizatsiya qilish."
+    },
+    "energonazorat": {
+      "subtitle": "Raqamli Energiya Nazorat tizimi",
+      "stat1": "Energiya nazorati",
+      "stat2": "Active",
+      "description": "Prezident Farmoni asosida yaratilgan milliy platform. Energiya resurslarini real-time monitoring qilish, noqonuniy isteʼmolni aniqlash va jamoatchilik nazoratini ta'minlash."
     },
     "scienceid": {
-      "title": "ScienceID - Ilmiy Identifikatsiya Tizimi",
-      "goal_text": "Science ID – ilmiy-innovatsion faoliyat bilan shug'ullanuvchi jismoniy shaxslarning identifikatsiya raqami. Milliy ilmiy ekotizimni raqamlashtirish va olimlarni yagona platformada birlashtirish.",
-      "role_items": [
-        "OAuth2 protokolini Django DRF'da implementatsiya qilish",
-        "OneID tizimi bilan integratsiya qilish va SSO funksiyasini yaratish",
-        "RESTful API'lar yaratish va foydalanuvchi ma'lumotlarini boshqarish",
-        "Ilmiy profillarni qo'llab-quvvatlash va boshqarish tizimlarini rivojlantirish",
-        "Boshqa platformalar uchun OAuth2 provider yaratish",
-        "ScienceGate platformasi bilan integratsiya"
-      ],
-      "integration_items": [
-        "ScienceGate - Olimlar portfolio platformasi",
-        "Anjumanlar - Ilmiy tadbirlar platformasi",
-        "eTaqriz - Taqrizchilar tizimi",
-        "SLIB.uz - Ilmiy kutubxona",
-        "ROI.uz - Raqamli identifikator"
-      ]
+      "subtitle": "Ilmiy Identifikatsiya Tizimi",
+      "stat1": "4,000+ foydalanuvchi",
+      "stat2": "Active",
+      "description": "Ilmiy-innovatsion faoliyat bilan shug'ullanuvchi shaxslar uchun milliy identifikatsiya platformasi. OAuth2 va OneID integratsiyasi bilan."
+    },
+    "sciencegate": {
+      "subtitle": "Ilmiy Baholash Platformasi",
+      "stat1": "Olimlar platformasi",
+      "stat2": "Restricted",
+      "description": "Olimlar uchun portfolio, ilmiy va pedagogik faoliyat reytingi."
+    },
+    "anjumanlar": {
+      "subtitle": "Ilmiy Tadbirlar Platformasi",
+      "stat1": "1,500+ foydalanuvchi",
+      "stat2": "3,600+ anjuman",
+      "description": "Respublikadagi barcha ilmiy anjumanlarni bir platformada yig'ish"
+    },
+    "etaqriz": {
+      "subtitle": "Taqrizchilar Platformasi",
+      "stat1": "2,280+ taqriz",
+      "stat2": "79+ taqrizchi",
+      "description": "Ilmiy ishlarni malakali mutaxassislar tomonidan taqrizlash tizimi. Tezkor va sifatli xizmat."
+    },
+    "slib": {
+      "subtitle": "O'zbekiston Ilmiy Kutubxonasi",
+      "stat1": "345+ jurnal",
+      "stat2": "35,000+ maqola",
+      "description": "Milliy ilmiy jurnallar va maqolalar platformasi. SRM tizimi bilan."
+    },
+    "roi": {
+      "subtitle": "Raqamli Obyekt Identifikatori",
+      "stat1": "35,339+ ROI",
+      "stat2": "~236/soat",
+      "description": "DOI va ZENODO'ning O'zbekiston analogi. Ilmiy materiallar uchun raqamli identifikator."
+    },
+    "plagiat": {
+      "subtitle": "Plagiatga Tekshirish",
+      "stat1": "5,000+ manbalar",
+      "stat2": "6,000+ hujjat",
+      "description": "Plagiatni aniqlash va AI-generated text detection. 2+ milliard tekshirilgan ma'lumot."
+    }
+  },
+  "modals": {
+    "modals": {
+      "common": {
+        "goal": "Maqsad",
+        "stats": "Statistika (20.02.2026)",
+        "role": "Mening Rollim",
+        "tech": "Texnologiyalar",
+        "integrations": "Integratsiyalar",
+        "audience": "Auditoriya",
+        "process": "Maqola Nashr Jarayoni",
+        "advantages": "Afzalliklar"
+      },
+      "uztransgaz": {
+        "subtitle": "SCADA Monitoring Tizimi",
+        "goal": "2020-2024 yillar Davlat Investitsiya Dasturi doirasida magistral gaz quvurlarini modernizatsiya qilish va SCADA (Supervisory Control and Data Acquisition) tizimini joriy etish. Gaz uzatish tizimining o'tkazuvchanligini oshirish, zamonaviy energiya tejaydigan texnologiyalarni joriy etish va atmosferaga ifloslantiruvchi chiqindilarni kamaytirish.",
+        "role": [
+          "Microservice arxitektura asosida backend servislarni ishlab chiqish",
+          "Django va Django Rest Framework yordamida API'lar yaratish",
+          "Tashqi servislar bilan integratsiya qilish",
+          "Real-time monitoring va vizualizatsiya tizimlari yaratish",
+          "Celery va cron task'lar orqali fon jarayonlarni avtomatlash",
+          "Chart va diagrammalar orqali monitoring ma'lumotlarini vizualizatsiya",
+          "MinIO service integratsiyasi orqali fayllarni boshqarish",
+          "Vault yordamida maxfiy konfiguratsiyalarni xavfsiz boshqarish",
+          "Redis orqali kesh va ishlash tezligini oshirish",
+          "Custom permission'lar va user role tizimini ishlab chiqish",
+          "PostgreSQL'da katta va murakkab so'rovlarni yozish, optimizatsiya qilish",
+          "Loyihaning core module ishlab chiqishda ishtirok etish",
+          "Code review jarayonlarida ishtirok etish",
+          "Vaqtincha Team Leader vazifasini bajarish"
+        ]
+      },
+      "energonazorat": {
+        "subtitle": "Raqamli Energiya Nazorat tizimi",
+        "goal": "Prezident Farmoni (PF-5421, 18.04.2023) asosida yoqilg'i-energiya resurslaridan foydalanish ustidan davlat nazoratini kuchaytirish va \"raqamli energonazorat\" tizimini joriy etish. Energiya resurslarini talon-toroj qilish holatlarining oldini olish, jamoatchilik nazoratini ta'minlash va qonun talablarini buzgan shaxslarga nisbatan javobgarlik muqarrarligini ta'minlash.",
+        "role": [
+          "Microservice arxitektura asosida Django va Django REST Framework yordamida backend servislarni ishlab chiqish",
+          "Katta hajmdagi ma'lumotlarni yig'ish, qayta ishlash, hisobotlar chiqarish",
+          "Tashqi servislar bilan integratsiya qilish",
+          "django-q va cron task'lar orqali rejalashtirilgan jarayonlarni avtomatlash",
+          "Chart va diagrammalar orqali vizualizatsiya qilish",
+          "Excel integratsiyasi (o'qish va yozish)",
+          "MinIO service orqali fayllarni boshqarish",
+          "PostgreSQL'da murakkab va katta so'rovlar yozish hamda optimizatsiya qilish",
+          "Loyihaning base package (core modul) ishlab chiqish jarayonida qatnashish",
+          "Code review jarayonlarida ishtirok etish",
+          "Vaqtincha Team Leader vazifasini bajarish"
+        ]
+      },
+      "scienceid": {
+        "subtitle": "Ilmiy Identifikatsiya Tizimi",
+        "goal": "Science ID – ilmiy-innovatsion faoliyat bilan shug'ullanuvchi jismoniy shaxslarning identifikatsiya raqami.",
+        "stats": [
+          {
+            "icon": "fas fa-users",
+            "value": "4,184+",
+            "label": "Foydalanuvchi"
+          },
+          {
+            "icon": "fas fa-male",
+            "value": "2,242+",
+            "label": "Erkak"
+          },
+          {
+            "icon": "fas fa-female",
+            "value": "1,942+",
+            "label": "Ayol"
+          },
+          {
+            "icon": "fas fa-graduation-cap",
+            "value": "830+",
+            "label": "Ilmiy Daraja"
+          }
+        ],
+        "role": [
+          "OAuth2 protokolini Django DRF'da implementatsiya qilish",
+          "OneID tizimi bilan integratsiya qilish va SSO funksiyasini yaratish",
+          "RESTful API'lar yaratish va foydalanuvchi ma'lumotlarini boshqarish",
+          "Ilmiy profillarni qo'llab-quvvatlash va boshqarish tizimlarini rivojlantirish",
+          "Boshqa platformalar uchun OAuth2 provider yaratish"
+        ],
+        "integrations": [
+          "ScienceGate - Olimlar portfolio platformasi",
+          "Anjumanlar - Ilmiy tadbirlar platformasi",
+          "eTaqriz - Taqrizchilar tizimi",
+          "SLIB.uz - Ilmiy kutubxona",
+          "ROI.uz - Raqamli identifikator"
+        ]
+      },
+      "sciencegate": {
+        "subtitle": "Ilmiy Baholash Platformasi",
+        "goal": "Olimlar uchun portfolio, ilmiy va pedagogik faoliyat reytingi. ScienceID bilan integratsiyalangan platforma.",
+        "role": [
+          "Django DRF asosida backend API'larni yaratish",
+          "H-index hisoblash algoritmlari",
+          "Ilmiy nashrlar va faoliyat ma'lumotlarini boshqarish",
+          "ScienceID bilan integratsiya"
+        ]
+      },
+      "anjumanlar": {
+        "subtitle": "Ilmiy Tadbirlar Platformasi",
+        "goal": "Respublikamizdagi barcha ilmiy anjumanlarni bir platformada yig'ish va tashkilotlar uchun maxsus avtomatlashtirilgan web platforma yaratish. Xalqaro va respublika miqyosida o'tkaziladigan ilmiy va ilmiy-texnik tadbirlar platformasi.",
+        "stats": [
+          {
+            "icon": "fas fa-users",
+            "value": "1,580+",
+            "label": "Foydalanuvchi"
+          },
+          {
+            "icon": "fas fa-building",
+            "value": "329+",
+            "label": "Tashkilot"
+          },
+          {
+            "icon": "fas fa-calendar",
+            "value": "3,690+",
+            "label": "Anjuman"
+          },
+          {
+            "icon": "fas fa-file-alt",
+            "value": "1,376+",
+            "label": "Maqola/Tezis"
+          }
+        ],
+        "role": [
+          "Laravel va Livewire yordamida real-time yangilanuvchi interface yaratish",
+          "Konferensiyalarni boshqarish va ishtirokchilarni avtomatik ro'yxatdan o'tish",
+          "Laravel Nova bilan admin panel yaratish va moslashtirish",
+          "Maqola va tezislarni yuklash, boshqarish va statuslarni kuzatish",
+          "ScienceID, DOI, ROI, Savodxonlik va eTaqriz bilan to'liq integratsiya",
+          "Anjuman o'tkazish jarayonini to'liq avtomatlash"
+        ],
+        "audience": [
+          "O'qituvchi-professorlar",
+          "Ilmiy tadqiqotchilar",
+          "Ilmiy hodimlar",
+          "Talaba-magistrlar"
+        ]
+      },
+      "etaqriz": {
+        "subtitle": "Taqrizchilar Platformasi",
+        "goal": "Ilmiy va o'quv-uslubiy ishlarni malakali mutaxassislar tomonidan puxta va xolis taqrizdan o'tkazish – tezkor, ishonchli va sifatli natija kafolati bilan. Ilmiy ishlar sifatini baholash va nashrga yaroqliligini aniqlash.",
+        "stats": [
+          {
+            "icon": "fas fa-file-alt",
+            "value": "2,280+",
+            "label": "Taqriz"
+          },
+          {
+            "icon": "fas fa-user-tie",
+            "value": "79+",
+            "label": "Taqrizchi"
+          }
+        ],
+        "role": [
+          "Laravel va Filament PHP yordamida zamonaviy admin panel yaratish",
+          "Taqrizchilarni avtomatik tanlash va tayinlash tizimi",
+          "Taqriz jarayonini to'liq avtomatlash va statuslarni kuzatish",
+          "Email bildirishnomalar va real-time yangilanishlar",
+          "ScienceID, Anjumanlar va SLIB bilan integratsiya"
+        ]
+      },
+      "slib": {
+        "subtitle": "O'zbekiston Ilmiy Kutubxonasi",
+        "goal": "O'zbekiston Respublikasidagi ilmiy jurnallarni yagona raqamli platformada jamlash, maqolalarning to'liq va barqaror elektron arxivini shakllantirish hamda tadqiqotchilar uchun ishonchli milliy axborot bazasini yaratish.",
+        "stats": [
+          {
+            "icon": "fas fa-book",
+            "value": "345+",
+            "label": "Jurnal"
+          },
+          {
+            "icon": "fas fa-user-graduate",
+            "value": "20,368+",
+            "label": "Muallif"
+          },
+          {
+            "icon": "fas fa-file-alt",
+            "value": "35,339+",
+            "label": "Maqola"
+          }
+        ],
+        "role": [
+          "Yii2 framework'da eski tizimlarni refaktor qilish va modernizatsiya",
+          "Maqola nashr qilish jarayonini 6 bosqichda avtomatlash",
+          "Ochiq va yopiq maqolalar tizimini yaratish",
+          "DOI, ROI va eTaqriz bilan integratsiya",
+          "SRM (Scientific Resource Management) tizimini joriy etish",
+          "Tahririyat-nashriyot jarayonlarini to'liq raqamlashtirish"
+        ],
+        "process": [
+          "Maqola topshirish",
+          "Texnik ekspertiza (3-5 kun)",
+          "Plagiatga tekshirish (2-3 kun)",
+          "Taqriz bosqichi (10-15 kun)",
+          "To'lov bosqichi (agar kerak bo'lsa)",
+          "Yakuniy bosqich (7-10 kun)"
+        ]
+      },
+      "roi": {
+        "subtitle": "Raqamli Obyekt Identifikatori",
+        "goal": "ROI – raqamli obyekt identifikatori, axborot faoliyati obyektlarini belgilash uchun mo'ljallangan tizim. DOI va ZENODO'ning O'zbekistondagi analogi bo'lib, bir necha barobarga arzon. Ilmiy materiallarga doimiy identifikator berish.",
+        "stats": [
+          {
+            "icon": "fas fa-hashtag",
+            "value": "35,339+",
+            "label": "Identifikator"
+          },
+          {
+            "icon": "fas fa-bolt",
+            "value": "~236",
+            "label": "Soatiga Yangi ROI"
+          }
+        ],
+        "role": [
+          "Django va DRF asosida arxitektura yaratish",
+          "Django adminni custom yozib chiqish",
+          "Avtomatik ROI generatsiya algoritmi ishlab chiqish",
+          "40+ turdagi raqamli obyektlar uchun identifikator berish tizimi",
+          "Nashriyotlar uchun API integratsiya imkoniyati",
+          "Doimiy elektron arxiv va havola tizimi",
+          "ScienceID, Anjumanlar va SLIB bilan integratsiya"
+        ],
+        "advantages": [
+          "Raqamli obyektni cheklanmagan muddatga saqlash",
+          "Jurnal yopilsa ham material saqlanadi",
+          "Unikal raqamlar orqali aniq identifikatsiya",
+          "DOI'dan bir necha barobarga arzon",
+          "Ishonchli milliy xizmat"
+        ]
+      },
+      "plagiat": {
+        "subtitle": "Plagiat Tekshirish Tizimi",
+        "goal": "Plagiatga tekshirish va sun'iy intellekt yordamida yozilgan matnlarni aniqlash tizimi. Ilmiy ishlar sifatini nazorat qilish va originallikni ta'minlash.",
+        "stats": [
+          {
+            "icon": "fas fa-database",
+            "value": "5,375+",
+            "label": "Manbalar"
+          },
+          {
+            "icon": "fas fa-file",
+            "value": "6,263+",
+            "label": "Hujjat"
+          },
+          {
+            "icon": "fas fa-chart-line",
+            "value": "2+ mlrd",
+            "label": "Tekshirilgan"
+          }
+        ],
+        "role": [
+          "Ekspert va ekspert-admin rollarini yaratish",
+          "Hujjat yuklash va xulosa olish jarayonini to'liq avtomatlash",
+          "Narx nazorati tizimini joriy qilish"
+        ]
+      }
     }
   }
 }

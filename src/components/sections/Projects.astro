@@ -1,0 +1,154 @@
+---
+const { t } = Astro.props;
+
+const projects = [
+    {
+        id: "uztransgaz",
+        name: "UzTransGaz SCADA",
+        subtitle: t.projects.uztransgaz?.subtitle || "Gaz Infratuzilmasi SCADA Platformasi",
+        stats: [
+            { icon: "fas fa-network-wired", text: t.projects.uztransgaz?.stat1 || "Real-time" },
+            { icon: "fas fa-chart-line", text: t.projects.uztransgaz?.stat2 || "Active" }
+        ],
+        description: t.projects.uztransgaz?.description || "Prezident Qaroriga asosan ishlab chiqilgan milliy monitoring tizimi. Magistral gaz quvurlarini real-time nazorat qilish, dispetcherlik boshqaruvi va gaz uzatish tizimini modernizatsiya qilish.",
+        tech: ["Django", "Django Rest Framework"],
+        delay: 100
+    },
+    {
+        id: "energonazorat",
+        name: "EnergoNazorat",
+        subtitle: t.projects.energonazorat?.subtitle || "Raqamli Energiya Nazorat tizimi",
+        stats: [
+            { icon: "fas fa-bolt", text: t.projects.energonazorat?.stat1 || "Energiya nazorati" },
+            { icon: "fas fa-chart-line", text: t.projects.energonazorat?.stat2 || "Active" }
+        ],
+        description: t.projects.energonazorat?.description || "Prezident Farmoni asosida yaratilgan milliy platform. Energiya resurslarini real-time monitoring qilish, noqonuniy isteʼmolni aniqlash va jamoatchilik nazoratini ta'minlash.",
+        tech: ["Django", "Django Rest Framework"],
+        delay: 150
+    },
+    {
+        id: "scienceid",
+        name: "ScienceID",
+        subtitle: t.projects.scienceid?.subtitle || "Ilmiy Identifikatsiya Tizimi",
+        stats: [
+            { icon: "fas fa-users", text: t.projects.scienceid?.stat1 || "4,000+ foydalanuvchi" },
+            { icon: "fas fa-chart-line", text: t.projects.scienceid?.stat2 || "Active" }
+        ],
+        description: t.projects.scienceid?.description || "Ilmiy-innovatsion faoliyat bilan shug'ullanuvchi shaxslar uchun milliy identifikatsiya platformasi. OAuth2 va OneID integratsiyasi bilan.",
+        tech: ["Django", "Django Rest Framework"],
+        link: "https://id.ilmiy.uz/",
+        delay: 200
+    },
+    {
+        id: "anjumanlar",
+        name: "Anjumanlar",
+        subtitle: t.projects.anjumanlar?.subtitle || "Ilmiy Tadbirlar Platformasi",
+        stats: [
+            { icon: "fas fa-users", text: t.projects.anjumanlar?.stat1 || "1,500+ foydalanuvchi" },
+            { icon: "fas fa-calendar", text: t.projects.anjumanlar?.stat2 || "3,600+ anjuman" }
+        ],
+        description: t.projects.anjumanlar?.description || "Respublikadagi barcha ilmiy anjumanlarni bir platformada yig'ish",
+        tech: ["Laravel", "Laravel Livewire", "Laravel Nova"],
+        link: "https://anjumanlar.uz",
+        delay: 250
+    },
+    {
+        id: "etaqriz",
+        name: "eTaqriz",
+        subtitle: t.projects.etaqriz?.subtitle || "Taqrizchilar Platformasi",
+        stats: [
+            { icon: "fas fa-file-alt", text: t.projects.etaqriz?.stat1 || "2,280+ taqriz" },
+            { icon: "fas fa-user-tie", text: t.projects.etaqriz?.stat2 || "79+ taqrizchi" }
+        ],
+        description: t.projects.etaqriz?.description || "Ilmiy ishlarni malakali mutaxassislar tomonidan taqrizlash tizimi. Tezkor va sifatli xizmat.",
+        tech: ["Laravel", "Filament PHP"],
+        link: "https://etaqriz.uz",
+        delay: 300
+    },
+    {
+        id: "slib",
+        name: "SLIB.uz",
+        subtitle: t.projects.slib?.subtitle || "O'zbekiston Ilmiy Kutubxonasi",
+        stats: [
+            { icon: "fas fa-book", text: t.projects.slib?.stat1 || "345+ jurnal" },
+            { icon: "fas fa-file", text: t.projects.slib?.stat2 || "35,000+ maqola" }
+        ],
+        description: t.projects.slib?.description || "Milliy ilmiy jurnallar va maqolalar platformasi. SRM tizimi bilan.",
+        tech: ["Yii2"],
+        link: "https://slib.uz",
+        delay: 350
+    },
+    {
+        id: "roi",
+        name: "ROI.uz",
+        subtitle: t.projects.roi?.subtitle || "Raqamli Obyekt Identifikatori",
+        stats: [
+            { icon: "fas fa-hashtag", text: t.projects.roi?.stat1 || "35,339+ ROI" },
+            { icon: "fas fa-bolt", text: t.projects.roi?.stat2 || "~236/soat" }
+        ],
+        description: t.projects.roi?.description || "DOI va ZENODO'ning O'zbekiston analogi. Ilmiy materiallar uchun raqamli identifikator.",
+        tech: ["Django", "Django Rest Framework"],
+        link: "https://roi.sciencelib.uz/",
+        delay: 400
+    },
+    {
+        id: "plagiat",
+        name: "Plagiat.uz",
+        subtitle: t.projects.plagiat?.subtitle || "Plagiatga Tekshirish",
+        stats: [
+            { icon: "fas fa-database", text: t.projects.plagiat?.stat1 || "5,000+ manbalar" },
+            { icon: "fas fa-file", text: t.projects.plagiat?.stat2 || "6,000+ hujjat" }
+        ],
+        description: t.projects.plagiat?.description || "Plagiatni aniqlash va AI-generated text detection. 2+ milliard tekshirilgan ma'lumot.",
+        tech: ["Laravel", "Django"],
+        link: "https://plagiat.uz",
+        delay: 450
+    }
+];
+---
+
+<!-- Projects Section -->
+<section class="container" id="projects">
+    <div class="section-title" data-aos="fade-up">
+        <h2><span class="gradient-text">{t.projects.title}</span></h2>
+        <p>{t.projects.subtitle}</p>
+    </div>
+    <div class="projects-grid">
+        {projects.map(project => (
+            <div class="project-card" data-aos="fade-up" data-aos-delay={project.delay}>
+                <div class="project-header">
+                    <h3>{project.name}</h3>
+                    <p style="margin-top: 0.5rem; opacity: 0.9;">{project.subtitle}</p>
+                    <div class="project-stats">
+                        {project.stats.map(stat => (
+                            <div class="project-stat">
+                                <i class={stat.icon}></i>
+                                <span>{stat.text}</span>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div class="project-body">
+                    <p>{project.description}</p>
+                    <div class="project-tech">
+                        {project.tech.map(tech => (
+                            <span class="tech-badge">{tech}</span>
+                        ))}
+                    </div>
+                    <div class="project-links">
+                        <button class="btn-details" data-project={project.id}>
+                            <i class="fas fa-info-circle"></i>
+                            {t.projects.btnDetails || "Batafsil"}
+                        </button>
+                        {project.link && (
+                            <a href={project.link} target="_blank" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                {t.projects.btnView || "Ko'rish"}
+                            </a>
+                        )}
+                    </div>
+                </div>
+            </div>
+        ))}
+    </div>
+</section>
