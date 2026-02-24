@@ -355,5 +355,8 @@
         "Implementing price control system"
       ]
     }
+  },
+  "footer": {
+    "copyright": "All rights reserved."
   }
 }

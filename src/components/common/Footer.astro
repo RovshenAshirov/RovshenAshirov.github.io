@@ -1,0 +1,53 @@
+---
+const { t } = Astro.props;
+
+const socialLinks = [
+    {
+        url: "https://github.com/RovshenAshirov",
+        icon: "fab fa-github",
+        name: "GitHub"
+    },
+    {
+        url: "https://www.linkedin.com/in/rovshenashirov/",
+        icon: "fab fa-linkedin",
+        name: "LinkedIn"
+    },
+    {
+        url: "https://t.me/Oliy_dasturchi",
+        icon: "fab fa-telegram",
+        name: "Telegram"
+    },
+    {
+        url: "mailto:rovshenashirov1619@gmail.com",
+        icon: "fas fa-envelope",
+        name: "Email"
+    }
+];
+
+const techStack = ["Django", "Laravel", "Python", "PHP"];
+const currentYear = new Date().getFullYear();
+---
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="social-links">
+            {socialLinks.map(link => (
+                <a
+                    href={link.url}
+                    target={link.url.startsWith('mailto:') ? '_self' : '_blank'}
+                    class="social-link"
+                    aria-label={link.name}
+                >
+                    <i class={link.icon}></i>
+                </a>
+            ))}
+        </div>
+        <p class="footer-text">
+            &copy; {currentYear} Rovshen Ashirov. {t.footer?.copyright || "Barcha huquqlar himoyalangan."}
+        </p>
+        <p class="footer-text" style="margin-top: 0.5rem; font-size: 0.875rem;">
+            {techStack.join(" | ")}
+        </p>
+    </div>
+</footer>
