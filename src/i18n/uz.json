@@ -358,6 +358,10 @@
       }
     }
   },
+  "certificates": {
+    "title": "Sertifikatlar",
+    "subtitle": "Professional sertifikatlar va kurslar"
+  },
   "contact": {
     "title": "Bog'lanish",
     "subtitle": "Keling, birgalikda nimadir ajoyib yarataylik!",

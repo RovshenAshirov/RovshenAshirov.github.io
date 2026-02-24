@@ -1,0 +1,48 @@
+---
+const { t } = Astro.props;
+
+const certificates = [
+    {
+        image: "/images/certificates/git-certificate.png",
+        title: "The Ultimate Git Course",
+        organization: "Code with Mosh",
+        date: "2024",
+        delay: 100
+    }
+];
+---
+
+<!-- Certificates Section -->
+<section class="container" id="certificates">
+    <div class="section-title" data-aos="fade-up">
+        <h2><span class="gradient-text">{t.certificates?.title || "Sertifikatlar"}</span></h2>
+        <p>{t.certificates?.subtitle || "Professional sertifikatlar va kurslar"}</p>
+    </div>
+    <div class="certificates-grid">
+        {certificates.map(cert => (
+            <div class="certificate-card" data-aos="fade-up" data-aos-delay={cert.delay}>
+                <div class="certificate-image">
+                    <img
+                        src={cert.image}
+                        alt={cert.title}
+                        onerror="this.style.background='var(--accent-gradient)'"
+                    />
+                    <div class="certificate-overlay">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                </div>
+                <div class="certificate-content">
+                    <h3>{cert.title}</h3>
+                    <p class="certificate-org">
+                        <i class="fas fa-building"></i>
+                        {cert.organization}
+                    </p>
+                    <p class="certificate-date">
+                        <i class="fas fa-calendar"></i>
+                        {cert.date}
+                    </p>
+                </div>
+            </div>
+        ))}
+    </div>
+</section>

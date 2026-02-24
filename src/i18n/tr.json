@@ -356,6 +356,10 @@
       ]
     }
   },
+  "certificates": {
+    "title": "Sertifikalar",
+    "subtitle": "Profesyonel sertifikalar ve kurslar"
+  },
   "contact": {
     "title": "İletişim",
     "subtitle": "Hadi birlikte harika bir şey yaratalım!",

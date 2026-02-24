@@ -356,6 +356,10 @@
       ]
     }
   },
+  "certificates": {
+    "title": "Certificates",
+    "subtitle": "Professional certificates and courses"
+  },
   "contact": {
     "title": "Contact",
     "subtitle": "Let's create something amazing together!",
