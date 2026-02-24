@@ -358,6 +358,74 @@
       }
     }
   },
+  "experience": {
+    "title": "Professional Tajriba",
+    "subtitle": "Mening karyera yo'lim",
+    "uzinfocom": {
+      "title": "Backend Software Engineer",
+      "period": "Sentyabr 2024 - Hozir",
+      "description": "Davlat loyihalari ustida ishlash. Microservice arxitektura asosida backend servislarni ishlab chiqish.",
+      "highlights": [
+        "<strong>UzTransGaz SCADA:</strong> Gaz Infratuzilmasi SCADA Platformasi",
+        "<strong>EnergoNazorat:</strong> Raqamli Energiya Nazorat tizimi",
+        "MinIO service integratsiyasi orqali fayllarni boshqarish",
+        "Vault yordamida maxfiy konfiguratsiyalarni xavfsiz boshqarish",
+        "Redis orqali kesh va ishlash tezligini oshirish",
+        "Custom permission'lar va user role tizimini ishlab chiqish",
+        "PostgreSQL'da katta va murakkab so'rovlarni yozish, optimizatsiya qilish",
+        "Excel integratsiyasi (o'qish va yozish)",
+        "Celery va cron task'lar bilan fon jarayonlarni avtomatlashtirish",
+        "Core module development va architecture design'da ishtirok etish",
+        "Vaqtincha Team Leader vazifasini bajarish",
+        "Code review jarayonlarida faol ishtirok etish"
+      ]
+    },
+    "perspective": {
+      "title": "Software Engineer",
+      "period": "Dekabr 2022 - Avgust 2024",
+      "description": "Milliy ilmiy platformalarni yaratish va qo'llab-quvvatlash. O'zbekistonning ilmiy ekotizimini raqamlashtirish.",
+      "highlights": [
+        "<strong>ScienceID:</strong> Ilmiy-innovatsion faoliyat bilan shug'ullanuvchi jismoniy shaxslarni identifikatsiya tizimi",
+        "<strong>ScienceGate:</strong> Foydalanuvchining ilmiy-tadqiqot va pedogogik faolyatiga tegishli bo'lgan 43 turdagi ma'lumotlarini umumlashtirib beruvchi platforma",
+        "<strong>Anjumanlar:</strong> Xalqaro va respublika miqyosida oʻtkaziladigan ilmiy va ilmiy texnik tadbirlar platformasi",
+        "<strong>eTaqriz:</strong> Ilmiy ishlarni malakali mutaxassislar tomonidan taqrizlash tizimi",
+        "<strong>SLIB.uz:</strong> O'zbekiston ilmiy kutubxonasi",
+        "<strong>ROI.uz:</strong> Ilmiy materiallar uchun raqamli identifikator",
+        "<strong>UzSCI:</strong> SLIB.uz'ni admin boshqaruv panel qismi",
+        "<strong>Plagiat.uz:</strong> Plagiatga tekshirish va sun'iy intellekt yordamida yozilgan matnlarni aniqlash",
+        "<strong>Paxtachilik Kengashi:</strong> O'zbekiston Respublikasi Prezidenti huzuridagi Paxtachilik kengashi",
+        "OAuth2 protokolini Django DRF'da implementatsiya qilish",
+        "Boshqa platformalar uchun OAuth2 provider yaratish",
+        "RESTful API dizayni va multiple platform integratsiyalar",
+        "Django, Filament PHP, Laravel Nova va Yii2 admin boshqaruv panellarini yaratish va moslashtirish",
+        "PostgreSQL va MySQL ma'lumotlar bazasi bilan ishlash",
+        "Fayllar bilan ishlash, PDF fayllar generatsiya qilish",
+        "Server bilan ishlash, deploying va texnik qo'llab quvvatlash"
+      ]
+    },
+    "ubtuit": {
+      "title": "Software Engineer",
+      "company": "UBTUIT (Dissertatsiya)",
+      "period": "Mart 2023 - Iyun 2023",
+      "description": "IQ test platformasini Django yordamida yaratish va dissertatsiya uchun tadqiqot o'tkazish.",
+      "highlights": [
+        "IQ darajani aniqlash tizimini ishlab chiqish",
+        "Test va natijalarni avtomatik hisoblash algoritmlari",
+        "Foydalanuvchilar uchun statistika va hisobotlar"
+      ]
+    },
+    "freelance": {
+      "title": "Telegram Bot Developer",
+      "period": "Noyabr 2021 - Noyabr 2022",
+      "description": "Telegram botlar yaratish va avtomatlash tizimlari (Python, aiogram).",
+      "highlights": [
+        "<strong>@TezYetkaz_bot:</strong> Pochtalar va posilkalar yetkazish xizmati",
+        "<strong>@cashback_bot:</strong> QR kod skanerlash orqali cashback beruvchi bot",
+        "<strong>@newyear_bot:</strong> Yangi yil tabrigi generatori",
+        "Buyurtma berish va qabul qilish jarayonini avtomatlash"
+      ]
+    }
+  },
   "certificates": {
     "title": "Sertifikatlar",
     "subtitle": "Professional sertifikatlar va kurslar"

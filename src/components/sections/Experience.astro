@@ -1,0 +1,108 @@
+---
+const { t } = Astro.props;
+
+const experiences = [
+    {
+        id: "uzinfocom",
+        title: t.experience?.uzinfocom?.title || "Backend Software Engineer",
+        company: "UZINFOCOM",
+        period: t.experience?.uzinfocom?.period || "Sentyabr 2024 - Hozir",
+        description: t.experience?.uzinfocom?.description || "Davlat loyihalari ustida ishlash. Microservice arxitektura asosida backend servislarni ishlab chiqish.",
+        highlights: t.experience?.uzinfocom?.highlights || [
+            "<strong>UzTransGaz SCADA:</strong> Gaz Infratuzilmasi SCADA Platformasi",
+            "<strong>EnergoNazorat:</strong> Raqamli Energiya Nazorat tizimi",
+            "MinIO service integratsiyasi orqali fayllarni boshqarish",
+            "Vault yordamida maxfiy konfiguratsiyalarni xavfsiz boshqarish",
+            "Redis orqali kesh va ishlash tezligini oshirish",
+            "Custom permission'lar va user role tizimini ishlab chiqish",
+            "PostgreSQL'da katta va murakkab so'rovlarni yozish, optimizatsiya qilish",
+            "Excel integratsiyasi (o'qish va yozish)",
+            "Celery va cron task'lar bilan fon jarayonlarni avtomatlashtirish",
+            "Core module development va architecture design'da ishtirok etish",
+            "Vaqtincha Team Leader vazifasini bajarish",
+            "Code review jarayonlarida faol ishtirok etish"
+        ]
+    },
+    {
+        id: "perspective",
+        title: t.experience?.perspective?.title || "Software Engineer",
+        company: "Perspective Team",
+        period: t.experience?.perspective?.period || "Dekabr 2022 - Avgust 2024",
+        description: t.experience?.perspective?.description || "Milliy ilmiy platformalarni yaratish va qo'llab-quvvatlash. O'zbekistonning ilmiy ekotizimini raqamlashtirish.",
+        highlights: t.experience?.perspective?.highlights || [
+            "<strong>ScienceID:</strong> Ilmiy-innovatsion faoliyat bilan shug'ullanuvchi jismoniy shaxslarni identifikatsiya tizimi",
+            "<strong>ScienceGate:</strong> Foydalanuvchining ilmiy-tadqiqot va pedogogik faolyatiga tegishli bo'lgan 43 turdagi ma'lumotlarini umumlashtirib beruvchi platforma",
+            "<strong>Anjumanlar:</strong> Xalqaro va respublika miqyosida oʻtkaziladigan ilmiy va ilmiy texnik tadbirlar platformasi",
+            "<strong>eTaqriz:</strong> Ilmiy ishlarni malakali mutaxassislar tomonidan taqrizlash tizimi",
+            "<strong>SLIB.uz:</strong> O'zbekiston ilmiy kutubxonasi",
+            "<strong>ROI.uz:</strong> Ilmiy materiallar uchun raqamli identifikator",
+            "<strong>UzSCI:</strong> SLIB.uz'ni admin boshqaruv panel qismi",
+            "<strong>Plagiat.uz:</strong> Plagiatga tekshirish va sun'iy intellekt yordamida yozilgan matnlarni aniqlash",
+            "<strong>Paxtachilik Kengashi:</strong> O'zbekiston Respublikasi Prezidenti huzuridagi Paxtachilik kengashi",
+            "OAuth2 protokolini Django DRF'da implementatsiya qilish",
+            "Boshqa platformalar uchun OAuth2 provider yaratish",
+            "RESTful API dizayni va multiple platform integratsiyalar",
+            "Django, Filament PHP, Laravel Nova va Yii2 admin boshqaruv panellarini yaratish va moslashtirish",
+            "PostgreSQL va MySQL ma'lumotlar bazasi bilan ishlash",
+            "Fayllar bilan ishlash, PDF fayllar generatsiya qilish",
+            "Server bilan ishlash, deploying va texnik qo'llab quvvatlash"
+        ]
+    },
+    {
+        id: "ubtuit",
+        title: t.experience?.ubtuit?.title || "Software Engineer",
+        company: t.experience?.ubtuit?.company || "UBTUIT (Dissertatsiya)",
+        period: t.experience?.ubtuit?.period || "Mart 2023 - Iyun 2023",
+        description: t.experience?.ubtuit?.description || "IQ test platformasini Django yordamida yaratish va dissertatsiya uchun tadqiqot o'tkazish.",
+        highlights: t.experience?.ubtuit?.highlights || [
+            "IQ darajani aniqlash tizimini ishlab chiqish",
+            "Test va natijalarni avtomatik hisoblash algoritmlari",
+            "Foydalanuvchilar uchun statistika va hisobotlar"
+        ]
+    },
+    {
+        id: "freelance",
+        title: t.experience?.freelance?.title || "Telegram Bot Developer",
+        company: "Freelance",
+        period: t.experience?.freelance?.period || "Noyabr 2021 - Noyabr 2022",
+        description: t.experience?.freelance?.description || "Telegram botlar yaratish va avtomatlash tizimlari (Python, aiogram).",
+        highlights: t.experience?.freelance?.highlights || [
+            "<strong>@TezYetkaz_bot:</strong> Pochtalar va posilkalar yetkazish xizmati",
+            "<strong>@cashback_bot:</strong> QR kod skanerlash orqali cashback beruvchi bot",
+            "<strong>@newyear_bot:</strong> Yangi yil tabrigi generatori",
+            "Buyurtma berish va qabul qilish jarayonini avtomatlash"
+        ]
+    }
+];
+---
+
+<!-- Experience Timeline -->
+<section class="container" id="experience">
+    <div class="section-title" data-aos="fade-up">
+        <h2><span class="gradient-text">{t.experience?.title || "Professional Tajriba"}</span></h2>
+        <p>{t.experience?.subtitle || "Mening karyera yo'lim"}</p>
+    </div>
+    <div class="timeline">
+        {experiences.map(exp => (
+            <div class="timeline-item" data-aos="fade-up">
+                <div class="timeline-content">
+                    <div class="timeline-header">
+                        <div class="timeline-title">
+                            <h3>{exp.title}</h3>
+                            <div class="timeline-company">{exp.company}</div>
+                        </div>
+                        <div class="timeline-date">{exp.period}</div>
+                    </div>
+                    <p class="timeline-description">
+                        {exp.description}
+                    </p>
+                    <ul class="timeline-highlights">
+                        {exp.highlights.map((highlight: string) => (
+                            <li set:html={highlight}></li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+        ))}
+    </div>
+</section>

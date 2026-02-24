@@ -356,6 +356,74 @@
       ]
     }
   },
+  "experience": {
+    "title": "Profesyonel Deneyim",
+    "subtitle": "Kariyer Yolculuğum",
+    "uzinfocom": {
+      "title": "Backend Yazılım Mühendisi",
+      "period": "Eylül 2024 - Şu an",
+      "description": "Devlet projeleri üzerinde çalışma. Mikro hizmet mimarisine dayalı backend hizmetleri geliştirme.",
+      "highlights": [
+        "<strong>UzTransGaz SCADA:</strong> Gaz Altyapısı SCADA Platformu",
+        "<strong>EnergoNazorat:</strong> Dijital Enerji Kontrol Sistemi",
+        "MinIO hizmet entegrasyonu aracılığıyla dosya yönetimi",
+        "Vault kullanarak gizli yapılandırmaların güvenli yönetimi",
+        "Redis aracılığıyla önbellek ve performansı iyileştirme",
+        "Özel izinler ve kullanıcı rolü sistemini geliştirme",
+        "PostgreSQL'de büyük ve karmaşık sorgular yazma, optimizasyon",
+        "Excel entegrasyonu (okuma ve yazma)",
+        "Celery ve cron görevleri ile arka plan süreçlerini otomatikleştirme",
+        "Core modül geliştirme ve mimari tasarıma katılma",
+        "Geçici olarak Team Leader görevini yerine getirme",
+        "Code review süreçlerinde aktif katılım"
+      ]
+    },
+    "perspective": {
+      "title": "Yazılım Mühendisi",
+      "period": "Aralık 2022 - Ağustos 2024",
+      "description": "Ulusal bilimsel platformlar oluşturma ve destekleme. Özbekistan'ın bilimsel ekosistemini dijitalleştirme.",
+      "highlights": [
+        "<strong>ScienceID:</strong> Bilimsel ve yenilikçi faaliyetlerle uğraşan gerçek kişiler için kimlik sistemi",
+        "<strong>ScienceGate:</strong> Kullanıcının bilimsel araştırma ve pedagojik faaliyetleriyle ilgili 43 veri türünü özetleyen platform",
+        "<strong>Anjumanlar:</strong> Uluslararası ve cumhuriyet düzeyinde düzenlenen bilimsel ve bilimsel-teknik etkinlikler platformu",
+        "<strong>eTaqriz:</strong> Bilimsel çalışmaların nitelikli uzmanlar tarafından incelenmesi sistemi",
+        "<strong>SLIB.uz:</strong> Özbekistan Bilimsel Kütüphanesi",
+        "<strong>ROI.uz:</strong> Bilimsel materyaller için dijital tanımlayıcı",
+        "<strong>UzSCI:</strong> SLIB.uz'un yönetici kontrol paneli bölümü",
+        "<strong>Plagiat.uz:</strong> İntihal kontrolü ve AI tarafından oluşturulan metin tespiti",
+        "<strong>Paxtachilik Kengashi:</strong> Özbekistan Cumhuriyeti Cumhurbaşkanlığı'na bağlı Pamuk Konseyi",
+        "Django DRF'de OAuth2 protokolünü uygulama",
+        "Diğer platformlar için OAuth2 sağlayıcı oluşturma",
+        "RESTful API tasarımı ve çoklu platform entegrasyonları",
+        "Django, Filament PHP, Laravel Nova ve Yii2 yönetici panelleri oluşturma ve özelleştirme",
+        "PostgreSQL ve MySQL veritabanları ile çalışma",
+        "Dosyalarla çalışma, PDF dosyaları oluşturma",
+        "Sunucu yönetimi, deployment ve teknik destek"
+      ]
+    },
+    "ubtuit": {
+      "title": "Yazılım Mühendisi",
+      "company": "UBTUIT (Tez)",
+      "period": "Mart 2023 - Haziran 2023",
+      "description": "Django kullanarak IQ test platformu oluşturma ve tez için araştırma yapma.",
+      "highlights": [
+        "IQ seviye belirleme sistemini geliştirme",
+        "Testler ve sonuçlar için otomatik hesaplama algoritmaları",
+        "Kullanıcılar için istatistikler ve raporlar"
+      ]
+    },
+    "freelance": {
+      "title": "Telegram Bot Developer",
+      "period": "Kasım 2021 - Kasım 2022",
+      "description": "Telegram botları oluşturma ve otomasyon sistemleri (Python, aiogram).",
+      "highlights": [
+        "<strong>@TezYetkaz_bot:</strong> Posta ve kargo teslimat hizmeti",
+        "<strong>@cashback_bot:</strong> QR kod tarama yoluyla cashback botu",
+        "<strong>@newyear_bot:</strong> Yeni yıl tebrik üreteci",
+        "Sipariş verme ve alma süreçlerini otomatikleştirme"
+      ]
+    }
+  },
   "certificates": {
     "title": "Sertifikalar",
     "subtitle": "Profesyonel sertifikalar ve kurslar"

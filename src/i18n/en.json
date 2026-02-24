@@ -356,6 +356,74 @@
       ]
     }
   },
+  "experience": {
+    "title": "Professional Experience",
+    "subtitle": "My Career Journey",
+    "uzinfocom": {
+      "title": "Backend Software Engineer",
+      "period": "September 2024 - Present",
+      "description": "Working on government projects. Developing backend services based on microservice architecture.",
+      "highlights": [
+        "<strong>UzTransGaz SCADA:</strong> Gas Infrastructure SCADA Platform",
+        "<strong>EnergoNazorat:</strong> Digital Energy Control System",
+        "File management through MinIO service integration",
+        "Secure management of confidential configurations using Vault",
+        "Improving cache and performance through Redis",
+        "Developing custom permissions and user role system",
+        "Writing large and complex queries in PostgreSQL, optimization",
+        "Excel integration (reading and writing)",
+        "Automating background processes with Celery and cron tasks",
+        "Participating in core module development and architecture design",
+        "Temporarily performing Team Leader duties",
+        "Active participation in code review processes"
+      ]
+    },
+    "perspective": {
+      "title": "Software Engineer",
+      "period": "December 2022 - August 2024",
+      "description": "Creating and supporting national scientific platforms. Digitalizing Uzbekistan's scientific ecosystem.",
+      "highlights": [
+        "<strong>ScienceID:</strong> Identification system for individuals engaged in scientific and innovative activities",
+        "<strong>ScienceGate:</strong> Platform that summarizes 43 types of data related to user's scientific research and pedagogical activities",
+        "<strong>Anjumanlar:</strong> Platform for scientific and scientific-technical events held at international and republican level",
+        "<strong>eTaqriz:</strong> System for reviewing scientific works by qualified specialists",
+        "<strong>SLIB.uz:</strong> Uzbekistan Scientific Library",
+        "<strong>ROI.uz:</strong> Digital identifier for scientific materials",
+        "<strong>UzSCI:</strong> Admin control panel section of SLIB.uz",
+        "<strong>Plagiat.uz:</strong> Plagiarism detection and AI-generated text identification",
+        "<strong>Paxtachilik Kengashi:</strong> Cotton Council under the President of the Republic of Uzbekistan",
+        "Implementing OAuth2 protocol in Django DRF",
+        "Creating OAuth2 provider for other platforms",
+        "RESTful API design and multiple platform integrations",
+        "Creating and customizing Django, Filament PHP, Laravel Nova and Yii2 admin panels",
+        "Working with PostgreSQL and MySQL databases",
+        "Working with files, generating PDF files",
+        "Server management, deploying and technical support"
+      ]
+    },
+    "ubtuit": {
+      "title": "Software Engineer",
+      "company": "UBTUIT (Dissertation)",
+      "period": "March 2023 - June 2023",
+      "description": "Creating IQ test platform using Django and conducting research for dissertation.",
+      "highlights": [
+        "Developing IQ level determination system",
+        "Automatic calculation algorithms for tests and results",
+        "Statistics and reports for users"
+      ]
+    },
+    "freelance": {
+      "title": "Telegram Bot Developer",
+      "period": "November 2021 - November 2022",
+      "description": "Creating Telegram bots and automation systems (Python, aiogram).",
+      "highlights": [
+        "<strong>@TezYetkaz_bot:</strong> Mail and parcel delivery service",
+        "<strong>@cashback_bot:</strong> Cashback bot through QR code scanning",
+        "<strong>@newyear_bot:</strong> New Year greeting generator",
+        "Automating ordering and receiving processes"
+      ]
+    }
+  },
   "certificates": {
     "title": "Certificates",
     "subtitle": "Professional certificates and courses"
