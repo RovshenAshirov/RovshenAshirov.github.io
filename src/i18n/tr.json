@@ -356,6 +356,11 @@
       ]
     }
   },
+  "contact": {
+    "title": "İletişim",
+    "subtitle": "Hadi birlikte harika bir şey yaratalım!",
+    "email": "Email"
+  },
   "footer": {
     "copyright": "Tüm hakları saklıdır."
   }

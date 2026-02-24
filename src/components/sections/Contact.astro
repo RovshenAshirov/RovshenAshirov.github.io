@@ -1,0 +1,58 @@
+---
+const { t } = Astro.props;
+
+const contacts = [
+    {
+        icon: "fas fa-envelope",
+        title: t.contact?.email || "Email",
+        value: "rovshenashirov1619@gmail.com",
+        url: "mailto:rovshenashirov1619@gmail.com",
+        delay: 100
+    },
+    {
+        icon: "fab fa-telegram",
+        title: "Telegram",
+        value: "@Oliy_dasturchi",
+        url: "https://t.me/Oliy_dasturchi",
+        delay: 200
+    },
+    {
+        icon: "fab fa-github",
+        title: "GitHub",
+        value: "RovshenAshirov",
+        url: "https://github.com/RovshenAshirov",
+        delay: 300
+    },
+    {
+        icon: "fab fa-linkedin",
+        title: "LinkedIn",
+        value: "rovshenashirov",
+        url: "https://www.linkedin.com/in/rovshenashirov/",
+        delay: 400
+    }
+];
+---
+
+<!-- Contact Section -->
+<section class="container" id="contact">
+    <div class="section-title" data-aos="fade-up">
+        <h2><span class="gradient-text">{t.contact?.title || "Bog'lanish"}</span></h2>
+        <p>{t.contact?.subtitle || "Keling, birgalikda nimadir ajoyib yarataylik!"}</p>
+    </div>
+    <div class="contact-grid">
+        {contacts.map(contact => (
+            <div class="contact-card" data-aos="fade-up" data-aos-delay={contact.delay}>
+                <div class="contact-icon">
+                    <i class={contact.icon}></i>
+                </div>
+                <h3>{contact.title}</h3>
+                <a
+                    href={contact.url}
+                    target={contact.url.startsWith('mailto:') ? '_self' : '_blank'}
+                >
+                    {contact.value}
+                </a>
+            </div>
+        ))}
+    </div>
+</section>

@@ -358,6 +358,11 @@
       }
     }
   },
+  "contact": {
+    "title": "Bog'lanish",
+    "subtitle": "Keling, birgalikda nimadir ajoyib yarataylik!",
+    "email": "Email"
+  },
   "footer": {
     "copyright": "Barcha huquqlar himoyalangan."
   }

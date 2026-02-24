@@ -356,6 +356,11 @@
       ]
     }
   },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Let's create something amazing together!",
+    "email": "Email"
+  },
   "footer": {
     "copyright": "All rights reserved."
   }
