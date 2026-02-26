@@ -11,6 +11,10 @@ const { title, description, lang } = Astro.props;
     <meta name="keywords" content="Software Engineer, Backend Developer, Django, Laravel, Python, PHP, Full-stack Developer, OAuth2, Microservices, Uzbekistan">
     <meta name="author" content="Rovshen Ashirov">
 
+    <!-- Google - Verify ownership-->
+    <!-- HTML tag -->
+    <meta name="google-site-verification" content="ndx34xs4FsttJDqRDSBbQF9f0UmuAu4bixg7Pgh1SJ4" />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Rovshen Ashirov - Backend Software Engineer"/>
@@ -53,6 +57,24 @@ const { title, description, lang } = Astro.props;
     <link rel="stylesheet" href="/css/components/modal.css">
     <link rel="stylesheet" href="/css/components/project-card.css">
     <link rel="stylesheet" href="/css/components/lightbox.css">
+
+    <!-- Google Analytics - Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1P3SSRW2LQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1P3SSRW2LQ');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NZ8R7X37');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
     <!-- Loading Screen -->
@@ -75,5 +97,10 @@ const { title, description, lang } = Astro.props;
     <script is:inline src="/js/sections/language.js"></script>
     <script is:inline src="/js/components/modal.js"></script>
     <script is:inline src="/js/components/certificates.js"></script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZ8R7X37"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 </body>
 </html>
