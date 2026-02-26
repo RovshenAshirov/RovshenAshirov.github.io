@@ -47,6 +47,9 @@
     font-family: 'JetBrains Mono', monospace;
     color: var(--accent-primary);
     font-weight: 600;
+    display: inline-block;
+    min-height: 1.5em;
+    vertical-align: top;
 }
 
 .hero-buttons {
