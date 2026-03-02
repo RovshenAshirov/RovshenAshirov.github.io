@@ -5,7 +5,6 @@
 
 ### CONTACT INFORMATION
 
-**Telegram:** @Oliy_dasturchi  
 **Email:** rovshenashirov1619@gmail.com  
 **Location:** Urgench, Khorezm Region, Uzbekistan  
 **LinkedIn:** [linkedin.com/in/rovshenashirov](https://linkedin.com/in/rovshenashirov)  
@@ -104,7 +103,7 @@ Working on critical government infrastructure projects with focus on real-time m
 
 ---
 
-#### Web Developer | Perspective Team
+#### Software Engineer | Perspective Team
 **December 2022 - August 2024** | Tashkent, Uzbekistan
 
 Focused on creating and maintaining national scientific platforms, digitalizing Uzbekistan's scientific ecosystem.
@@ -175,7 +174,7 @@ Focused on creating and maintaining national scientific platforms, digitalizing 
 
 ---
 
-#### Web Developer | TATU Urganch Branch
+#### Software Engineer | TATU Urganch Branch
 **March 2023 - June 2023** | Urgench, Uzbekistan
 
 **Dissertation Research Project:**
