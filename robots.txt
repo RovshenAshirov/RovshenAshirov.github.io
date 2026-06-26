@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rovshenashirov.github.io/sitemap.xml
