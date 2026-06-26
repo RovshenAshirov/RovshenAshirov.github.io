@@ -31,7 +31,7 @@
     "title": "About Me",
     "subtitle": "My professional journey and achievements",
     "p1": "I am <strong>Rovshen Rejepbayevich Ashirov</strong>, a Backend Software Engineer with <strong id=\"aboutExperience\">4+</strong> years of experience. I graduated from Tashkent University of Information Technologies Urgench branch and currently work as a Backend Software Engineer at <strong>UZINFOCOM</strong>.",
-    "p2": "Throughout my career at companies like <strong>UZINFOCOM</strong> and <strong>Perspective Team</strong>, I have successfully built national-level platforms including <strong>EnergoNazorat</strong>, <strong>ScienceID</strong>, <strong>ScienceGate</strong>, <strong>Anjumanlar</strong>, <strong>Plagiat.uz</strong>, <strong>SLIB.uz</strong>, <strong>ROI.uz</strong>. These platforms serve 10,000+ users.",
+    "p2": "Throughout my career at companies like <strong>UZINFOCOM</strong> and <strong>Perspective Team</strong>, I have successfully built confidential energy-sector projects for the state and national-level platforms including <strong>ScienceID</strong>, <strong>ScienceGate</strong>, <strong>Anjumanlar</strong>, <strong>Plagiat.uz</strong>, <strong>SLIB.uz</strong>, <strong>ROI.uz</strong>. These platforms serve 10,000+ users.",
     "p3": "Key achievements: implementing <strong>OAuth2</strong> protocol in Django DRF, integration with <strong>OneID</strong> system, supporting platforms with <strong>35,000+</strong> scientific articles, and building complex systems based on <strong>microservices</strong> architecture.",
     "p4": "Technologies: extensive experience with <strong>Django, Laravel, Yii2, PostgreSQL, Redis, Celery, OAuth2, Microservices</strong> and other modern technologies."
   },
@@ -44,17 +44,12 @@
     "subtitle": "My largest projects I participated in",
     "btnDetails": "Details",
     "btnView": "View",
-    "uztransgaz": {
-      "subtitle": "Gas Infrastructure SCADA Platform",
-      "stat1": "Real-time",
+    "energy": {
+      "name": "Energy Projects",
+      "subtitle": "Confidential energy-sector projects for the state",
+      "stat1": "Energy",
       "stat2": "Active",
-      "description": "National monitoring system developed based on Presidential Decree. Real-time control of main gas pipelines, dispatching management and gas transmission system modernization."
-    },
-    "energonazorat": {
-      "subtitle": "Digital Energy Control System",
-      "stat1": "Energy monitoring",
-      "stat2": "Active",
-      "description": "National platform created based on Presidential Decree. Real-time monitoring of energy resources, detection of illegal consumption and ensuring public control."
+      "description": "Confidential energy-sector projects developed under state commission. Real-time monitoring, processing and visualization of large volumes of data. Details are not disclosed as the projects are confidential."
     },
     "scienceid": {
       "subtitle": "Scientific Identification System",
@@ -110,39 +105,25 @@
       "process": "Publishing Process",
       "advantages": "Advantages"
     },
-    "uztransgaz": {
-      "subtitle": "SCADA Monitoring System",
-      "goal": "Within the framework of the 2020-2024 State Investment Program, modernize main gas pipelines and implement SCADA (Supervisory Control and Data Acquisition) system. Increase the capacity of the gas transmission system, introduce modern energy-saving technologies and reduce polluting emissions into the atmosphere.",
+    "energy": {
+      "title": "Energy Projects",
+      "subtitle": "Confidential energy-sector projects for the state",
+      "goal": "Development of several major projects in the energy sector under state commission. Collecting, real-time monitoring, processing and visualizing large volumes of data. Project names and details are not disclosed as the projects are confidential.",
       "role": [
-        "Developing backend services based on microservice architecture",
-        "Creating APIs using Django and Django Rest Framework",
+        "Developing backend services based on microservice architecture using Django and Django REST Framework",
+        "Creating RESTful APIs",
+        "Collecting, processing large amounts of data and generating reports",
         "Integration with external services",
         "Creating real-time monitoring and visualization systems",
-        "Automating background processes through Celery and cron tasks",
-        "Visualizing monitoring data through charts and diagrams",
-        "File management through MinIO service integration",
+        "Automating background processes through Celery, django-q and cron tasks",
+        "Visualizing data through charts and diagrams",
+        "Excel integration (reading and writing)",
+        "File management through MinIO",
         "Secure management of confidential configurations using Vault",
         "Improving cache and performance through Redis",
         "Developing custom permissions and user role system",
-        "Writing large and complex queries in PostgreSQL, optimization",
+        "Writing large and complex queries in PostgreSQL and optimization",
         "Participating in the development of the project's core module",
-        "Participating in code review processes",
-        "Temporarily performing Team Leader duties"
-      ]
-    },
-    "energonazorat": {
-      "subtitle": "Digital Energy Control System",
-      "goal": "Based on the Presidential Decree (PF-5421, 18.04.2023), strengthen state control over the use of fuel and energy resources and implement the \"digital energy control\" system. Prevent cases of plundering of energy resources, ensure public control and ensure the inevitability of responsibility for persons who violate legal requirements.",
-      "role": [
-        "Developing backend services using Django and Django REST Framework based on microservice architecture",
-        "Collecting, processing large amounts of data, generating reports",
-        "Integration with external services",
-        "Automating scheduled processes through django-q and cron tasks",
-        "Visualization through charts and diagrams",
-        "Excel integration (reading and writing)",
-        "File management through MinIO service",
-        "Writing complex and large queries in PostgreSQL and optimization",
-        "Participating in the development process of the project's base package (core module)",
         "Participating in code review processes",
         "Temporarily performing Team Leader duties"
       ]
@@ -364,8 +345,7 @@
       "period": "September 2024 - Present",
       "description": "Working on government projects. Developing backend services based on microservice architecture.",
       "highlights": [
-        "<strong>UzTransGaz SCADA:</strong> Gas Infrastructure SCADA Platform",
-        "<strong>EnergoNazorat:</strong> Digital Energy Control System",
+        "<strong>Energy Projects:</strong> Confidential energy-sector projects for the state",
         "File management through MinIO service integration",
         "Secure management of confidential configurations using Vault",
         "Improving cache and performance through Redis",

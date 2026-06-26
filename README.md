@@ -79,21 +79,15 @@ Working on critical government infrastructure projects with focus on real-time m
 
 **Major Projects:**
 
-**UzTransGaz SCADA Platform**
-- Architected and developed microservices backend for gas infrastructure SCADA system under State Investment Program 2020-2024
-- Implemented real-time monitoring and visualization systems for main gas pipelines
+**Energy Projects (Confidential)**
+- Architected and developed microservices backends for confidential energy-sector projects under state commission
+- Implemented real-time monitoring, processing and visualization systems for large volumes of data
 - Integrated MinIO for file management, Vault for secure configuration storage, and Redis for caching
 - Developed custom permission systems and role-based access control (RBAC)
+- Automated background and scheduled tasks using Celery, django-q and cron jobs
 - Optimized PostgreSQL queries for large datasets, reducing response time from 2 seconds to 200ms
-- Technologies: Django, Django REST Framework, Celery, PostgreSQL, Redis, MinIO, Vault
-
-**EnergoNazorat Platform**
-- Developed digital energy control system per Presidential Decree PF-5421 (April 18, 2023)
-- Built microservices for collecting and processing large volumes of energy consumption data
-- Implemented automated reporting with Excel integration for data export
-- Created visualization dashboards using charts and diagrams
-- Automated scheduled tasks using django-q and cron jobs handling 10,000+ daily operations
-- Technologies: Django, Django REST Framework, PostgreSQL, Redis, MinIO, Excel Integration
+- Technologies: Django, Django REST Framework, Celery, PostgreSQL, Redis, MinIO, Vault, Excel Integration
+- *Project names and details are not disclosed as the projects are confidential.*
 
 **Leadership & Team Contribution:**
 - Temporarily performed Team Leader duties, coordinating team of 5 developers

@@ -3,47 +3,29 @@ const { t } = Astro.props;
 
 const modals = [
     {
-        id: "uztransgaz",
-        title: "UzTransGaz SCADA",
-        subtitle: t.modals?.uztransgaz?.subtitle || "Gaz Infratuzilmasi SCADA Platformasi",
-        goal: t.modals?.uztransgaz?.goal || "2020-2024 yillar Davlat Investitsiya Dasturi doirasida magistral gaz quvurlarini modernizatsiya qilish va SCADA (Supervisory Control and Data Acquisition) tizimini joriy etish. Gaz uzatish tizimining o'tkazuvchanligini oshirish, zamonaviy energiya tejaydigan texnologiyalarni joriy etish va atmosferaga ifloslantiruvchi chiqindilarni kamaytirish.",
-        role: t.modals?.uztransgaz?.role || [
-            "Microservice arxitektura asosida backend servislarni ishlab chiqish",
-            "Django va Django Rest Framework yordamida API'lar yaratish",
+        id: "energy",
+        title: t.modals?.energy?.title || "Energiya loyihalari",
+        subtitle: t.modals?.energy?.subtitle || "Davlat uchun maxfiy energetika loyihalari",
+        goal: t.modals?.energy?.goal || "Davlat buyurtmasi asosida energetika sohasida bir nechta yirik loyihalarni ishlab chiqish. Katta hajmdagi ma'lumotlarni yig'ish, real-time monitoring qilish, qayta ishlash va vizualizatsiya qilish. Loyihalar maxfiy bo'lgani sababli nomlari va tafsilotlari oshkor qilinmaydi.",
+        role: t.modals?.energy?.role || [
+            "Microservice arxitektura asosida Django va Django REST Framework yordamida backend servislarni ishlab chiqish",
+            "RESTful API'lar yaratish",
+            "Katta hajmdagi ma'lumotlarni yig'ish, qayta ishlash va hisobotlar chiqarish",
             "Tashqi servislar bilan integratsiya qilish",
             "Real-time monitoring va vizualizatsiya tizimlari yaratish",
-            "Celery va cron task'lar orqali fon jarayonlarni avtomatlash",
-            "Chart va diagrammalar orqali monitoring ma'lumotlarini vizualizatsiya",
-            "MinIO service integratsiyasi orqali fayllarni boshqarish",
+            "Celery, django-q va cron task'lar orqali fon jarayonlarni avtomatlash",
+            "Chart va diagrammalar orqali ma'lumotlarni vizualizatsiya qilish",
+            "Excel integratsiyasi (o'qish va yozish)",
+            "MinIO orqali fayllarni boshqarish",
             "Vault yordamida maxfiy konfiguratsiyalarni xavfsiz boshqarish",
             "Redis orqali kesh va ishlash tezligini oshirish",
             "Custom permission'lar va user role tizimini ishlab chiqish",
-            "PostgreSQL'da katta va murakkab so'rovlarni yozish, optimizatsiya qilish",
+            "PostgreSQL'da katta va murakkab so'rovlarni yozish va optimizatsiya qilish",
             "Loyihaning core module ishlab chiqishda ishtirok etish",
             "Code review jarayonlarida ishtirok etish",
             "Vaqtincha Team Leader vazifasini bajarish"
         ],
-        tech: ["Django", "Django Rest Framework", "Celery", "MinIO", "Vault", "Redis", "PostgreSQL"]
-    },
-    {
-        id: "energonazorat",
-        title: "EnergoNazorat",
-        subtitle: t.modals?.energonazorat?.subtitle || "Raqamli Energiya Nazorat tizimi",
-        goal: t.modals?.energonazorat?.goal || "Prezident Farmoni (PF-5421, 18.04.2023) asosida yoqilg'i-energiya resurslaridan foydalanish ustidan davlat nazoratini kuchaytirish va \"raqamli energonazorat\" tizimini joriy etish. Energiya resurslarini talon-toroj qilish holatlarining oldini olish, jamoatchilik nazoratini ta'minlash va qonun talablarini buzgan shaxslarga nisbatan javobgarlik muqarrarligini ta'minlash.",
-        role: t.modals?.energonazorat?.role || [
-            "Microservice arxitektura asosida Django va Django REST Framework yordamida backend servislarni ishlab chiqish",
-            "Katta hajmdagi ma'lumotlarni yig'ish, qayta ishlash, hisobotlar chiqarish",
-            "Tashqi servislar bilan integratsiya qilish",
-            "django-q va cron task'lar orqali rejalashtirilgan jarayonlarni avtomatlash",
-            "Chart va diagrammalar orqali vizualizatsiya qilish",
-            "Excel integratsiyasi (o'qish va yozish)",
-            "MinIO service orqali fayllarni boshqarish",
-            "PostgreSQL'da murakkab va katta so'rovlar yozish hamda optimizatsiya qilish",
-            "Loyihaning base package (core modul) ishlab chiqish jarayonida qatnashish",
-            "Code review jarayonlarida ishtirok etish",
-            "Vaqtincha Team Leader vazifasini bajarish"
-        ],
-        tech: ["Django", "Django Rest Framework", "PostgreSQL", "Redis", "MinIO", "Excel"]
+        tech: ["Django", "Django Rest Framework", "Celery", "PostgreSQL", "Redis", "MinIO", "Vault", "Excel"]
     },
     {
         id: "scienceid",

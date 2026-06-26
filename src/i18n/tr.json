@@ -31,7 +31,7 @@
     "title": "Hakkımda",
     "subtitle": "Profesyonel yolculuğum ve başarılarım",
     "p1": "Ben <strong>Rovshen Rejepbayevich Ashirov</strong>, <strong id=\"aboutExperience\">4+</strong> yıllık deneyime sahip bir Backend Yazılım Mühendisiyim. Taşkent Bilgi Teknolojileri Üniversitesi Ürgench şubesinden mezun oldum ve şu anda <strong>UZINFOCOM</strong>'da Backend Yazılım Mühendisi olarak çalışıyorum.",
-    "p2": "<strong>UZINFOCOM</strong> ve <strong>Perspective Team</strong> gibi şirketlerdeki kariyerim boyunca <strong>EnergoNazorat</strong>, <strong>ScienceID</strong>, <strong>ScienceGate</strong>, <strong>Anjumanlar</strong>, <strong>Plagiat.uz</strong>, <strong>SLIB.uz</strong>, <strong>ROI.uz</strong> gibi ulusal düzeyde projeleri başarıyla hayata geçirdim. Bu platformlar 10,000+ kullanıcıya hizmet vermektedir.",
+    "p2": "<strong>UZINFOCOM</strong> ve <strong>Perspective Team</strong> gibi şirketlerdeki kariyerim boyunca <strong>ScienceID</strong>, <strong>ScienceGate</strong>, <strong>Anjumanlar</strong>, <strong>Plagiat.uz</strong>, <strong>SLIB.uz</strong>, <strong>ROI.uz</strong> gibi ulusal düzeyde projeleri ve devlet için gizli enerji projelerini başarıyla hayata geçirdim. Bu platformlar 10,000+ kullanıcıya hizmet vermektedir.",
     "p3": "Temel başarılar: Django DRF'de <strong>OAuth2</strong> protokolünü uygulama, <strong>OneID</strong> sistemiyle entegrasyon, <strong>35,000+</strong> bilimsel makale içeren platformları destekleme ve <strong>mikroservis</strong> mimarisine dayalı karmaşık sistemler geliştirme.",
     "p4": "Teknolojiler: <strong>Django, Laravel, Yii2, PostgreSQL, Redis, Celery, OAuth2, Microservices</strong> ve diğer modern teknolojilerle kapsamlı deneyim."
   },
@@ -44,17 +44,12 @@
     "subtitle": "Katıldığım en büyük projeler",
     "btnDetails": "Detaylar",
     "btnView": "Görüntüle",
-    "uztransgaz": {
-      "subtitle": "Gaz Altyapısı SCADA Platformu",
-      "stat1": "Gerçek zamanlı",
+    "energy": {
+      "name": "Enerji Projeleri",
+      "subtitle": "Devlet için gizli enerji projeleri",
+      "stat1": "Enerji",
       "stat2": "Aktif",
-      "description": "Cumhurbaşkanlığı Kararnamesi temelinde geliştirilen ulusal izleme sistemi. Ana gaz boru hatlarının gerçek zamanlı kontrolü, sevk yönetimi ve gaz iletim sisteminin modernizasyonu."
-    },
-    "energonazorat": {
-      "subtitle": "Dijital Enerji Kontrol Sistemi",
-      "stat1": "Enerji izleme",
-      "stat2": "Aktif",
-      "description": "Cumhurbaşkanlığı Kararnamesi temelinde oluşturulan ulusal platform. Enerji kaynaklarının gerçek zamanlı izlenmesi, yasadışı tüketimin tespiti ve kamu denetiminin sağlanması."
+      "description": "Devlet siparişi kapsamında geliştirilen gizli enerji projeleri. Büyük hacimli verilerin gerçek zamanlı izlenmesi, işlenmesi ve görselleştirilmesi. Projeler gizli olduğu için detaylar açıklanmamaktadır."
     },
     "scienceid": {
       "subtitle": "Bilimsel Kimlik Sistemi",
@@ -110,39 +105,25 @@
       "process": "Yayın Süreci",
       "advantages": "Avantajlar"
     },
-    "uztransgaz": {
-      "subtitle": "SCADA İzleme Sistemi",
-      "goal": "2020-2024 Devlet Yatırım Programı çerçevesinde ana gaz boru hatlarını modernize etmek ve SCADA (Supervisory Control and Data Acquisition) sistemini uygulamak. Gaz iletim sisteminin kapasitesini artırmak, modern enerji tasarruflu teknolojileri uygulamak ve atmosfere kirletici emisyonları azaltmak.",
+    "energy": {
+      "title": "Enerji Projeleri",
+      "subtitle": "Devlet için gizli enerji projeleri",
+      "goal": "Devlet siparişi kapsamında enerji alanında birkaç büyük projenin geliştirilmesi. Büyük hacimli verilerin toplanması, gerçek zamanlı izlenmesi, işlenmesi ve görselleştirilmesi. Projeler gizli olduğu için isimleri ve detayları açıklanmamaktadır.",
       "role": [
-        "Mikro hizmet mimarisine dayalı backend hizmetleri geliştirme",
-        "Django ve Django Rest Framework kullanarak API'ler oluşturma",
+        "Mikro hizmet mimarisine dayalı Django ve Django REST Framework kullanarak backend hizmetleri geliştirme",
+        "RESTful API'ler oluşturma",
+        "Büyük miktarda veri toplama, işleme ve rapor oluşturma",
         "Harici hizmetlerle entegrasyon",
         "Gerçek zamanlı izleme ve görselleştirme sistemleri oluşturma",
-        "Celery ve cron görevleri aracılığıyla arka plan süreçlerini otomatikleştirme",
-        "Grafikler ve diyagramlar aracılığıyla izleme verilerini görselleştirme",
-        "MinIO hizmet entegrasyonu aracılığıyla dosya yönetimi",
+        "Celery, django-q ve cron görevleri aracılığıyla arka plan süreçlerini otomatikleştirme",
+        "Grafikler ve diyagramlar aracılığıyla verileri görselleştirme",
+        "Excel entegrasyonu (okuma ve yazma)",
+        "MinIO aracılığıyla dosya yönetimi",
         "Vault kullanarak gizli yapılandırmaların güvenli yönetimi",
         "Redis aracılığıyla önbellek ve performansı iyileştirme",
         "Özel izinler ve kullanıcı rolü sistemini geliştirme",
-        "PostgreSQL'de büyük ve karmaşık sorgular yazma, optimizasyon",
+        "PostgreSQL'de büyük ve karmaşık sorgular yazma ve optimizasyon",
         "Projenin core modülünün geliştirilmesine katılma",
-        "Code review süreçlerine katılma",
-        "Geçici olarak Team Leader görevini yerine getirme"
-      ]
-    },
-    "energonazorat": {
-      "subtitle": "Dijital Enerji Kontrol Sistemi",
-      "goal": "Cumhurbaşkanlığı Kararnamesi (PF-5421, 18.04.2023) temelinde yakıt ve enerji kaynaklarının kullanımı üzerinde devlet kontrolünü güçlendirmek ve \"dijital enerji kontrolü\" sistemini uygulamak. Enerji kaynaklarının yağmalanması vakalarını önlemek, kamu kontrolünü sağlamak ve yasal gereksinimleri ihlal eden kişiler için sorumluluğun kaçınılmazlığını sağlamak.",
-      "role": [
-        "Mikro hizmet mimarisine dayalı Django ve Django REST Framework kullanarak backend hizmetleri geliştirme",
-        "Büyük miktarda veri toplama, işleme, rapor oluşturma",
-        "Harici hizmetlerle entegrasyon",
-        "django-q ve cron görevleri aracılığıyla zamanlanmış süreçleri otomatikleştirme",
-        "Grafikler ve diyagramlar aracılığıyla görselleştirme",
-        "Excel entegrasyonu (okuma ve yazma)",
-        "MinIO hizmeti aracılığıyla dosya yönetimi",
-        "PostgreSQL'de karmaşık ve büyük sorgular yazma ve optimizasyon",
-        "Projenin temel paketinin (core modül) geliştirilme sürecine katılma",
         "Code review süreçlerine katılma",
         "Geçici olarak Team Leader görevini yerine getirme"
       ]
@@ -364,8 +345,7 @@
       "period": "Eylül 2024 - Şu an",
       "description": "Devlet projeleri üzerinde çalışma. Mikro hizmet mimarisine dayalı backend hizmetleri geliştirme.",
       "highlights": [
-        "<strong>UzTransGaz SCADA:</strong> Gaz Altyapısı SCADA Platformu",
-        "<strong>EnergoNazorat:</strong> Dijital Enerji Kontrol Sistemi",
+        "<strong>Enerji Projeleri:</strong> Devlet için gizli enerji projeleri",
         "MinIO hizmet entegrasyonu aracılığıyla dosya yönetimi",
         "Vault kullanarak gizli yapılandırmaların güvenli yönetimi",
         "Redis aracılığıyla önbellek ve performansı iyileştirme",

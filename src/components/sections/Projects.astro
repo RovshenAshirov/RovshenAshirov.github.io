@@ -3,28 +3,16 @@ const { t } = Astro.props;
 
 const projects = [
     {
-        id: "uztransgaz",
-        name: "UzTransGaz SCADA",
-        subtitle: t.projects.uztransgaz?.subtitle || "Gaz Infratuzilmasi SCADA Platformasi",
+        id: "energy",
+        name: t.projects.energy?.name || "Energiya loyihalari",
+        subtitle: t.projects.energy?.subtitle || "Davlat uchun maxfiy energetika loyihalari",
         stats: [
-            { icon: "fas fa-network-wired", text: t.projects.uztransgaz?.stat1 || "Real-time" },
-            { icon: "fas fa-chart-line", text: t.projects.uztransgaz?.stat2 || "Active" }
+            { icon: "fas fa-bolt", text: t.projects.energy?.stat1 || "Energetika" },
+            { icon: "fas fa-chart-line", text: t.projects.energy?.stat2 || "Active" }
         ],
-        description: t.projects.uztransgaz?.description || "Prezident Qaroriga asosan ishlab chiqilgan milliy monitoring tizimi. Magistral gaz quvurlarini real-time nazorat qilish, dispetcherlik boshqaruvi va gaz uzatish tizimini modernizatsiya qilish.",
-        tech: ["Django", "Django Rest Framework"],
+        description: t.projects.energy?.description || "Davlat buyurtmasi asosida energetika sohasidagi maxfiy loyihalar. Katta hajmdagi ma'lumotlarni real-time monitoring qilish, qayta ishlash va vizualizatsiya qilish. Loyihalar maxfiy bo'lgani uchun tafsilotlar oshkor qilinmaydi.",
+        tech: ["Django", "Django Rest Framework", "Celery", "PostgreSQL", "Redis", "MinIO", "Vault"],
         delay: 100
-    },
-    {
-        id: "energonazorat",
-        name: "EnergoNazorat",
-        subtitle: t.projects.energonazorat?.subtitle || "Raqamli Energiya Nazorat tizimi",
-        stats: [
-            { icon: "fas fa-bolt", text: t.projects.energonazorat?.stat1 || "Energiya nazorati" },
-            { icon: "fas fa-chart-line", text: t.projects.energonazorat?.stat2 || "Active" }
-        ],
-        description: t.projects.energonazorat?.description || "Prezident Farmoni asosida yaratilgan milliy platform. Energiya resurslarini real-time monitoring qilish, noqonuniy isteʼmolni aniqlash va jamoatchilik nazoratini ta'minlash.",
-        tech: ["Django", "Django Rest Framework"],
-        delay: 150
     },
     {
         id: "scienceid",
